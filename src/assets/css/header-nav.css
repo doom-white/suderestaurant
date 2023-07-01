@@ -1,0 +1,221 @@
+.header-container {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  margin-bottom: 1rem;
+}
+
+.header-nav {
+  width: 100%;
+  background: linear-gradient(to bottom, rgb(248, 250, 252), #ffe4e6);
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  position: relative;
+}
+
+/*? HEADER_LOGO */
+
+.header-logo-div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 0 40%;
+}
+
+.header-logo-text {
+  font-family: "Pacifico", cursive;
+  font-size: 2rem;
+  background: -webkit-linear-gradient(#eee, crimson);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  user-select: none;
+}
+
+/*? HEADER_MENU_LIST */
+
+.header-list-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  position: relative;
+}
+
+.header-list-div a {
+  font-family: "Pacifico", cursive;
+  font-size: 1.5rem;
+  padding-bottom: 0.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  background: -webkit-linear-gradient(#eee, #333);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: color 0.3s ease-in-out;
+}
+
+.header-list-div a:hover {
+  background: -webkit-linear-gradient(#eee, crimson);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-list-div a img {
+  display: none;
+  width: 2rem;
+  height: 2rem;
+}
+
+.header-list-div a:is(.active) img {
+  display: flex;
+}
+
+.header-list-div a.active p {
+  display: none;
+}
+
+/*? HEADER_COLLAPSE */
+
+.btn-toggle {
+  width: 2rem;
+  height: 1.5rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 3px;
+  padding: 0.1rem;
+  position: absolute;
+  right: 1rem;
+  top: 2rem;
+  transition: all 0.3s linear;
+}
+
+.btn-toggle span {
+  display: inline-flex;
+  width: 100%;
+  height: 0.15rem;
+  background-color: rgba(220, 20, 60, 0.8);
+  border-radius: 2px;
+  transition: all 0.3s linear;
+}
+
+.btn-toggle:hover {
+  background-color: rgba(220, 20, 60, 0.1);
+}
+
+.btn-toggle.active-toggle span:nth-child(1) {
+  display: none;
+}
+
+.btn-toggle.active-toggle span:nth-child(2) {
+  transform: translate(0, 0.32rem) rotate(-45deg);
+}
+
+.btn-toggle.active-toggle span:nth-child(3) {
+  transform: translate(0, -0.32rem) rotate(45deg);
+}
+
+.btn-toggle.active-toggle + .header-list-div {
+  display: flex;
+}
+
+/*? INDICATOR */
+
+.indicator {
+  position: absolute;
+  top: 0.08rem;
+  left: -8.5rem;
+  width: 3.2rem;
+  height: 3.2rem;
+  z-index: 1;
+  transition: 0.7s !important;
+  border-radius: 50%;
+}
+
+.light-nav .indicator {
+  border: 2px solid rgba(196, 77, 107, 0.2);
+  box-shadow: rgba(196, 77, 107, 0.24) 0px 3px 8px;
+  border-radius: 2rem;
+}
+
+/*? INDICATOR STEPS */
+
+.light-nav a:nth-child(1):is(.active) ~ .indicator {
+  transform: translateX(7.9rem);
+}
+
+.light-nav a:nth-child(2):is(.active) ~ .indicator {
+  transform: translateX(15.6rem);
+}
+
+.light-nav a:nth-child(3):is(.active) ~ .indicator {
+  transform: translateX(20.8rem);
+}
+
+.light-nav a:nth-child(4):is(.active) ~ .indicator {
+  transform: translateX(26.4rem);
+}
+
+.light-nav a:nth-child(5):is(.active) ~ .indicator {
+  transform: translateX(32.8rem);
+}
+
+/*! MEDIA SCREEN */
+
+/* flex-direction -> column | menu-list-display-none */
+@media only screen and (max-width: 992px) {
+  .btn-toggle {
+    display: flex;
+  }
+
+  .header-logo-div {
+    flex: 0 80%;
+  }
+
+  .header-list-div {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    padding: 1rem;
+  }
+
+  /****************** INDICATOR *************************/
+
+  .indicator {
+    top: 0.47rem;
+    left: 0.33rem;
+  }
+
+  /****************** INDICATOR STEPS ************************/
+
+  .light-nav a:nth-child(1):is(.active) ~ .indicator {
+    transform: translate(0.1rem);
+  }
+
+  .light-nav a:nth-child(2):is(.active) ~ .indicator {
+    transform: translate(0, 3.8rem);
+  }
+
+  .light-nav a:nth-child(3):is(.active) ~ .indicator {
+    transform: translate(0, 7.8rem);
+  }
+
+  .light-nav a:nth-child(4):is(.active) ~ .indicator {
+    transform: translate(0.2rem, 11.5rem);
+  }
+
+  .light-nav a:nth-child(5):is(.active) ~ .indicator {
+    transform: translate(0.1rem, 15.6rem);
+  }
+}
