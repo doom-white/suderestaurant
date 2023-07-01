@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "title": "Antep Lahmacun",
+    "price": 30,
+    "desc": "",
+    "imgURL": "images/antep.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Lahmacun",
+    "price": 25,
+    "desc": "",
+    "imgURL": "images/lahmacun.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Patlıcan Kebabı",
+    "price": 60,
+    "desc": "",
+    "imgURL": "images/patlican.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Kuşbaşılı Kaşarlı Pide",
+    "price": 75,
+    "desc": "",
+    "imgURL": "images/kasarli.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Karışık Pide",
+    "price": 75,
+    "desc": "",
+    "imgURL": "images/mixed.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Kavurmalı Pide",
+    "price": 75,
+    "desc": "",
+    "imgURL": "images/kavurmali.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Kıymalı Pide",
+    "price": 60,
+    "desc": "",
+    "imgURL": "images/kiymali.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Kaşarlı Pide",
+    "price": 60,
+    "desc": "",
+    "imgURL": "images/kasarli.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Tavuk Tantuni",
+    "price": 35,
+    "desc": "Yarım Ekmek Arası Tavuk Tantuni",
+    "imgURL": "images/tavuk1.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Tavuk Tantuni",
+    "price": 35,
+    "desc": "Tavuk Tantuni Dürüm",
+    "imgURL": "images/tavuk2.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Et Tantuni",
+    "price": 60,
+    "desc": "Yarım Ekmek Arası Et Tantuni",
+    "imgURL": "images/et-tantuni1.jpeg"
+  },
+  {
+    "id": 12,
+    "title": "Et Tantuni",
+    "price": 35,
+    "desc": "Et Tantuni Dürüm",
+    "imgURL": "images/et-tantuni2.jpg"
+  },
+  {
+    "id": 13,
+    "title": "Köfte",
+    "price": 50,
+    "desc": "Yarım Ekmek Arası Köfte",
+    "imgURL": "images/kofte1.jpg"
+  },
+  {
+    "id": 14,
+    "title": "Köfte",
+    "price": 90,
+    "desc": "Porsiyon Köfte",
+    "imgURL": "images/kofte2.jpg"
+  },
+  {
+    "id": 15,
+    "title": "Kilis Tavası",
+    "price": 120,
+    "desc": "",
+    "imgURL": "images/kilis.jpg"
+  },
+  {
+    "id": 16,
+    "title": "Mercimek Çorbası",
+    "price": 40,
+    "desc": "",
+    "imgURL": "images/mercimek.jpg"
+  },
+  {
+    "id": 17,
+    "title": "Lavaş",
+    "price": 5,
+    "desc": "",
+    "imgURL": "images/lavas.jpg"
+  },
+  {
+    "id": 18,
+    "title": "Künefe",
+    "price": 40,
+    "desc": "",
+    "imgURL": "images/kunefe.jpg"
+  }
+]
