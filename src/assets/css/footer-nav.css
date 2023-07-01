@@ -1,0 +1,115 @@
+.footer-container {
+  width: 100%;
+  height: 7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  background: linear-gradient(to bottom, rgb(225, 29, 72), #881337);
+  background-repeat: no-repeat;
+}
+
+.footer-content-container {
+  /* background-color: aqua; */
+  width: 100%;
+  padding-top: 1rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+/*? CONTENT - LEFT */
+
+.footer-content-left {
+  /* background-color: blue; */
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  user-select: none;
+}
+
+.fcl-store-name {
+  color: rgb(254 205 211);
+  font-weight: bold;
+}
+
+.fcl-store-date {
+  color: rgb(254 205 211);
+}
+
+.fcl-city {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgb(209 213 219);
+}
+
+/*? CONTENT - MIDDLE */
+
+.footer-content-middle {
+  /* background-color: tomato; */
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.fcm-social-img,
+.fcm-social-img-first {
+  width: 2rem;
+}
+
+.fcm-social-img {
+  margin-left: 1rem;
+}
+
+/*? CONTENT - RIGHT */
+
+.footer-content-right {
+  /* background-color: crimson; */
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  user-select: none;
+}
+
+.fcr-mail-text {
+  color: rgb(254 205 211);
+  font-weight: bold;
+}
+
+.fcr-tel {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: rgb(209 213 219);
+}
+
+/*? FOOTER - BOTTOM */
+
+.footer-bottom {
+  /* background-color: yellow; */
+  width: 100%;
+  flex: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* font-size: 0.875rem 14px */
+  /*line-height: 1.25rem  20px; */
+  color: rgb(255 228 230);
+  font-size: 0.75rem /* 12px */;
+  line-height: 1rem /* 16px */;
+  opacity: 0.5;
+}
