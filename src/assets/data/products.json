@@ -2,127 +2,181 @@
   {
     "id": 1,
     "title": "Antep Lahmacun",
+    "type": "",
     "price": 30,
-    "desc": "",
-    "imgURL": "images/antep.jpg"
+    "desc": "Acılı istersen Antep Lahmacun ilk akla gelen...",
+    "fav": true,
+    "rated": false,
+    "imgURL": "assets/images/antep.jpg"
   },
   {
     "id": 2,
     "title": "Lahmacun",
+    "type": "",
     "price": 25,
-    "desc": "",
-    "imgURL": "images/lahmacun.jpg"
+    "desc": "Kıyma ve soğanın eşsiz uyumu...",
+    "fav": false,
+    "rated": false,
+    "imgURL": "assets/images/lahmacun.jpg"
   },
   {
     "id": 3,
     "title": "Patlıcan Kebabı",
+    "type": "",
     "price": 60,
-    "desc": "",
-    "imgURL": "images/patlican.jpg"
+    "desc": "Özel isteğe göre özel bir lezzet şöleni...",
+    "fav": false,
+    "rated": true,
+    "imgURL": "assets/images/patlican.jpg"
   },
   {
     "id": 4,
     "title": "Kuşbaşılı Kaşarlı Pide",
+    "type": "",
     "price": 75,
-    "desc": "",
-    "imgURL": "images/kasarli.jpg"
+    "desc": "Pidelerin şahı...",
+    "fav": true,
+    "rated": false,
+    "imgURL": "assets/images/kuskas.jpg"
   },
   {
     "id": 5,
     "title": "Karışık Pide",
+    "type": "",
     "price": 75,
-    "desc": "",
-    "imgURL": "images/mixed.jpg"
+    "desc": "Hayatta görebileceğiniz en güzel karışıklık...",
+    "fav": false,
+    "rated": true,
+    "imgURL": "assets/images/mixed.jpg"
   },
   {
     "id": 6,
     "title": "Kavurmalı Pide",
+    "type": "",
     "price": 75,
-    "desc": "",
-    "imgURL": "images/kavurmali.jpg"
+    "desc": "Üstüne bir de yumurta kırdık mı tadından yenmez...",
+    "fav": false,
+    "rated": true,
+    "imgURL": "assets/images/kavurmali.jpg"
   },
   {
     "id": 7,
     "title": "Kıymalı Pide",
+    "type": "",
     "price": 60,
-    "desc": "",
-    "imgURL": "images/kiymali.jpg"
+    "desc": "Tadı damağınızda kalacak kadar lezzetli...",
+    "fav": false,
+    "rated": true,
+    "imgURL": "assets/images/kiymali.jpg"
   },
   {
     "id": 8,
     "title": "Kaşarlı Pide",
+    "type": "",
     "price": 60,
-    "desc": "",
-    "imgURL": "images/kasarli.jpg"
+    "desc": "Çıtır ve taze bir lezzet şöleni...",
+    "fav": false,
+    "rated": false,
+    "imgURL": "assets/images/kasarli.jpg"
   },
   {
     "id": 9,
     "title": "Tavuk Tantuni",
+    "type": "Ekmek Arası",
     "price": 35,
-    "desc": "Yarım Ekmek Arası Tavuk Tantuni",
-    "imgURL": "images/tavuk1.jpg"
+    "desc": "Dikkat bağımlılık yapar!",
+    "fav": false,
+    "rated": false,
+    "imgURL": "assets/images/tavuk1.jpg"
   },
   {
     "id": 10,
     "title": "Tavuk Tantuni",
+    "type": "Dürüm",
     "price": 35,
-    "desc": "Tavuk Tantuni Dürüm",
-    "imgURL": "images/tavuk2.jpg"
+    "desc": "Lezzetli bir dürüm yemek istemez misiniz...",
+    "fav": true,
+    "rated": false,
+    "imgURL": "assets/images/tavuk2.jpg"
   },
   {
     "id": 11,
     "title": "Et Tantuni",
+    "type": "Ekmek Arası",
     "price": 60,
-    "desc": "Yarım Ekmek Arası Et Tantuni",
-    "imgURL": "images/et-tantuni1.jpeg"
+    "desc": "Ekstra doyurucu...",
+    "fav": true,
+    "rated": false,
+    "imgURL": "assets/images/et-tantuni1.jpeg"
   },
   {
     "id": 12,
     "title": "Et Tantuni",
+    "type": "Dürüm",
     "price": 35,
-    "desc": "Et Tantuni Dürüm",
-    "imgURL": "images/et-tantuni2.jpg"
+    "desc": "Lezzetten başınız dönecek...",
+    "fav": false,
+    "rated": false,
+    "imgURL": "assets/images/et-tantuni2.jpg"
   },
   {
     "id": 13,
     "title": "Köfte",
+    "type": "Ekmek Arası",
     "price": 50,
-    "desc": "Yarım Ekmek Arası Köfte",
-    "imgURL": "images/kofte1.jpg"
+    "desc": "Doyurucu ve lezzetli...",
+    "fav": true,
+    "rated": false,
+    "imgURL": "assets/images/kofte1.jpg"
   },
   {
     "id": 14,
     "title": "Köfte",
+    "type": "Porsiyon",
     "price": 90,
-    "desc": "Porsiyon Köfte",
-    "imgURL": "images/kofte2.jpg"
+    "desc": "Bir porsiyon sizi keser mi?",
+    "fav": true,
+    "rated": false,
+    "imgURL": "assets/images/kofte2.jpg"
   },
   {
     "id": 15,
     "title": "Kilis Tavası",
+    "type": "",
     "price": 120,
-    "desc": "",
-    "imgURL": "images/kilis.jpg"
+    "desc": "Tepsi kebabını yemek için artık Gaziantep'e gitmeye gerek yok...",
+    "fav": true,
+    "rated": false,
+    "imgURL": "assets/images/kilis.jpg"
   },
   {
     "id": 16,
     "title": "Mercimek Çorbası",
+    "type": "",
     "price": 40,
-    "desc": "",
-    "imgURL": "images/mercimek.jpg"
+    "desc": "Kışın içinizi ısıtacak bol tereyağlı enfes bir çorba...",
+    "fav": false,
+    "rated": true,
+    "imgURL": "assets/images/mercimek.jpg"
   },
   {
     "id": 17,
     "title": "Lavaş",
+    "type": "",
     "price": 5,
-    "desc": "",
-    "imgURL": "images/lavas.jpg"
+    "desc": "Lavaşlarımız taze ve yumuşacık, afiyet olsun...",
+    "fav": false,
+    "rated": false,
+    "imgURL": "assets/images/lavas.jpg"
   },
   {
     "id": 18,
     "title": "Künefe",
+    "type": "",
     "price": 40,
-    "desc": "",
-    "imgURL": "images/kunefe.jpg"
+    "desc": "İçinizde hala künefe sevmeyen var mı?",
+    "fav": true,
+    "rated": false,
+    "imgURL": "assets/images/kunefe.jpg"
   }
 ]

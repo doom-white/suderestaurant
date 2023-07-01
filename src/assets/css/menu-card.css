@@ -1,0 +1,113 @@
+.menu-card-container {
+  width: 100%;
+  height: 100%;
+  background-color: #be123d15;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-card-content-container {
+  height: 35rem;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-card-content-container img {
+  width: 100%;
+  height: 32rem;
+  border-radius: 0.7rem;
+}
+
+.menu-card-img {
+  overflow: hidden;
+  transition: all 0.5s linear;
+}
+
+.menu-card-img:hover + .menu-card-dantel {
+  opacity: 0.3;
+}
+
+.menu-card-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.menu-title {
+  color: rgb(190 18 60);
+}
+
+.menu-desc {
+  color: rgb(244 63 94);
+}
+
+.menu-card-dantel {
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(190, 18, 61, 0.8);
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s linear;
+  padding: 2rem 1.2rem;
+  font-size: 1.3rem;
+}
+
+.menu-card-dantel span:nth-child(2) > img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.menu-card-footer-dantel {
+  width: 100%;
+  height: 5rem;
+  background-color: rgba(190, 18, 61, 0.8);
+  border-bottom-left-radius: 0.7rem;
+  border-bottom-right-radius: 0.7rem;
+  position: absolute;
+  bottom: -10rem;
+  left: 0;
+  z-index: 1;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.menu-card-img:hover ~ .menu-card-footer-dantel {
+  animation: footer-dantel 1s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes footer-dantel {
+  0% {
+    bottom: -9rem;
+  }
+  25% {
+    bottom: -6rem;
+  }
+  75% {
+    bottom: -3rem;
+  }
+  100% {
+    bottom: 0;
+  }
+}
