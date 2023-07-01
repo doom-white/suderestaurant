@@ -41,6 +41,9 @@
   justify-content: space-around;
   gap: 2rem;
   position: relative;
+  background: linear-gradient(to bottom, rgb(248, 250, 252), #fff1f2);
+  /* background-color: #333; */
+  background-repeat: no-repeat;
 }
 
 .header-list-div a {
@@ -114,15 +117,52 @@
 }
 
 .btn-toggle.active-toggle span:nth-child(2) {
-  transform: translate(0, 0.32rem) rotate(-45deg);
+  transform: translate(0, 0.36rem) rotate(-45deg);
 }
 
 .btn-toggle.active-toggle span:nth-child(3) {
-  transform: translate(0, -0.32rem) rotate(45deg);
+  transform: translate(0, -0.36rem) rotate(45deg);
 }
 
 .btn-toggle.active-toggle + .header-list-div {
-  display: flex;
+  animation: slider-menu 0.5s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slider-menu {
+  0% {
+    top: -20rem;
+  }
+  10% {
+    top: -17rem;
+  }
+  20% {
+    top: -14rem;
+  }
+  30% {
+    top: -11rem;
+  }
+  40% {
+    top: -9rem;
+  }
+  50% {
+    top: -6rem;
+  }
+  60% {
+    top: -3rem;
+  }
+  70% {
+    top: 0;
+  }
+  80% {
+    top: 2rem;
+  }
+  90% {
+    top: 4rem;
+  }
+  100% {
+    top: 5rem;
+  }
 }
 
 /*? INDICATOR */
@@ -179,15 +219,15 @@
   }
 
   .header-list-div {
-    display: none;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
     width: 100%;
     position: absolute;
-    top: 5rem;
+    top: -21rem;
     left: 0;
     padding: 1rem;
+    z-index: -1;
   }
 
   /****************** INDICATOR *************************/
@@ -204,18 +244,18 @@
   }
 
   .light-nav a:nth-child(2):is(.active) ~ .indicator {
-    transform: translate(0, 3.8rem);
+    transform: translate(0, 3.9rem);
   }
 
   .light-nav a:nth-child(3):is(.active) ~ .indicator {
-    transform: translate(0, 7.8rem);
+    transform: translate(0, 7.9rem);
   }
 
   .light-nav a:nth-child(4):is(.active) ~ .indicator {
-    transform: translate(0.2rem, 11.5rem);
+    transform: translate(0.2rem, 11.8rem);
   }
 
   .light-nav a:nth-child(5):is(.active) ~ .indicator {
-    transform: translate(0.1rem, 15.6rem);
+    transform: translate(0.1rem, 15.9rem);
   }
 }

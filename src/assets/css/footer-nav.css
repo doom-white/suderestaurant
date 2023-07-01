@@ -74,7 +74,7 @@
 /*? CONTENT - RIGHT */
 
 .footer-content-right {
-  /* background-color: crimson; */
+  /* background-color: rgb(26, 167, 177); */
   flex: 1;
   height: 100%;
   display: flex;
@@ -112,4 +112,32 @@
   font-size: 0.75rem /* 12px */;
   line-height: 1rem /* 16px */;
   opacity: 0.5;
+}
+
+/*! MEDIA SCREEN */
+
+@media only screen and (max-width: 712px) {
+  .footer-content-middle {
+    flex: 0.5;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .footer-container {
+    height: 100%;
+  }
+
+  .footer-content-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-content-middle {
+    order: 3;
+  }
+
+  .footer-bottom {
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+  }
 }
