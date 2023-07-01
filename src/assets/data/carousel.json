@@ -4,105 +4,105 @@
     "title": "Antep Lahmacun",
     "price": 30,
     "desc": "",
-    "imgURL": "images/antep.jpg"
+    "imgURL": "assets/images/antep.jpg"
   },
   {
     "id": 2,
     "title": "Lahmacun",
     "price": 25,
     "desc": "",
-    "imgURL": "images/lahmacun.jpg"
+    "imgURL": "assets/images/lahmacun.jpg"
   },
   {
     "id": 3,
     "title": "Patlıcan Kebabı",
     "price": 60,
     "desc": "",
-    "imgURL": "images/patlican.jpg"
+    "imgURL": "assets/images/patlican.jpg"
   },
   {
     "id": 4,
     "title": "Kuşbaşılı Kaşarlı Pide",
     "price": 75,
     "desc": "",
-    "imgURL": "images/kasarli.jpg"
+    "imgURL": "assets/images/kasarli.jpg"
   },
   {
     "id": 5,
     "title": "Karışık Pide",
     "price": 75,
     "desc": "",
-    "imgURL": "images/mixed.jpg"
+    "imgURL": "assets/images/mixed.jpg"
   },
   {
     "id": 6,
     "title": "Kavurmalı Pide",
     "price": 75,
     "desc": "",
-    "imgURL": "images/kavurmali.jpg"
+    "imgURL": "assets/images/kavurmali.jpg"
   },
   {
     "id": 7,
     "title": "Kıymalı Pide",
     "price": 60,
     "desc": "",
-    "imgURL": "images/kiymali.jpg"
+    "imgURL": "assets/images/kiymali.jpg"
   },
   {
     "id": 8,
     "title": "Kaşarlı Pide",
     "price": 60,
     "desc": "",
-    "imgURL": "images/kasarli.jpg"
+    "imgURL": "assets/images/kasarli.jpg"
   },
   {
     "id": 9,
     "title": "Tavuk Tantuni",
     "price": 35,
     "desc": "Yarım Ekmek Arası Tavuk Tantuni",
-    "imgURL": "images/tavuk1.jpg"
+    "imgURL": "assets/images/tavuk1.jpg"
   },
   {
     "id": 10,
     "title": "Tavuk Tantuni",
     "price": 35,
     "desc": "Tavuk Tantuni Dürüm",
-    "imgURL": "images/tavuk2.jpg"
+    "imgURL": "assets/images/tavuk2.jpg"
   },
   {
     "id": 11,
     "title": "Et Tantuni",
     "price": 60,
     "desc": "Yarım Ekmek Arası Et Tantuni",
-    "imgURL": "images/et-tantuni1.jpeg"
+    "imgURL": "assets/images/et-tantuni1.jpeg"
   },
   {
     "id": 12,
     "title": "Et Tantuni",
     "price": 35,
     "desc": "Et Tantuni Dürüm",
-    "imgURL": "images/et-tantuni2.jpg"
+    "imgURL": "assets/images/et-tantuni2.jpg"
   },
   {
     "id": 13,
     "title": "Köfte",
     "price": 50,
     "desc": "Yarım Ekmek Arası Köfte",
-    "imgURL": "images/kofte1.jpg"
+    "imgURL": "assets/images/kofte1.jpg"
   },
   {
     "id": 14,
     "title": "Köfte",
     "price": 90,
     "desc": "Porsiyon Köfte",
-    "imgURL": "images/kofte2.jpg"
+    "imgURL": "assets/images/kofte2.jpg"
   },
   {
     "id": 15,
     "title": "Kilis Tavası",
     "price": 120,
     "desc": "",
-    "imgURL": "images/kilis.jpg"
+    "imgURL": "assets/images/kilis.jpg"
   },
 
   {
@@ -110,6 +110,6 @@
     "title": "Künefe",
     "price": 40,
     "desc": "",
-    "imgURL": "images/kunefe.jpg"
+    "imgURL": "assets/images/kunefe.jpg"
   }
 ]
