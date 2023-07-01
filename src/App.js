@@ -6,9 +6,11 @@ import HomePage from "./pages/HomePage";
 const App = () => {
   return (
     <>
-      <HeaderNav />
-      <HomePage />
-      <FooterNav />
+      <div className="app-main-container">
+        <HeaderNav />
+        <HomePage />
+        <FooterNav />
+      </div>
     </>
   );
 };

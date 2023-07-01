@@ -59,42 +59,42 @@
     "id": 9,
     "title": "Tavuk Tantuni",
     "price": 35,
-    "desc": "Yarım Ekmek Arası Tavuk Tantuni",
+    "desc": "Ekmek Arası",
     "imgURL": "assets/images/tavuk1.jpg"
   },
   {
     "id": 10,
     "title": "Tavuk Tantuni",
     "price": 35,
-    "desc": "Tavuk Tantuni Dürüm",
+    "desc": "Dürüm",
     "imgURL": "assets/images/tavuk2.jpg"
   },
   {
     "id": 11,
     "title": "Et Tantuni",
     "price": 60,
-    "desc": "Yarım Ekmek Arası Et Tantuni",
+    "desc": "Ekmek Arası",
     "imgURL": "assets/images/et-tantuni1.jpeg"
   },
   {
     "id": 12,
     "title": "Et Tantuni",
     "price": 35,
-    "desc": "Et Tantuni Dürüm",
+    "desc": "Dürüm",
     "imgURL": "assets/images/et-tantuni2.jpg"
   },
   {
     "id": 13,
     "title": "Köfte",
     "price": 50,
-    "desc": "Yarım Ekmek Arası Köfte",
+    "desc": "Ekmek Arası",
     "imgURL": "assets/images/kofte1.jpg"
   },
   {
     "id": 14,
     "title": "Köfte",
     "price": 90,
-    "desc": "Porsiyon Köfte",
+    "desc": "Porsiyon",
     "imgURL": "assets/images/kofte2.jpg"
   },
   {

@@ -3,8 +3,10 @@ import CarouselMain from "../components/CarouselMain";
 
 const HomePage = () => {
   return (
-    <div>
-      <CarouselMain />
+    <div className="hp-container">
+      <div className="hp-carousel">
+        <CarouselMain />
+      </div>
     </div>
   );
 };

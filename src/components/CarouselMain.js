@@ -1,6 +1,7 @@
 import { Carousel } from "antd";
 import imagesData from "../assets/data/carousel.json";
 import ribbon from "../assets/icons/ico_general/ribbon.png";
+import del from "../assets/icons/ico_general/heart.png";
 
 const CarouselMain = () => {
   return (
@@ -11,7 +12,10 @@ const CarouselMain = () => {
         {imagesData &&
           imagesData.map((i) => {
             return (
-              <div key={i.id}>
+              <div className="crsl-images-container" key={i.id}>
+                <span className="crsl-images-title">
+                  {i.title} {i.desc && "-"} {i.desc}
+                </span>
                 <img className="crsl-images" src={i.imgURL} alt={i.title} />
               </div>
             );
