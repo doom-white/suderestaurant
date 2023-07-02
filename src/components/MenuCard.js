@@ -2,6 +2,7 @@ import React from "react";
 import imagesData from "../assets/data/products.json";
 import MenuCardInfo from "./MenuCardInfo";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 
 const MenuCard = () => {
   return (
@@ -16,12 +17,17 @@ const MenuCard = () => {
           <Splide
             options={{
               type: "loop",
+              drag: "free",
               perPage: 2,
-              perMove: 1,
               gap: "1rem",
               focus: "center",
               pagination: false,
+              autoScroll: {
+                speed: 1,
+              },
+              rewind: true,
             }}
+            extensions={{ AutoScroll }}
           >
             {imagesData &&
               imagesData
