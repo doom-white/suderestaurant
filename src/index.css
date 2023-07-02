@@ -57,6 +57,12 @@ body::-webkit-scrollbar-thumb {
   background: linear-gradient(to bottom, rgb(255 228 230), #fb7185);
 }
 
+/* SPLIDE-JS SETTINGS*/
+
+.splide__arrow svg {
+  fill: rgb(190 18 60);
+}
+
 /*! MEDIA SCREEN */
 
 @media only screen and (max-width: 1024px) {
@@ -98,5 +104,13 @@ body::-webkit-scrollbar-thumb {
 @media only screen and (max-width: 280px) {
   html {
     font-size: 7px;
+  }
+  .splide__arrow {
+    width: 15px;
+    height: 15px;
+  }
+  .splide__arrow svg {
+    width: 15px;
+    height: 9px;
   }
 }

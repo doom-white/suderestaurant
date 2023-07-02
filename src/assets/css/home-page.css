@@ -1,5 +1,5 @@
 .hp-container {
-  /* background-color: red; */
+  /* background-color: blue; */
   width: 95%;
   margin: 1rem auto;
   display: flex;
@@ -35,4 +35,12 @@
   background-position: center;
   background-attachment: fixed;
   opacity: 0.5;
+}
+
+/*! MEDIA SCREEN */
+
+@media only screen and (max-width: 280px) {
+  .hp-container {
+    width: 100%;
+  }
 }
