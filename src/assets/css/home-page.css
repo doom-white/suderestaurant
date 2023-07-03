@@ -37,8 +37,21 @@
   opacity: 0.3;
 }
 
-.hp-chef {
+.hp-chef-div {
   position: absolute;
   bottom: 0;
-  right: 20px;
+  right: 2.5rem;
+}
+
+.hp-chef {
+  width: 7rem;
+  height: 7rem;
+}
+
+/*! MEDIA SCREEN */
+
+@media only screen and (min-width: 992px) {
+  .hp-chef-div {
+    right: 4.5rem;
+  }
 }

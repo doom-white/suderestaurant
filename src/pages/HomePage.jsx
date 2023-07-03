@@ -14,9 +14,9 @@ const HomePage = ({ screenSize }) => {
       <div className="hp-content-img"></div>
       <MenuCard screenSize={screenSize} />
       <div className="hp-content-img-2"></div>
-      <div className="hp-chef">
+      <div className="hp-chef-div">
         <a href="#hp-top">
-          <img src={chef} alt="master-chef" />
+          <img className="hp-chef" src={chef} alt="master-chef" />
         </a>
       </div>
     </div>
