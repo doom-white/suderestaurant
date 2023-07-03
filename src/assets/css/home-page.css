@@ -41,6 +41,7 @@
   position: absolute;
   bottom: 0;
   right: 2.5rem;
+  cursor: pointer;
 }
 
 .hp-chef {

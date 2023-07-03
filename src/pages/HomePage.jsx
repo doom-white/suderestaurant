@@ -5,8 +5,15 @@ import MenuCard from "../components/MenuCard";
 import chef from "../assets/icons/ico_general/chef.png";
 
 const HomePage = ({ screenSize }) => {
+  const goToTheTopOfPage = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <div id="hp-top" className="hp-container">
+    <div className="hp-container">
       <div className="hp-carousel">
         <CarouselMain />
       </div>
@@ -15,9 +22,12 @@ const HomePage = ({ screenSize }) => {
       <MenuCard screenSize={screenSize} />
       <div className="hp-content-img-2"></div>
       <div className="hp-chef-div">
-        <a href="#hp-top">
-          <img className="hp-chef" src={chef} alt="master-chef" />
-        </a>
+        <img
+          className="hp-chef"
+          src={chef}
+          alt="master-chef"
+          onClick={goToTheTopOfPage}
+        />
       </div>
     </div>
   );
