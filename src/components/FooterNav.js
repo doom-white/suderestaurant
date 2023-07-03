@@ -49,7 +49,7 @@ const FooterNav = () => {
         </div>
         <div className="footer-content-right">
           <div className="fcr-mail">
-            <span className="fcr-mail-text">suderestaurant@gmail.com</span>
+            <span className="fcr-mail-text">suderestaurant27@gmail.com</span>
           </div>
           <p className="fcr-tel">Tel: (+90) 228 212 24 24</p>
         </div>
