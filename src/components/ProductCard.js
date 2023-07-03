@@ -10,22 +10,29 @@ const ProductCard = ({ screenSize }) => {
       <div className="pro-card-container">
         <div className="pro-card-title">
           <h1 className="pro-title">En çok beğenilen yemeklerimiz</h1>
-          <pre className="pro-desc">
-            Gaziantep lezzetleri ayaklarınızda...{screenSize.width}
-          </pre>
+          <pre className="pro-desc">Gaziantep lezzetleri ile tanış...</pre>
         </div>
 
         <div className="pro-card-content-container">
           <Splide
             options={{
               direction: screenSize.width > 992 ? "ltr" : "ttb",
-              height: screenSize.width > 992 ? "25rem" : "40rem",
-              autoHeight: screenSize > 992 ? false : true,
+              height:
+                screenSize.width > 1600
+                  ? "40rem"
+                  : screenSize.width > 1366
+                  ? "30rem"
+                  : screenSize.width > 1024
+                  ? "25rem"
+                  : screenSize.width > 992
+                  ? "20rem"
+                  : "90rem",
+              autoHeight: screenSize.width > 992 ? false : true,
               type: "loop",
               drag: "free",
               perPage: screenSize.width > 992 ? 2 : 1,
-              gap: screenSize.width > 992 ? "1rem" : "1.1rem",
-              focus: screenSize.width > 992 ? "center" : 0,
+              gap: "1rem",
+              focus: "center",
               pagination: false,
               autoScroll: {
                 speed: 1,
@@ -38,7 +45,7 @@ const ProductCard = ({ screenSize }) => {
               imagesData
                 .filter((item) => item.fav === true)
                 .map((product) => (
-                  <SplideSlide>
+                  <SplideSlide key={product.id}>
                     <ProductCardInfo product={product} key={product.id} />
                   </SplideSlide>
                 ))}

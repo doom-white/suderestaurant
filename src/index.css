@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  background: linear-gradient(to bottom, rgb(248 250 252), #f43f5e);
+  background: linear-gradient(to bottom, rgb(255 228 230), #fdd4da);
   background-repeat: no-repeat;
   overflow: auto;
 }
@@ -54,7 +54,8 @@ body::-webkit-scrollbar-thumb {
 .app-main-container {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(to bottom, rgb(255 228 230), #fb7185);
+  /* background: #333; */
+  background: linear-gradient(to bottom, rgb(255 228 230), #fdd4da);
 }
 
 /* SPLIDE-JS SETTINGS*/
@@ -75,11 +76,29 @@ body::-webkit-scrollbar-thumb {
   html {
     font-size: 15px;
   }
+
+  .splide__arrow {
+    width: 40px;
+    height: 40px;
+  }
+  .splide__arrow svg {
+    width: 40px;
+    height: 22px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   html {
     font-size: 14px;
+  }
+
+  .splide__arrow {
+    width: 27px;
+    height: 27px;
+  }
+  .splide__arrow svg {
+    width: 27px;
+    height: 17px;
   }
 }
 
@@ -87,17 +106,43 @@ body::-webkit-scrollbar-thumb {
   html {
     font-size: 13px;
   }
+  .splide__arrow {
+    width: 25px;
+    height: 25px;
+  }
+  .splide__arrow svg {
+    width: 25px;
+    height: 15px;
+  }
 }
 
 @media only screen and (max-width: 414px) {
   html {
     font-size: 10px;
   }
+
+  .splide__arrow {
+    width: 25px;
+    height: 25px;
+  }
+  .splide__arrow svg {
+    width: 25px;
+    height: 15px;
+  }
 }
 
 @media only screen and (max-width: 320px) {
   html {
     font-size: 9px;
+  }
+
+  .splide__arrow {
+    width: 15px;
+    height: 15px;
+  }
+  .splide__arrow svg {
+    width: 15px;
+    height: 9px;
   }
 }
 

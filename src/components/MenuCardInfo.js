@@ -1,5 +1,5 @@
 import React from "react";
-import toprated from "../assets/icons/ico_general/top-rated.png";
+import rated from "../assets/icons/ico_general/top-rated.png";
 
 const MenuCardInfo = ({ product }) => {
   return (
@@ -20,7 +20,7 @@ const MenuCardInfo = ({ product }) => {
           {product.type ? product.type : ""}
         </span>
         <span>
-          <img src={toprated} alt="one_cikan" />
+          <img src={rated} alt="one-cikanlar" />
         </span>
       </div>
     </>

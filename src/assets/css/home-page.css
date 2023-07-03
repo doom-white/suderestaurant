@@ -1,23 +1,23 @@
 .hp-container {
   /* background-color: blue; */
-  width: 95%;
-  margin: 1rem auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .hp-carousel {
   /* background-color: yellow; */
-  width: 100%;
+  width: 95%;
   height: 100%;
   position: relative;
 }
 
 .hp-content-img {
-  width: 100%;
-  height: 25rem;
+  width: 95%;
+  height: 10rem;
   background: url("../../../public/assets/images/yuvalama.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -27,20 +27,18 @@
 }
 
 .hp-content-img-2 {
-  width: 100%;
-  height: 25rem;
+  width: 95%;
+  height: 10rem;
   background: url("../../../public/assets/images/kofte1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
-/*! MEDIA SCREEN */
-
-@media only screen and (max-width: 280px) {
-  .hp-container {
-    width: 100%;
-  }
+.hp-chef {
+  position: absolute;
+  bottom: 0;
+  right: 20px;
 }
