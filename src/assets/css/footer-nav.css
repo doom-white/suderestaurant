@@ -60,7 +60,142 @@
   align-items: center;
   justify-content: center;
   user-select: none;
+  position: relative;
 }
+
+.fcm-social {
+  width: 100%;
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/*? WHATSAPP BUTTON */
+
+.div-whatsapp {
+  height: 100%;
+  /* background-color: yellow; */
+  position: relative !important;
+  margin-left: 1rem;
+}
+
+.styles-module_whatsappButton__tVits {
+  background: linear-gradient(
+    to bottom,
+    rgb(253, 122, 140),
+    #aa0f3e
+  ) !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  position: relative !important;
+  top: 0;
+  left: 0;
+}
+
+.styles-module_whatsappButton__tVits:after {
+  width: 2rem !important;
+  height: 2rem !important;
+}
+
+.styles-module_whatsappButton__tVits svg {
+  width: 2rem !important;
+  height: 2rem !important;
+  padding: 0.3rem !important;
+}
+
+.styles-module_chatHeader__gaeOA {
+  background: linear-gradient(
+    to bottom,
+    rgb(248, 250, 252),
+    #f86692
+  ) !important;
+}
+
+.styles-module_chatHeader__gaeOA .styles-module_statusTitle__NgfPQ {
+  color: #881337 !important;
+}
+
+.styles-module_chatHeader__gaeOA .styles-module_statusSubtitle__esavW {
+  color: #b41f4c !important;
+}
+
+.styles-module_chatHeader__gaeOA .styles-module_close__RLouK svg {
+  fill: #d84470 !important;
+  transition: all 0.5s linear !important;
+}
+
+.styles-module_chatHeader__gaeOA .styles-module_close__RLouK svg:hover {
+  fill: #881337 !important;
+}
+
+.styles-module_chatHeader__gaeOA .styles-module_avatar__afcc4:after {
+  background: #881337 !important;
+}
+
+.styles-module_chatBody__VBxQH .styles-module_message__Z9MOV {
+  background-color: #fcdae4 !important;
+}
+
+.styles-module_chatBubble__F6k84 {
+  background: linear-gradient(
+    to bottom,
+    rgb(248, 250, 252),
+    #f86692
+  ) !important;
+}
+
+.styles-module_typing__Ru9xZ .styles-module_dot__RoVT7 {
+  background-color: rgba(180, 31, 76, 0.7) !important;
+}
+
+.styles-module_chatBody__VBxQH
+  .styles-module_message__Z9MOV
+  .styles-module_triangle__K9ViC {
+  border-color: transparent #fcdae4 transparent transparent !important;
+}
+
+.styles-module_chatBody__VBxQH .styles-module_accountName__20AXD {
+  color: #881337 !important;
+}
+
+.styles-module_chatBody__VBxQH .styles-module_messageBody__9-hwo {
+  color: #b41f4c !important;
+}
+
+.styles-module_chatBody__VBxQH .styles-module_messageTime__MIwoR {
+  color: #88133679 !important;
+}
+
+.styles-module_chatBody__VBxQH {
+  background-color: #ff99b7c0 !important;
+}
+
+.styles-module_chatFooter__TGv0P {
+  background: linear-gradient(to top, rgb(248, 250, 252), #f86692) !important;
+}
+
+.styles-module_chatFooter__TGv0P form .styles-module_input__WFb9L {
+  background-color: #fcdae4 !important;
+  color: #881337 !important;
+}
+
+.styles-module_chatFooter__TGv0P form .styles-module_input__WFb9L:focus {
+  border-color: rgb(136, 19, 55) !important;
+  box-shadow: 0 0 0 1px rgba(136, 19, 55, 0.5) !important;
+}
+
+.styles-module_chatFooter__TGv0P form .styles-module_input__WFb9L::placeholder {
+  color: #88133679 !important;
+}
+
+.styles-module_chatFooter__TGv0P form .styles-module_buttonSend__kXjja svg {
+  fill: #881337 !important;
+}
+
+/*? **********************************/
+/*? **********************************/
 
 .fcm-social-img,
 .fcm-social-img-first {
@@ -130,6 +265,10 @@
   .footer-content-container {
     flex-direction: column;
     gap: 2rem;
+  }
+
+  .footer-content-middle {
+    width: 100%;
   }
 
   .footer-content-middle {

@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import facebook from "../assets/icons/ico_social/facebook.png";
 import instagram from "../assets/icons/ico_social/instagram.png";
-import whatsapp from "../assets/icons/ico_social/whatsapp.png";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
+import sude from "../assets/restaurant_images/sude.jpg";
 
 const FooterNav = () => {
   return (
@@ -30,14 +31,27 @@ const FooterNav = () => {
             <Link to="#">
               <img className="fcm-social-img" src={instagram} alt="instagram" />
             </Link>
-            <img className="fcm-social-img" src={whatsapp} alt="whatsapp" />
+            <div className="div-whatsapp">
+              <FloatingWhatsApp
+                phoneNumber="+90 538 678 76 78"
+                accountName="Sude Restaurant"
+                statusMessage="En geç 1 saat içinde dönüş yapılır"
+                chatMessage="Lezzet şölenine hoşgeldiniz..."
+                allowEsc
+                allowClickAway
+                notification
+                notificationSound
+                avatar={sude}
+                placeholder="Mesaj"
+              />
+            </div>
           </div>
         </div>
         <div className="footer-content-right">
           <div className="fcr-mail">
             <span className="fcr-mail-text">suderestaurant@gmail.com</span>
           </div>
-          <p className="fcr-tel">Tel: 8-800-458-4587</p>
+          <p className="fcr-tel">Tel: (+90) 228 212 24 24</p>
         </div>
       </div>
 
