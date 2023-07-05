@@ -57,8 +57,8 @@ body::-webkit-scrollbar-thumb {
 .app-main-container {
   width: 100%;
   min-height: 100vh;
-  /* background: #333; */
-  background: linear-gradient(to bottom, rgb(255 228 230), #fdd4da);
+  background: #fee0e3;
+
   position: relative;
 }
 

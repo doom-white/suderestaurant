@@ -18,7 +18,9 @@ const GaleryMenuCard = ({ product }) => {
             </small>
           )}
 
-          <h3 className="gm-con-price">{product.price} ₺</h3>
+          <h3 className="gm-con-price">
+            {product.price} {product.price && "₺"}
+          </h3>
         </div>
         <div className="gm-image-dantel">
           {product && product.fav === true ? (

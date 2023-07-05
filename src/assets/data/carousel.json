@@ -16,70 +16,70 @@
   {
     "id": 3,
     "title": "Patlıcan Kebabı",
-    "price": 60,
+    "price": 100,
     "desc": "",
     "imgURL": "assets/images/patlican.jpg"
   },
   {
     "id": 4,
     "title": "Kuşbaşılı Kaşarlı Pide",
-    "price": 75,
+    "price": 90,
     "desc": "",
     "imgURL": "assets/images/kasarli.jpg"
   },
   {
     "id": 5,
     "title": "Karışık Pide",
-    "price": 75,
+    "price": 90,
     "desc": "",
     "imgURL": "assets/images/mixed.jpg"
   },
   {
     "id": 6,
     "title": "Kavurmalı Pide",
-    "price": 75,
+    "price": 100,
     "desc": "",
     "imgURL": "assets/images/kavurmali.jpg"
   },
   {
     "id": 7,
     "title": "Kıymalı Pide",
-    "price": 60,
+    "price": 70,
     "desc": "",
     "imgURL": "assets/images/kiymali.jpg"
   },
   {
     "id": 8,
     "title": "Kaşarlı Pide",
-    "price": 60,
+    "price": 70,
     "desc": "",
     "imgURL": "assets/images/kasarli.jpg"
   },
   {
     "id": 9,
     "title": "Tavuk Tantuni",
-    "price": 35,
+    "price": 40,
     "desc": "Ekmek Arası",
     "imgURL": "assets/images/tavuk1.jpg"
   },
   {
     "id": 10,
     "title": "Tavuk Tantuni",
-    "price": 35,
+    "price": 45,
     "desc": "Dürüm",
     "imgURL": "assets/images/tavuk2.jpg"
   },
   {
     "id": 11,
     "title": "Et Tantuni",
-    "price": 60,
+    "price": 65,
     "desc": "Ekmek Arası",
     "imgURL": "assets/images/et-tantuni1.jpeg"
   },
   {
     "id": 12,
     "title": "Et Tantuni",
-    "price": 35,
+    "price": 70,
     "desc": "Dürüm",
     "imgURL": "assets/images/et-tantuni2.jpg"
   },
@@ -93,7 +93,7 @@
   {
     "id": 14,
     "title": "Köfte",
-    "price": 90,
+    "price": 100,
     "desc": "Porsiyon",
     "imgURL": "assets/images/kofte2.jpg"
   },
@@ -108,7 +108,7 @@
   {
     "id": 16,
     "title": "Künefe",
-    "price": 40,
+    "price": 50,
     "desc": "",
     "imgURL": "assets/images/kunefe.jpg"
   }
