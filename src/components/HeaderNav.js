@@ -35,15 +35,15 @@ const HeaderNav = () => {
             <img src={menux32} alt="menu" />
             <p>menü</p>
           </NavLink>
-          <NavLink to="/galery">
+          <NavLink to="/galeri">
             <img src={galeryx32} alt="galery" />
             <p>galeri</p>
           </NavLink>
-          <NavLink to="/contact">
+          <NavLink to="/iletisim">
             <img src={contactx32} alt="contact" />
             <p>iletişim</p>
           </NavLink>
-          <NavLink to="/about">
+          <NavLink to="/hakkimizda">
             <img src={aboutx32} alt="about" />
             <p>hakkımızda</p>
           </NavLink>

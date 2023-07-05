@@ -4,8 +4,10 @@
 @import url("./assets/css/footer-nav.css");
 @import url("./assets/css/carousel-main.css");
 @import url("./assets/css/home-page.css");
+@import url("./assets/css/menu-page.css");
 @import url("./assets/css/product-card.css");
 @import url("./assets/css/menu-card.css");
+@import url("./assets/css/master-chef.css");
 
 * {
   padding: 0;
@@ -13,6 +15,7 @@
   border: none;
   text-decoration: none;
   box-sizing: border-box;
+  list-style: none;
 }
 
 html {
@@ -56,6 +59,7 @@ body::-webkit-scrollbar-thumb {
   min-height: 100vh;
   /* background: #333; */
   background: linear-gradient(to bottom, rgb(255 228 230), #fdd4da);
+  position: relative;
 }
 
 /* SPLIDE-JS SETTINGS*/

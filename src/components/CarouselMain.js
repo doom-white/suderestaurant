@@ -1,7 +1,6 @@
 import { Carousel } from "antd";
 import imagesData from "../assets/data/carousel.json";
 import ribbon from "../assets/icons/ico_general/ribbon.png";
-import del from "../assets/icons/ico_general/heart.png";
 
 const CarouselMain = () => {
   return (

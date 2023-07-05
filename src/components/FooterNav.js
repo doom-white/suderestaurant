@@ -54,7 +54,6 @@ const FooterNav = () => {
           <p className="fcr-tel">Tel: (+90) 228 212 24 24</p>
         </div>
       </div>
-
       <div className="footer-bottom">cihatturgut@yandex.com</div>
     </div>
   );

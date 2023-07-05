@@ -1,7 +1,13 @@
 import React, { useEffect, useState } from "react";
 import HeaderNav from "./components/HeaderNav";
 import FooterNav from "./components/FooterNav";
+import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
+import MenuPage from "./pages/MenuPage";
+import GaleryPage from "./pages/GaleryPage";
+import ContactPage from "./pages/ContactPage";
+import AboutPage from "./pages/AboutPage";
+import MasterChef from "./components/MasterChef";
 
 const App = () => {
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
@@ -28,7 +34,15 @@ const App = () => {
     <>
       <div className="app-main-container">
         <HeaderNav />
-        <HomePage screenSize={screenSize} />
+
+        <Routes>
+          <Route path="/" element={<HomePage screenSize={screenSize} />} />
+          <Route path="/menu" element={<MenuPage />} />
+          <Route path="/galeri" element={<GaleryPage />} />
+          <Route path="/iletisim" element={<ContactPage />} />
+          <Route path="/hakkimizda" element={<AboutPage />} />
+        </Routes>
+        <MasterChef />
         <FooterNav />
       </div>
     </>

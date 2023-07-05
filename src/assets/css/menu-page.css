@@ -1,0 +1,255 @@
+@import url("./galery-menu.css");
+@import url("./list-menu.css");
+
+.menu-container {
+  /* background-color: #333; */
+  height: 100%;
+}
+
+.menu-type {
+  background: linear-gradient(to bottom, #8b223c, #8f1634);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  gap: 1rem;
+  width: 100%;
+  position: sticky;
+  top: 88px;
+  user-select: none;
+  z-index: 992;
+}
+
+.menu-type-title {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  font-size: x-large;
+  color: whitesmoke;
+}
+
+.menu-type img {
+  width: 2rem;
+  height: 2rem;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.menu-type img:hover {
+  opacity: 1;
+}
+
+.galery-menu {
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.galery-menu-images {
+  width: 300px;
+  height: 200px;
+}
+
+.sm-heart,
+.sm-rated {
+  width: 24px !important;
+  height: 24px !important;
+  opacity: 1 !important;
+}
+
+.sub-menu-catalog {
+  position: absolute;
+  top: 3.1rem;
+  right: 4rem;
+  z-index: 3;
+  padding: 1rem;
+  background: linear-gradient(to top, #0f0e0f, #2c2c2c);
+  border: 1px solid lightgrey;
+  color: whitesmoke;
+  display: none;
+  overflow: hidden;
+  width: 17rem;
+  height: 0;
+  border-radius: 0.7rem 0 0.7rem 0.7rem;
+}
+
+.menu-catalog-div:hover .sub-menu-catalog {
+  display: block;
+  animation: submenu 0.3s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes submenu {
+  0% {
+    height: 0;
+  }
+  25% {
+    height: 25px;
+  }
+  50% {
+    height: 50px;
+  }
+  75% {
+    height: 75px;
+  }
+  100% {
+    height: 180px;
+  }
+}
+
+.sub-menu-catalog li:nth-child(2) span {
+  display: inline-block;
+  width: 100%;
+  margin: 0.5rem auto;
+  border-top: 0.5px solid rgb(20, 20, 20);
+  border-bottom: 0.5px solid rgb(37, 37, 37);
+}
+
+.sub-menu-catalog li:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.sub-menu-catalog li:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.sm-all-menu {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  background: #b6093477;
+  border-bottom-left-radius: 0.7rem;
+  border-bottom-right-radius: 0.7rem;
+  text-align: center;
+  line-height: 1.75rem;
+  font-size: larger;
+}
+
+.sub-menu-catalog li:nth-child(1):hover {
+  background: #252525;
+}
+
+.sub-menu-catalog li:nth-child(3):hover {
+  background: #1a1a1a;
+}
+
+.sub-menu-catalog li:nth-child(4):hover {
+  background: #a30c31;
+}
+
+/*! **************************************************/
+
+.sub-menu-list {
+  position: absolute;
+  top: 3.1rem;
+  right: 1rem;
+  z-index: 3;
+  padding: 1rem;
+  background: linear-gradient(to top, #0f0e0f, #2c2c2c);
+  border: 1px solid lightgrey;
+  color: whitesmoke;
+  display: none;
+  overflow: hidden;
+  width: 17rem;
+  height: 0;
+  border-radius: 0.7rem 0 0.7rem 0.7rem;
+}
+
+.menu-list-div:hover .sub-menu-list {
+  display: block;
+  animation: submenu 0.3s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes submenu {
+  0% {
+    height: 0;
+  }
+  25% {
+    height: 25px;
+  }
+  50% {
+    height: 50px;
+  }
+  75% {
+    height: 75px;
+  }
+  100% {
+    height: 180px;
+  }
+}
+
+.sub-menu-list li:nth-child(2) span {
+  display: inline-block;
+  width: 100%;
+  margin: 0.5rem auto;
+  border-top: 0.5px solid rgb(20, 20, 20);
+  border-bottom: 0.5px solid rgb(37, 37, 37);
+}
+
+.sub-menu-list li:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.sub-menu-list li:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.sub-menu-list li:nth-child(1):hover {
+  background: #252525;
+}
+
+.sub-menu-list li:nth-child(3):hover {
+  background: #1a1a1a;
+}
+
+.sub-menu-list li:nth-child(4):hover {
+  background: #a30c31;
+}
+
+/*! LIST MENU ***************/
+
+.lm-container {
+  /* background-color: #226a8b; */
+  width: 90%;
+  margin: 2rem auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  overflow: hidden;
+}

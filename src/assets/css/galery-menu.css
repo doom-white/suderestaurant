@@ -1,0 +1,145 @@
+.gm-container {
+  position: relative;
+  border-radius: 15px;
+}
+
+.gm-content {
+  position: relative;
+  width: 320px;
+  height: 450px;
+  background: #232323;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.gm-content::after {
+  content: "Sude";
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  font-size: 12em;
+  font-weight: 800;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.04);
+}
+
+.gm-content::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: crimson;
+  clip-path: circle(70px at 100% 100%);
+  transition-delay: 0.3s;
+  transition: 0.5s ease-in-out;
+}
+
+.gm-content:hover:before {
+  clip-path: circle(100px at 100% 100%);
+}
+
+/*? GM-IMAGE */
+
+.gm-con-img-div {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 220px;
+  transition: 0.5s;
+}
+
+.gm-content:hover .gm-con-img-div {
+  top: 0%;
+  transform: translateY(0%);
+}
+
+.gm-con-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 220px;
+}
+
+/*? GM-TITLE */
+
+.gm-con-title-div {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  transition: 1s;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gm-content:hover .gm-con-title-div {
+  height: 150px;
+  font-size: x-large;
+}
+
+.gm-con-title {
+  position: relative;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.gm-con-title-sm {
+  position: relative;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.gm-con-price {
+  position: absolute;
+  bottom: 1rem;
+  right: 0.5rem;
+  color: #fff;
+  user-select: none;
+}
+
+/*? GM_DANTEL (gm-content'in üst tarafı) */
+
+.gm-dantel {
+  width: 100%;
+  height: 113px;
+  background-color: rgba(190, 18, 61, 0.5);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease-in-out;
+  padding: 2rem 1.2rem;
+  font-size: 1.2rem;
+  text-align: center;
+  user-select: none;
+}
+
+.gm-content:hover .gm-dantel {
+  opacity: 0;
+}
+.gm-image-dantel {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.gmid-heart {
+  width: 27px;
+  height: 27px;
+}
