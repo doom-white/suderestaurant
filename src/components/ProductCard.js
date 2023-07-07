@@ -3,8 +3,13 @@ import imagesData from "../assets/data/products.json";
 import ProductCardInfo from "./ProductCardInfo";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+import { useSelected } from "../context/SelectedContext";
+import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ screenSize }) => {
+  const { setSelectedElement } = useSelected();
+  const navigation = useNavigate();
+
   return (
     <>
       <div className="pro-card-container">
@@ -45,7 +50,13 @@ const ProductCard = ({ screenSize }) => {
               imagesData
                 .filter((item) => item.fav === true)
                 .map((product) => (
-                  <SplideSlide key={product.id}>
+                  <SplideSlide
+                    key={product.id}
+                    onClick={() => {
+                      setSelectedElement(product.id - 1);
+                      navigation("/menu");
+                    }}
+                  >
                     <ProductCardInfo product={product} key={product.id} />
                   </SplideSlide>
                 ))}

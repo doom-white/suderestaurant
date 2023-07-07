@@ -48,6 +48,7 @@
   height: 25rem;
   border-radius: 0.7rem;
   transition: all 0.5s linear;
+  cursor: pointer;
 }
 
 .menu-card-img-container:hover + .menu-card-dantel {

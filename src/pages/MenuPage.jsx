@@ -23,7 +23,7 @@ const MenuPage = () => {
         <div className="menu-type">
           <div className="menu-type-title">
             {isMenu && status === 0
-              ? menuTypeTitle[status] + " " + "(" + productList.length + ")"
+              ? menuTypeTitle[status] + " (" + productList.length + ")"
               : isMenu && status === 2
               ? menuTypeTitle[0] +
                 " - " +
@@ -41,7 +41,7 @@ const MenuPage = () => {
                 productList.filter((p) => p.rated === true).length +
                 ")"
               : !isMenu && status === 1
-              ? menuTypeTitle[status] + " " + "(" + productList.length + ")"
+              ? menuTypeTitle[status] + " (" + productList.length + ")"
               : !isMenu && status === 2
               ? menuTypeTitle[1] +
                 " - " +

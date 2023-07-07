@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import heart from "../assets/icons/ico_general/heart.png";
 import toprated from "../assets/icons/ico_general/top-rated.png";
+import { useSelected } from "../context/SelectedContext";
 
 const GaleryMenuCard = ({ product }) => {
+  const { selectedElement, setSelectedElement } = useSelected();
+
+  useEffect(() => {
+    if (selectedElement >= 0) {
+      const element = document.querySelectorAll(".gm-content")[selectedElement];
+      element.classList.add("cihat");
+      setTimeout(() => {
+        element.classList.remove("cihat");
+        setSelectedElement(-1);
+      }, 5000);
+    }
+  }, [selectedElement, setSelectedElement]);
+
   return (
     <div className="gm-container">
       <div className="gm-content">

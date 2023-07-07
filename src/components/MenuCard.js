@@ -3,8 +3,13 @@ import imagesData from "../assets/data/products.json";
 import MenuCardInfo from "../components/MenuCardInfo";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+import { useSelected } from "../context/SelectedContext";
+import { useNavigate } from "react-router-dom";
 
 const MenuCard = ({ screenSize }) => {
+  const { setSelectedElement } = useSelected();
+  const navigation = useNavigate();
+
   return (
     <>
       <div className="menu-card-container">
@@ -45,7 +50,13 @@ const MenuCard = ({ screenSize }) => {
               imagesData
                 .filter((item) => item.rated === true)
                 .map((product) => (
-                  <SplideSlide key={product.id}>
+                  <SplideSlide
+                    key={product.id}
+                    onClick={() => {
+                      setSelectedElement(product.id - 1);
+                      navigation("/menu");
+                    }}
+                  >
                     <MenuCardInfo product={product} key={product.id} />
                   </SplideSlide>
                 ))}

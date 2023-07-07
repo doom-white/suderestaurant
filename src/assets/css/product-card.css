@@ -48,6 +48,7 @@
   height: 25rem;
   border-radius: 0.7rem;
   transition: all 0.5s linear;
+  cursor: pointer;
 }
 
 .pro-card-img-container:hover + .pro-card-dantel {

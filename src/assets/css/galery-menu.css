@@ -12,6 +12,14 @@
   overflow: hidden;
 }
 
+.gm-content:hover {
+  box-shadow: rgba(4, 206, 48, 0.8) 0 0 0.5rem 0.5rem;
+}
+
+.cihat {
+  box-shadow: rgba(206, 4, 65, 0.8) 0 0 0.5rem 0.5rem;
+}
+
 .gm-content::after {
   content: "Sude";
   position: absolute;
