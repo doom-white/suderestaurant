@@ -298,6 +298,10 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .header-container {
+    top: -0.5rem;
+  }
+
   /****************** INDICATOR STEPS ************************/
 
   .light-nav a:nth-child(1):is(.active) ~ .indicator {

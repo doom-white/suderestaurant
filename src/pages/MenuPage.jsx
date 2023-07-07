@@ -16,6 +16,7 @@ const MenuPage = () => {
     "En Çok Beğenilenler",
     "Öne Çıkanlar",
   ]);
+
   return (
     <>
       <section className="menu-container">

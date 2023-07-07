@@ -8,9 +8,13 @@ import GaleryPage from "./pages/GaleryPage";
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
 import MasterChef from "./components/MasterChef";
+import { handleScroll } from "./helpers/CatchBottomPosition";
 
 const App = () => {
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
+  const [isBottom, setIsBottom] = useState(false);
+
+  handleScroll(setIsBottom);
 
   function getCurrentDimension() {
     return {
@@ -34,7 +38,6 @@ const App = () => {
     <>
       <div className="app-main-container">
         <HeaderNav />
-
         <Routes>
           <Route path="/" element={<HomePage screenSize={screenSize} />} />
           <Route path="/menu" element={<MenuPage />} />
@@ -42,7 +45,7 @@ const App = () => {
           <Route path="/iletisim" element={<ContactPage />} />
           <Route path="/hakkimizda" element={<AboutPage />} />
         </Routes>
-        <MasterChef />
+        <MasterChef isBottom={isBottom} />
         <FooterNav />
       </div>
     </>

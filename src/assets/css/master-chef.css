@@ -2,8 +2,8 @@
   width: 5rem;
   height: 5rem;
   position: absolute;
-  bottom: 7rem;
-  right: 0 !important;
+  bottom: 1rem;
+  right: 1rem !important;
   cursor: pointer;
   /* background-color: yellow; */
   display: flex;
@@ -24,10 +24,6 @@
   opacity: 1;
 }
 
-/*! MEDIA SCREEN */
-
-@media only screen and (min-width: 992px) {
-  .hp-chef-div {
-    right: 4.5rem;
-  }
+.hp-chef:hover + .tooltip-container:is(.atBottom) {
+  opacity: 1 !important;
 }

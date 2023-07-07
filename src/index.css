@@ -8,6 +8,7 @@
 @import url("./assets/css/product-card.css");
 @import url("./assets/css/menu-card.css");
 @import url("./assets/css/master-chef.css");
+@import url("./assets/css/tooltip.css");
 
 * {
   padding: 0;
@@ -25,6 +26,7 @@ html {
 
 body {
   background: linear-gradient(to bottom, rgb(255 228 230), #fdd4da);
+  /* background-color: #333; */
   background-repeat: no-repeat;
   overflow: auto;
 }
@@ -58,7 +60,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   min-height: 100vh;
   background: #fee0e3;
-
+  /* background-color: #333; */
   position: relative;
 }
 
@@ -67,6 +69,13 @@ body::-webkit-scrollbar-thumb {
 .splide__arrow svg {
   fill: rgb(190 18 60);
 }
+
+/*todo ********************************************************************************/
+/*todo ********************************************************************************/
+/*? **********************************************************************************/
+/*? **********************************************************************************/
+/*! **********************************************************************************/
+/*! **********************************************************************************/
 
 /*! MEDIA SCREEN */
 
