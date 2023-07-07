@@ -9,6 +9,7 @@ const ProductCardInfo = ({ product }) => {
           className="pro-card-img"
           src={product.imgURL}
           alt={product.title}
+          title="Menüye Git..."
         />
         <div className="pro-card-footer-dantel">
           <span>{product.desc && product.desc}</span>

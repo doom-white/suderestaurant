@@ -9,6 +9,7 @@ const MenuCardInfo = ({ product }) => {
           className="menu-card-img"
           src={product.imgURL}
           alt={product.title}
+          title="Menüye Git..."
         />
         <div className="menu-card-footer-dantel">
           <span>{product.desc && product.desc}</span>
