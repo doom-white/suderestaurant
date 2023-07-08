@@ -1,39 +1,23 @@
 import React from "react";
-import Modal from "react-modal";
+import { Modal } from "antd";
+import { PoweroffOutlined } from "@ant-design/icons";
 import { useModal } from "../context/ModalContext";
 
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-  },
-};
-
 const GaleryModal = ({ imgURL }) => {
-  const { modalIsOpen, setIsOpen } = useModal();
-
-  function closeModal() {
-    setIsOpen(false);
-  }
+  const { isModalOpen, handleOk, handleCancel } = useModal();
 
   return (
-    <div>
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        style={customStyles}
-      >
-        <img
-          src={imgURL}
-          alt="resim"
-          style={{ width: "60rem", height: "40rem" }}
-        />
-      </Modal>
-    </div>
+    <Modal
+      open={isModalOpen}
+      onOk={handleOk}
+      onCancel={handleCancel}
+      width={"60rem"}
+      closable={true}
+      footer={null}
+      title="Sude Restaurant & Cafe"
+    >
+      <img src={imgURL} alt="resim" style={{ width: "100%" }} />
+    </Modal>
   );
 };
 

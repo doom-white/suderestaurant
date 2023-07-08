@@ -2,14 +2,12 @@ import GaleryModal from "../components/GaleryModal";
 import { useModal } from "../context/ModalContext";
 
 const GaleryPage = () => {
-  const { setIsOpen } = useModal();
-  function openModal() {
-    setIsOpen(true);
-  }
+  const { showModal } = useModal();
+
   return (
     <section className="gp-main-container">
       <div className="gp-img-container">
-        <div className="gp-img-item" onClick={openModal}>
+        <div className="gp-img-item" onClick={showModal}>
           <img
             className="gp-img"
             src="https://www.akhisar.bel.tr/images/blog/336-5145.JPG"
@@ -100,7 +98,7 @@ const GaleryPage = () => {
             alt="kafe"
           />
         </div>{" "}
-        <div className="gp-img-item" onClick={openModal}>
+        <div className="gp-img-item" onClick={showModal}>
           <img
             className="gp-img"
             src="https://www.akhisar.bel.tr/images/blog/336-5145.JPG"
@@ -142,7 +140,7 @@ const GaleryPage = () => {
             alt="kafe"
           />
         </div>{" "}
-        <div className="gp-img-item" onClick={openModal}>
+        <div className="gp-img-item" onClick={showModal}>
           <img
             className="gp-img"
             src="https://www.akhisar.bel.tr/images/blog/336-5145.JPG"
