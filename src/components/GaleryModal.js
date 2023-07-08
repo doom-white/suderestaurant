@@ -1,9 +1,8 @@
 import React from "react";
 import { Modal } from "antd";
-import { PoweroffOutlined } from "@ant-design/icons";
 import { useModal } from "../context/ModalContext";
 
-const GaleryModal = ({ imgURL }) => {
+const GaleryModal = ({ sude }) => {
   const { isModalOpen, handleOk, handleCancel } = useModal();
 
   return (
@@ -16,7 +15,11 @@ const GaleryModal = ({ imgURL }) => {
       footer={null}
       title="Sude Restaurant & Cafe"
     >
-      <img src={imgURL} alt="resim" style={{ width: "100%" }} />
+      <img
+        src={sude}
+        alt="sude-resimler"
+        style={{ width: "100%", height: "100%" }}
+      />
     </Modal>
   );
 };
