@@ -14,7 +14,7 @@ const HeaderNav = () => {
       <nav className="header-nav light-nav">
         <div className="header-logo-div">
           <Link to="/">
-            <h1 className="header-logo-text">Sude Restaurant</h1>
+            <h1 className="header-logo-text">Sude Restaurant & Cafe</h1>
           </Link>
         </div>
         <button

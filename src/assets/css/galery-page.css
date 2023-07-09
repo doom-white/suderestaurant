@@ -7,7 +7,7 @@
 }
 
 .gp-img-container {
-  background-color: red;
+  /* background-color: red; */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -32,18 +32,22 @@
 }
 
 .gp-img-item:hover {
-  transform: scale(1.13);
-  box-shadow: rgba(4, 206, 48, 0.8) 0 0 0.5rem 0.5rem;
+  transform: scale(1.1);
+  /* box-shadow: rgba(4, 206, 48, 0.8) 0 0 0.5rem 0.5rem; */
   z-index: 1;
-  animation: random 3s ease-in-out infinite;
+  animation: random 2s linear infinite;
+  border: none;
 }
 
 @keyframes random {
   0% {
-    filter: hue-rotate(0deg);
+    box-shadow: rgba(4, 176, 206, 0.432) 0 0 0.3rem 0.5rem;
+  }
+  50% {
+    box-shadow: rgba(4, 206, 48, 0.8) 0 0 0.3rem 0.5rem;
   }
   100% {
-    filter: hue-rotate(360deg);
+    box-shadow: rgba(206, 4, 71, 0.377) 0 0 0.3rem 0.5rem;
   }
 }
 
