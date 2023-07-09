@@ -7,13 +7,14 @@ const AboutPage = () => {
       <div className="ap-top-main-container">
         <div className="ap-top-info">
           <h1 className="ap-top-title">
-            World famous <br /> stars like our app!
+            Bilecik'te <br /> Gaziantep Lezzetleri
           </h1>
           <p className="ap-top-text">
-            Many desktop publishing packages and web page editors now use Lorem
-            Ipsum as their default model text, and a search for lorem ipsum will
-            uncover many web sites still in their infancy various versions have
-            evolved.
+            2000'li yılların başından beri Bilecik ilimizde esnaflık
+            yapmaktayız. Siz değerli müşterilerimize varsayılan lezzetler
+            haricinde Gaziantep lezzetlerini de Gaziantep'e gitmenize gerek
+            kalmadan eş değerde sunmaktayız ve bundan büyük keyif alıyoruz.
+            Sizin mutluluğunuzu görmek bizi de ziyadesiyle mutlu ediyor.
           </p>
         </div>
         <div className="ap-top-img-div">
@@ -27,7 +28,7 @@ const AboutPage = () => {
         </div>
         <div className="ap-bottom-info">
           <h1 className="ap-bottom-title">
-            ev tadında, güvenelir <br /> ve nezih yemekler!
+            ev tadında, güvenelir <br /> ve nezih yemekler
           </h1>
           <p className="ap-bottom-text">
             Siz değerli müşterilerimiz için öncelikli hedefimiz, evinizde yemek

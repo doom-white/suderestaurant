@@ -1,8 +1,9 @@
 .ap-main-container {
+  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .ap-top-main-container,
@@ -13,12 +14,13 @@
   align-items: center;
   justify-content: space-around;
   margin-bottom: 1rem;
+  position: relative;
 }
 
 /*! ****************** { T O P of T H E  P A G E } **************************************/
 
 .ap-top-info {
-  background: #fee0e3;
+  /* background: #fee0e3; */
   padding: 3rem 0 2rem 0;
   display: flex;
   flex-direction: column;
@@ -77,4 +79,128 @@
   line-height: 2rem;
   text-align: justify;
   text-indent: 1rem;
+}
+
+/*todo ********************************************************************************/
+/*todo ********************************************************************************/
+/*? **********************************************************************************/
+/*? **********************************************************************************/
+/*! **********************************************************************************/
+/*! **********************************************************************************/
+
+/*! MEDIA SCREEN */
+
+@media only screen and (max-width: 1024px) {
+  .ap-top-main-container,
+  .ap-bottom-main-container {
+    width: 100%;
+  }
+
+  .ap-top-title,
+  .ap-bottom-title {
+    /* background-color: blue; */
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    padding-left: 2rem;
+  }
+
+  .ap-top-text,
+  .ap-bottom-text {
+    width: 100%;
+  }
+
+  .ap-top-img,
+  .ap-bottom-img {
+    width: 30rem;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .ap-top-main-container,
+  .ap-bottom-main-container {
+    width: 100%;
+  }
+
+  .ap-top-title,
+  .ap-bottom-title {
+    /* background-color: blue; */
+    font-size: 1.7rem;
+    line-height: 3rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    padding-left: 2rem;
+  }
+
+  .ap-top-text,
+  .ap-bottom-text {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .ap-top-img,
+  .ap-bottom-img {
+    width: 25rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .ap-top-text,
+  .ap-bottom-text {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .ap-top-img,
+  .ap-bottom-img {
+    width: 23rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .ap-top-title,
+  .ap-bottom-title {
+    /* background-color: blue; */
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
+  .ap-top-text,
+  .ap-bottom-text {
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.7rem;
+  }
+
+  .ap-top-img,
+  .ap-bottom-img {
+    width: 20rem;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .ap-top-img-div {
+    display: none;
+  }
+  .ap-bottom-img-div {
+    display: none;
+  }
+
+  .ap-top-title,
+  .ap-bottom-title {
+    /* background-color: blue; */
+
+    line-height: 3rem;
+  }
+
+  .ap-top-text,
+  .ap-bottom-text {
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+  }
+
+  .ap-top-main-container,
+  .ap-bottom-main-container {
+    width: 100%;
+  }
 }
