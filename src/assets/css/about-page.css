@@ -7,7 +7,7 @@
 
 .ap-top-main-container,
 .ap-bottom-main-container {
-  background: white;
+  background: #fee0e3;
   width: 70%;
   display: flex;
   align-items: center;
@@ -18,7 +18,7 @@
 /*! ****************** { T O P of T H E  P A G E } **************************************/
 
 .ap-top-info {
-  background-color: white;
+  background: #fee0e3;
   padding: 3rem 0 2rem 0;
   display: flex;
   flex-direction: column;
@@ -28,6 +28,7 @@
 
 .ap-top-title {
   /* background-color: blue; */
+  color: rgb(126, 20, 41);
   font-size: 2.7rem;
   line-height: 4rem;
   margin-bottom: 1rem;
@@ -37,16 +38,19 @@
 
 .ap-top-text {
   /* background-color: gray; */
+  color: rgb(196, 48, 77);
   width: 90%;
   padding: 1.5rem;
   font-size: 1.3rem;
   line-height: 2rem;
+  text-align: justify;
+  text-indent: 1rem;
 }
 
 /*! ****************** { B O T T O M of T H E  P A G E } **************************************/
 
 .ap-bottom-info {
-  background-color: white;
+  background: #fee0e3;
   padding: 3rem 0 2rem 0;
   display: flex;
   flex-direction: column;
@@ -56,6 +60,7 @@
 
 .ap-bottom-title {
   /* background-color: blue; */
+  color: rgb(126, 20, 41);
   font-size: 2.7rem;
   line-height: 4rem;
   margin-bottom: 1rem;
@@ -65,8 +70,11 @@
 
 .ap-bottom-text {
   /* background-color: gray; */
+  color: rgb(196, 48, 77);
   width: 90%;
   padding: 1.5rem;
   font-size: 1.3rem;
   line-height: 2rem;
+  text-align: justify;
+  text-indent: 1rem;
 }

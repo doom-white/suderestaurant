@@ -1,5 +1,5 @@
-import deneme1 from "../assets/restaurant_images/deneme1.jpg";
-import deneme2 from "../assets/restaurant_images/deneme2.jpg";
+import apBottomImg from "../assets/restaurant_images/ap-bottom-img.png";
+import apTopImg from "../assets/restaurant_images/ap-top-img.png";
 
 const AboutPage = () => {
   return (
@@ -17,23 +17,24 @@ const AboutPage = () => {
           </p>
         </div>
         <div className="ap-top-img-div">
-          <img className="ap-top-img" src={deneme2} alt="" />
+          <img className="ap-top-img" src={apTopImg} alt="" />
         </div>
       </div>
 
       <div className="ap-bottom-main-container">
         <div className="ap-bottom-img-div">
-          <img className="ap-bottom-img" src={deneme1} alt="" />
+          <img className="ap-bottom-img" src={apBottomImg} alt="" />
         </div>
         <div className="ap-bottom-info">
           <h1 className="ap-bottom-title">
-            Share favorit <br /> music with friends!
+            ev tadında, güvenelir <br /> ve nezih yemekler!
           </h1>
           <p className="ap-bottom-text">
-            It is a long established fact that a reader will be distracted by
-            the readable content of a page when looking at its layout. The point
-            of using lorem ipsum is that it has a more-or-less normal
-            distribution of letters.
+            Siz değerli müşterilerimiz için öncelikli hedefimiz, evinizde yemek
+            yediğiniz zamanki hijyeni sağlamak , sağlıklı ve lezettli
+            yemeklerimiz ile ihtiyaçlarınızı karşılarken aynı zamanda nezih
+            ortamımız ile de geçirdiğiniz süre içinde keyif almanızı
+            sağlamaktır.
           </p>
         </div>
       </div>
