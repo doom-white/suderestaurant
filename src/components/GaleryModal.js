@@ -12,6 +12,7 @@ const GaleryModal = ({ sude }) => {
       onOk={handleOk}
       onCancel={handleCancel}
       width={"60rem"}
+      className="gp-modal"
       closable={true}
       footer={null}
       title="Sude Restaurant & Cafe"
@@ -29,14 +30,11 @@ const GaleryModal = ({ sude }) => {
       >
         {sude.map((s) => (
           <SplideSlide>
-            <img
-              src={s.res}
-              alt="sude-resimler"
-              style={{ width: "100%", height: "40rem" }}
-            />
+            <img src={s.res} alt="sude-resimler" className="gp-modal-img" />
           </SplideSlide>
         ))}
       </Splide>
+      <p className="modal-title">title...</p>
     </Modal>
   );
 };
