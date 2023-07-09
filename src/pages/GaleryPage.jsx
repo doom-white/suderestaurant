@@ -10,7 +10,7 @@ const GaleryPage = () => {
 
   useEffect(() => {
     setAllImages([
-      { id: selectedImg.id, res: selectedImg.res },
+      { id: selectedImg.id, desc: selectedImg.desc, res: selectedImg.res },
 
       ...sude_images.filter((item) => item.res !== selectedImg.res),
     ]);
