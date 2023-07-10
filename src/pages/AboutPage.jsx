@@ -21,7 +21,7 @@ const AboutPage = () => {
           <img className="ap-top-img" src={apTopImg} alt="" />
         </div>
       </div>
-
+      <div className="ap-divider"></div>
       <div className="ap-bottom-main-container">
         <div className="ap-bottom-img-div">
           <img className="ap-bottom-img" src={apBottomImg} alt="" />
