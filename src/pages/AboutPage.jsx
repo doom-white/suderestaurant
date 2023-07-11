@@ -28,7 +28,7 @@ const AboutPage = () => {
         </div>
         <div className="ap-bottom-info">
           <h1 className="ap-bottom-title">
-            ev tadında, güvenelir <br /> ve nezih yemekler
+            Ev tadında, güvenelir <br /> ve nezih yemekler
           </h1>
           <p className="ap-bottom-text">
             Siz değerli müşterilerimiz için öncelikli hedefimiz, evinizde yemek

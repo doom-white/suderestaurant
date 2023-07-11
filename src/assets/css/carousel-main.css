@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  margin-top: 1rem;
 }
 
 .crsl-images-container:hover > span {
@@ -32,7 +33,7 @@
 
 .crsl-ribbon-top {
   position: absolute;
-  top: -0.4rem;
+  top: 0.54rem;
   right: -0.4rem;
   z-index: 10;
   width: 8rem;

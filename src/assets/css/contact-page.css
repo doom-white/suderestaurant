@@ -1,0 +1,169 @@
+.con-main-container {
+  /* background-color: white; */
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.con-form-container {
+  /* background-color: green; */
+  /* background-color: white; */
+  width: 50%;
+  padding: 2rem;
+}
+
+.con-form {
+  /* background-color: aqua; */
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 0.3rem;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.con-form-item {
+  /* background-color: white; */
+  position: relative;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.con-form-label {
+  position: absolute;
+  top: 0.75rem;
+  left: 3rem;
+  background-color: white;
+  color: #cdcdcd;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.3rem;
+  user-select: none;
+  transition: all 0.2s linear;
+}
+
+.con-form-input {
+  width: 100%;
+  height: 3rem;
+  font-size: 1.3rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 0.45rem;
+  color: rgb(168, 66, 87);
+}
+
+.con-form-input:focus,
+.con-form-area:focus {
+  outline: none;
+  border-color: rgb(168, 66, 87) !important;
+}
+
+.con-form-input:focus ~ .con-form-label {
+  font-size: 1rem;
+  top: 0.6rem;
+  color: rgb(168, 66, 87);
+}
+
+.con-form-area {
+  width: 100%;
+  font-size: 1.3rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 2px solid #ddd;
+  color: rgb(168, 66, 87);
+  border-radius: 0.45rem;
+  resize: none;
+}
+
+.con-form-area:focus ~ .con-form-label {
+  font-size: 1rem;
+  top: 0.6rem;
+  color: rgb(168, 66, 87);
+  border-color: rgb(168, 66, 87);
+}
+
+.con-form-input::placeholder,
+.con-form-area::placeholder {
+  color: #dedede;
+}
+
+.con-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.con-button {
+  width: 45%;
+  height: 3rem;
+  border: none;
+  border-radius: 0.5rem;
+
+  color: #ddd;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-send {
+  background-color: rgb(66, 148, 168);
+}
+
+.btn-send:hover {
+  background-color: rgb(57, 124, 141);
+}
+
+.btn-cancel {
+  background-color: rgba(199, 61, 88, 0.918);
+}
+
+.btn-cancel:hover {
+  background-color: rgb(168, 66, 87);
+}
+
+/*! ******* {RESUTL DIV} *******/
+
+.con-result {
+  color: whitesmoke;
+  width: 100%;
+  height: 3rem;
+  position: relative;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.con-result::before {
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  transform: rotate(45deg);
+}
+
+.con-result::after {
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: -1rem;
+  transform: rotate(45deg);
+}
+
+/*! ******* {GOOGLE MAP} *******/
+
+.con-map-container {
+  width: 50%;
+  padding: 0 2rem;
+}
