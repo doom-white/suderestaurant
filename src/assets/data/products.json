@@ -86,7 +86,7 @@
     "price": 40,
     "desc": "Dikkat bağımlılık yapar!",
     "fav": false,
-    "rated": false,
+    "rated": true,
     "imgURL": "assets/images/tavuk1.jpg"
   },
   {
@@ -156,7 +156,7 @@
     "price": "",
     "desc": "Kışın içinizi ısıtacak bol tereyağlı enfes bir çorba...",
     "fav": false,
-    "rated": true,
+    "rated": false,
     "imgURL": "assets/images/mercimek.jpg"
   },
   {
