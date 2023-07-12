@@ -28,8 +28,8 @@ html {
 }
 
 body {
-  background: linear-gradient(to bottom, rgb(255 228 230), #fdd4da);
-  /* background-color: #333; */
+  /* background: linear-gradient(to bottom, rgb(255 228 230), #fdd4da); */
+  background: #fee0e3;
   overflow: auto;
 }
 

@@ -4,6 +4,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  margin: 1rem 0;
 }
 
 .gp-img-container {
@@ -32,7 +33,7 @@
 }
 
 .gp-img-item:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   /* box-shadow: rgba(4, 206, 48, 0.8) 0 0 0.5rem 0.5rem; */
   z-index: 1;
   animation: random 2s linear infinite;
@@ -69,6 +70,18 @@
   text-align: center;
 }
 
+.ant-modal-close {
+  transition: all 0.7s ease-in-out !important;
+}
+
+.ant-modal-close:hover {
+  transform: rotate(360deg) !important;
+}
+
+.ant-modal-root .ant-modal-wrap {
+  z-index: 9999 !important;
+}
+
 .ant-modal-content {
   padding: 15px 17px 7px 17px !important;
 }
@@ -82,6 +95,46 @@
 
 /*! MEDIA SCREEN*/
 
+@media only screen and (max-width: 1366px) {
+  .gp-img-container {
+    margin-bottom: 1.5rem;
+  }
+
+  .gp-img-item {
+    width: 30%;
+    height: 15rem;
+  }
+  .gp-modal-img {
+    width: 100%;
+    height: 30rem;
+  }
+
+  .ant-modal {
+    top: 25px !important;
+    width: auto !important;
+    max-width: calc(100vw - 500px) !important;
+  }
+
+  .ant-modal-content {
+    padding: 15px 17px 7px 17px !important;
+  }
+
+  .ant-modal-title {
+    font-size: 1.3rem !important;
+  }
+
+  .ant-modal-close {
+    width: 18px !important;
+    height: 18px !important;
+    top: 22px !important;
+  }
+
+  .ant-modal-close svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
+
 @media only screen and (max-width: 1280px) {
   .gp-img-container {
     margin-bottom: 1.5rem;
@@ -93,7 +146,13 @@
   }
   .gp-modal-img {
     width: 100%;
-    height: 37rem;
+    height: 27rem;
+  }
+
+  .ant-modal {
+    top: 15px !important;
+    width: auto !important;
+    max-width: calc(100vw - 500px) !important;
   }
 
   .ant-modal-content {
@@ -130,7 +189,13 @@
 
   .gp-modal-img {
     width: 100%;
-    height: 40rem;
+    height: 27rem;
+  }
+
+  .ant-modal {
+    top: 15px !important;
+    width: auto !important;
+    max-width: calc(100vw - 250px) !important;
   }
 
   .ant-modal-content {
@@ -173,7 +238,13 @@
 
   .gp-modal-img {
     width: 100%;
-    height: 33rem;
+    height: 25rem;
+  }
+
+  .ant-modal {
+    top: 30px !important;
+    width: auto !important;
+    max-width: calc(100vw - 150px) !important;
   }
 
   .ant-modal-content {
@@ -219,6 +290,12 @@
     height: 30rem;
   }
 
+  .ant-modal {
+    top: 5px !important;
+    width: auto !important;
+    max-width: calc(100vw - 32px) !important;
+  }
+
   .ant-modal-content {
     padding: 15px 13px 7px 13px !important;
   }
@@ -260,6 +337,12 @@
   .gp-modal-img {
     width: 100%;
     height: 25rem;
+  }
+
+  .ant-modal {
+    top: 70px !important;
+    width: auto !important;
+    max-width: calc(100vw - 32px) !important;
   }
 
   .ant-modal-content {
@@ -305,6 +388,12 @@
     height: 25rem;
   }
 
+  .ant-modal {
+    top: 70px !important;
+    width: auto !important;
+    max-width: calc(100vw - 20px) !important;
+  }
+
   .ant-modal-content {
     padding: 15px 13px 7px 13px !important;
   }
@@ -348,6 +437,12 @@
     height: 25rem;
   }
 
+  .ant-modal {
+    top: 50px !important;
+    width: auto !important;
+    max-width: calc(100vw - 20px) !important;
+  }
+
   .ant-modal-content {
     padding: 15px 13px 7px 13px !important;
   }
@@ -361,6 +456,7 @@
     width: 16px !important;
     height: 16px !important;
     top: 18px !important;
+    right: 1.5rem !important;
   }
 
   .ant-modal-close svg {
@@ -403,11 +499,18 @@
     font-size: 1.2rem;
   }
 
+  .ant-modal {
+    top: 50px !important;
+    width: auto !important;
+    max-width: calc(100vw - 20px) !important;
+  }
+
   .ant-modal-close {
     /* background: red !important; */
     width: 16px !important;
     height: 16px !important;
     top: 18px !important;
+    right: 1.5rem !important;
   }
 
   .ant-modal-close svg {
@@ -438,6 +541,12 @@
     height: 20rem;
   }
 
+  .ant-modal {
+    top: 50px !important;
+    width: auto !important;
+    max-width: calc(100vw - 20px) !important;
+  }
+
   .ant-modal-content {
     padding: 15px 13px 7px 13px !important;
   }
@@ -455,6 +564,7 @@
     width: 16px !important;
     height: 16px !important;
     top: 18px !important;
+    right: 1.3rem !important;
   }
 
   .ant-modal-close svg {
@@ -482,11 +592,17 @@
 
   .gp-modal-img {
     width: 100%;
-    height: 17rem;
+    height: 20rem;
+  }
+
+  .ant-modal {
+    top: 50px !important;
+    width: auto !important;
+    max-width: calc(100vw - 15px) !important;
   }
 
   .ant-modal-content {
-    padding: 15px 9px 0 9px !important;
+    padding: 9px 9px 0 9px !important;
   }
 
   .ant-modal-title {
@@ -499,10 +615,10 @@
   }
 
   .ant-modal-close {
-    /* background: red !important; */
     width: 14px !important;
     height: 14px !important;
-    top: 15px !important;
+    top: 9px !important;
+    right: 1.5rem !important;
   }
 
   .ant-modal-close svg {

@@ -174,8 +174,8 @@
 
   .gm-content::after {
     top: 35%;
-    left: -9%;
-    font-size: 9.5em;
+    left: -18%;
+    font-size: 11em;
   }
 }
 
@@ -187,8 +187,8 @@
 
   .gm-content::after {
     top: 35%;
-    left: -7%;
-    font-size: 9em;
+    left: -15%;
+    font-size: 10em;
   }
 }
 
@@ -200,28 +200,34 @@
 
   .gm-content::after {
     top: 35%;
-    left: -11%;
-    font-size: 9em;
+    left: -19%;
+    font-size: 10em;
   }
 }
 
 @media only screen and (max-width: 800px) {
   .gm-content {
-    width: 16rem;
+    width: 20rem;
     height: 28rem;
   }
 
   .gm-content::after {
-    top: 35%;
-    left: -9%;
-    font-size: 8em;
+    top: 30%;
+    left: -22%;
+    font-size: 12em;
   }
 }
 
 @media only screen and (max-width: 600px) {
+  .gm-content {
+    width: 19rem;
+    height: 28rem;
+  }
+
   .gm-content::after {
-    left: -8%;
-    font-size: 10em;
+    top: 30%;
+    left: -19%;
+    font-size: 11em;
   }
 }
 
@@ -233,6 +239,8 @@
 
   .gm-content::after {
     font-size: 10em;
+    top: 30%;
+    left: -15%;
   }
 }
 
@@ -243,6 +251,8 @@
   }
   .gm-content::after {
     font-size: 10em;
+    top: 30%;
+    left: -19%;
   }
 }
 
@@ -254,7 +264,8 @@
 
   .gm-content::after {
     top: 30%;
-    left: -8%;
+    left: -18%;
+    font-size: 11em;
   }
 }
 
@@ -264,9 +275,9 @@
     height: 28rem;
   }
   .gm-content::after {
-    top: 20%;
-    left: -8%;
-    font-size: 16em;
+    top: 15%;
+    left: -17%;
+    font-size: 17em;
   }
 
   .gm-con-img {

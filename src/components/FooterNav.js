@@ -34,7 +34,7 @@ const FooterNav = () => {
             <div className="div-whatsapp">
               <FloatingWhatsApp
                 phoneNumber="+90 538 678 76 78"
-                accountName="Sude Restaurant"
+                accountName="Sude Restoran & Kafe"
                 statusMessage="En geç 1 saat içinde dönüş yapılır"
                 chatMessage="Lezzet şölenine hoşgeldiniz..."
                 allowEsc
