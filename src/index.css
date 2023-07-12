@@ -28,9 +28,8 @@ html {
 }
 
 body {
-  /* background: linear-gradient(to bottom, rgb(255 228 230), #fdd4da); */
-  background-color: #333;
-  background-repeat: no-repeat;
+  background: linear-gradient(to bottom, rgb(255 228 230), #fdd4da);
+  /* background-color: #333; */
   overflow: auto;
 }
 

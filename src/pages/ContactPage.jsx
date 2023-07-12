@@ -13,6 +13,7 @@ const ContactPage = () => {
     setSurname("");
     setMail("");
     setContent("");
+    resultRef.current.style.display = "none";
   };
 
   const handleSubmit = (e) => {
@@ -21,14 +22,15 @@ const ContactPage = () => {
       Mail gönderme işlemleri....
     */
     resultRef.current.style.display = "flex";
-    setTimeout(() => {
-      resultRef.current.style.display = "none";
-    }, 2000);
+    // setTimeout(() => {
+    //   resultRef.current.style.display = "none";
+    // }, 2000);
   };
 
   return (
     <section className="con-main-container">
       <div className="con-form-container">
+        <p className="con-form-title">Bizimle iletişime geçin</p>
         <form className="con-form" onSubmit={handleSubmit}>
           <div
             ref={resultRef}
@@ -81,7 +83,7 @@ const ContactPage = () => {
               value={mail}
               placeholder="E-mail adresinizi giriniz..."
               onChange={(e) => setMail(e.target.value)}
-              required
+              // required
             />
             <label className="con-form-label" htmlFor="mail">
               e-mail
@@ -93,11 +95,11 @@ const ContactPage = () => {
               id="mail-text"
               className="con-form-area"
               cols="30"
-              rows="7"
+              rows="5"
               placeholder="Bir şeyler yaz..."
               value={content}
               onChange={(e) => setContent(e.target.value)}
-              required
+              // required
             ></textarea>
             <label className="con-form-label" htmlFor="mail-text">
               içerik
@@ -121,10 +123,6 @@ const ContactPage = () => {
         <iframe
           title="sude_restaurant_&_cafe"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6100.260662528406!2d29.978908999999998!3d40.1393805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cb8fe0c31e83f7%3A0xeb3a95083e87367b!2sOtogar%20Restoran!5e0!3m2!1sen!2str!4v1689006329921!5m2!1sen!2str"
-          width="100%"
-          height="450"
-          style={{ border: 0 }}
-          allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>

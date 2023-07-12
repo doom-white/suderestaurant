@@ -231,6 +231,7 @@
 
   .header-logo-div {
     flex: 0 80%;
+    padding-left: 0;
   }
 
   .header-list-div {
