@@ -32,19 +32,6 @@ const ContactPage = () => {
       <div className="con-form-container">
         <p className="con-form-title">Bizimle iletişime geçin</p>
         <form className="con-form" onSubmit={handleSubmit}>
-          <div
-            ref={resultRef}
-            className="con-result"
-            style={
-              mailStatus
-                ? { background: "rgb(66, 148, 168)" }
-                : { background: " rgba(199, 61, 88, 0.918)" }
-            }
-          >
-            {mailStatus
-              ? "Mesajınız başarıyla gönderildi!"
-              : "Üzgünüz, mesajınız gönderilemedi!"}
-          </div>
           <div className="con-form-item">
             <input
               id="name"
