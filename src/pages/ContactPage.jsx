@@ -1,46 +1,58 @@
 import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
 
 const ContactPage = () => {
-  const resultRef = useRef(null);
+  const formRef = useRef(null);
   const [name, setName] = useState("");
   const [surname, setSurname] = useState("");
   const [mail, setMail] = useState("");
   const [content, setContent] = useState("");
-  const [mailStatus, setMailStatus] = useState(true);
 
   const handleCleanInputs = () => {
     setName("");
     setSurname("");
     setMail("");
     setContent("");
-    resultRef.current.style.display = "none";
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    /*
-      Mail gönderme işlemleri....
-    */
-    resultRef.current.style.display = "flex";
-    // setTimeout(() => {
-    //   resultRef.current.style.display = "none";
-    // }, 2000);
+    emailjs
+      .sendForm(
+        "service_lxqk8f4",
+        "template_8r21oc6",
+        formRef.current,
+        "7m1FE-edaa9F6wLpy"
+      )
+      .then(
+        (result) => {
+          toast.success("Mesajınız gönderilmiştir!");
+          handleCleanInputs();
+        },
+        (error) => {
+          toast.error(`Üzgünüz! Mesajınız gönderilemedi! Hata:${error}`);
+        }
+      );
   };
 
   return (
     <section className="con-main-container">
       <div className="con-form-container">
         <p className="con-form-title">Bizimle iletişime geçin</p>
-        <form className="con-form" onSubmit={handleSubmit}>
+        <form ref={formRef} className="con-form" onSubmit={handleSubmit}>
           <div className="con-form-item">
             <input
               id="name"
-              name="name"
+              name="user_name"
               className="con-form-input"
               type="text"
-              value={name}
+              value={
+                name.substring(0, 1).toLocaleUpperCase("tr") + name.substring(1)
+              }
               placeholder="Adınızı giriniz..."
               onChange={(e) => setName(e.target.value)}
+              required
             />
             <label className="con-form-label" htmlFor="name">
               isim
@@ -52,9 +64,13 @@ const ContactPage = () => {
               name="surname"
               className="con-form-input"
               type="text"
-              value={surname}
+              value={
+                surname.substring(0, 1).toLocaleUpperCase("tr") +
+                surname.substring(1)
+              }
               placeholder="Soyadınızı giriniz..."
               onChange={(e) => setSurname(e.target.value)}
+              required
             />
             <label className="con-form-label" htmlFor="surname">
               soyisim
@@ -63,22 +79,22 @@ const ContactPage = () => {
           <div className="con-form-item">
             <input
               id="mail"
-              name="mail"
+              name="user_email"
               className="con-form-input"
               type="email"
               pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}"
               value={mail}
               placeholder="E-mail adresinizi giriniz..."
               onChange={(e) => setMail(e.target.value)}
-              // required
+              required
             />
-            <label className="con-form-label" htmlFor="mail">
+            <label className="con-form-label" htmlFor="user_email">
               e-mail
             </label>
           </div>
           <div className="con-form-item">
             <textarea
-              name="mail-text"
+              name="message"
               id="mail-text"
               className="con-form-area"
               cols="30"
@@ -86,9 +102,9 @@ const ContactPage = () => {
               placeholder="Bir şeyler yaz..."
               value={content}
               onChange={(e) => setContent(e.target.value)}
-              // required
+              required
             ></textarea>
-            <label className="con-form-label" htmlFor="mail-text">
+            <label className="con-form-label" htmlFor="message">
               içerik
             </label>
           </div>
@@ -96,6 +112,7 @@ const ContactPage = () => {
             <button className="con-button btn-send" type="submit">
               Gönder
             </button>
+            <ToastContainer />
             <button
               className="con-button btn-cancel"
               type="button"

@@ -4,6 +4,7 @@
   "private": true,
   "author": "cihatturgut",
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@testing-library/jest-dom": "^5.16.5",
@@ -15,6 +16,7 @@
     "react-floating-whatsapp": "^5.0.8",
     "react-router-dom": "^6.14.1",
     "react-scripts": "5.0.1",
+    "react-toastify": "^9.1.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
