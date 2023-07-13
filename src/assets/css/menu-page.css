@@ -36,7 +36,7 @@
 }
 
 .menu-search {
-  background: linear-gradient(to bottom, #8b223c, #8f1634);
+  background: linear-gradient(to bottom, #c25a74, #c94062);
   border: 1px solid black;
   border-radius: 3rem;
   box-shadow: inset black 0 0 7px;
@@ -53,7 +53,7 @@
 }
 
 .menu-search::placeholder {
-  color: #460c1a;
+  color: #460c1a83;
 }
 
 .menu-search-close,
