@@ -1,118 +1,236 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import catalog from "../assets/icons/ico_general/menu.png";
 import mlist from "../assets/icons/ico_general/mlist.png";
 import productList from "../assets/data/products.json";
 import GaleryMenuCard from "../components/GaleryMenuCard";
 import love from "../assets/icons/ico_general/love.png";
+import search from "../assets/icons/ico_general/search.png";
 import rated from "../assets/icons/ico_general/rated.png";
+import menu_search_close from "../assets/icons/ico_general/close.png";
+import menu_search_magnifying from "../assets/icons/ico_general/magnifying.png";
 import ListMenuCard from "../components/ListMenuCard";
 
 const MenuPage = () => {
+  const searchRef = useRef(null);
   const [isMenu, setIsMenu] = useState(true);
+  const [searchMenu, setSearchMenu] = useState(false);
+  const [searchedList, setSearchedList] = useState(productList);
   const [status, setStatus] = useState(0);
   const [menuTypeTitle] = useState([
-    "Katalog Menü",
-    "Liste Menü",
-    "En Çok Beğenilenler",
-    "Öne Çıkanlar",
+    "Katalog Menü", //0
+    "Liste Menü", //1
+    "En Çok Beğenilenler", //2
+    "Öne Çıkanlar", //3
   ]);
+
+  useEffect(() => {
+    setSearchedList(productList);
+  }, [searchMenu]);
+
+  const handleSearch = (e) => {
+    setSearchedList(
+      productList.filter((p) =>
+        p.title
+          .toLocaleLowerCase("tr")
+          .includes(e.target.value.toLocaleLowerCase("tr"))
+      )
+    );
+  };
+
+  const handleFocus = () => {
+    setTimeout(() => {
+      searchRef.current.focus();
+    }, 200);
+  };
 
   return (
     <>
       <section className="menu-container">
         <div className="menu-type">
           <div className="menu-type-title">
-            {isMenu && status === 0
-              ? menuTypeTitle[status] + " (" + productList.length + ")"
-              : isMenu && status === 2
-              ? menuTypeTitle[0] +
-                " - " +
-                menuTypeTitle[status] +
-                " " +
-                "(" +
-                productList.filter((p) => p.fav === true).length +
-                ")"
-              : isMenu && status === 3
-              ? menuTypeTitle[0] +
-                " - " +
-                menuTypeTitle[status] +
-                " " +
-                "(" +
-                productList.filter((p) => p.rated === true).length +
-                ")"
-              : !isMenu && status === 1
-              ? menuTypeTitle[status] + " (" + productList.length + ")"
-              : !isMenu && status === 2
-              ? menuTypeTitle[1] +
-                " - " +
-                menuTypeTitle[status] +
-                " " +
-                "(" +
-                productList.filter((p) => p.fav === true).length +
-                ")"
-              : !isMenu && status === 3
-              ? menuTypeTitle[1] +
-                " - " +
-                menuTypeTitle[status] +
-                " " +
-                "(" +
-                productList.filter((p) => p.rated === true).length +
-                ")"
-              : null}
+            {
+              /* Katalog Menu */
+              isMenu && status === 0
+                ? searchMenu
+                  ? menuTypeTitle[status] + " (" + searchedList.length + ")"
+                  : menuTypeTitle[status] + " (" + productList.length + ")"
+                : isMenu && status === 2
+                ? searchMenu
+                  ? menuTypeTitle[0] +
+                    " - " +
+                    menuTypeTitle[status] +
+                    " (" +
+                    searchedList.filter((p) => p.fav === true).length +
+                    ")"
+                  : menuTypeTitle[0] +
+                    " - " +
+                    menuTypeTitle[status] +
+                    " (" +
+                    productList.filter((p) => p.fav === true).length +
+                    ")"
+                : isMenu && status === 3
+                ? searchMenu
+                  ? menuTypeTitle[0] +
+                    " - " +
+                    menuTypeTitle[status] +
+                    " (" +
+                    searchedList.filter((p) => p.rated === true).length +
+                    ")"
+                  : menuTypeTitle[0] +
+                    " - " +
+                    menuTypeTitle[status] +
+                    " (" +
+                    productList.filter((p) => p.rated === true).length +
+                    ")"
+                : /* Liste Menu */
+                !isMenu && status === 1
+                ? searchMenu
+                  ? menuTypeTitle[status] + " (" + searchedList.length + ")"
+                  : menuTypeTitle[status] + " (" + productList.length + ")"
+                : !isMenu && status === 2
+                ? searchMenu
+                  ? menuTypeTitle[1] +
+                    " - " +
+                    menuTypeTitle[status] +
+                    " (" +
+                    searchedList.filter((p) => p.fav === true).length +
+                    ")"
+                  : menuTypeTitle[1] +
+                    " - " +
+                    menuTypeTitle[status] +
+                    " (" +
+                    productList.filter((p) => p.fav === true).length +
+                    ")"
+                : !isMenu && status === 3
+                ? searchMenu
+                  ? menuTypeTitle[1] +
+                    " - " +
+                    menuTypeTitle[status] +
+                    " (" +
+                    searchedList.filter((p) => p.rated === true).length +
+                    ")"
+                  : menuTypeTitle[1] +
+                    " - " +
+                    menuTypeTitle[status] +
+                    " (" +
+                    productList.filter((p) => p.rated === true).length +
+                    ")"
+                : null
+            }
           </div>
 
-          <div className="menu-love-div">
-            <img
-              src={love}
-              alt="love-menu"
-              onClick={() => {
-                setStatus(2);
-              }}
-            />
-          </div>
+          {searchMenu && (
+            <div className="menu-search-container">
+              <input
+                ref={searchRef}
+                className="menu-search"
+                type="text"
+                placeholder="Menüde Ara..."
+                onChange={(e) => handleSearch(e)}
+                maxLength={30}
+              />
+              <img
+                className="menu-search-close"
+                src={menu_search_close}
+                alt="menu_search_close"
+                onClick={() => {
+                  setSearchMenu(false);
+                  isMenu
+                    ? document
+                        .querySelector(".galery-menu")
+                        .classList.remove("m-responsive")
+                    : document
+                        .querySelector(".lm-container")
+                        .classList.remove("m-responsive");
+                }}
+              />
+              <img
+                className="menu-search-magnifying"
+                src={menu_search_magnifying}
+                alt="menu_search_magnifying"
+              />
+            </div>
+          )}
 
-          <div className="menu-rated-div">
-            <img
-              src={rated}
-              alt="rated-menu"
-              onClick={() => {
-                setStatus(3);
-              }}
-            />
-          </div>
+          <div className="menu-type-img">
+            <div className="menu-search-div">
+              <img
+                src={search}
+                alt="search-bar"
+                onClick={() => {
+                  setSearchMenu(true);
+                  handleFocus();
+                  isMenu
+                    ? document
+                        .querySelector(".galery-menu")
+                        .classList.add("m-responsive")
+                    : document
+                        .querySelector(".lm-container")
+                        .classList.add("m-responsive");
+                }}
+              />
+            </div>
+            <div className="menu-love-div">
+              <img
+                src={love}
+                alt="love-menu"
+                onClick={() => {
+                  setStatus(2);
+                }}
+              />
+            </div>
 
-          <div className="menu-catalog-div">
-            <img
-              src={catalog}
-              alt="galeri-menu"
-              onClick={() => {
-                setIsMenu(true);
-                setStatus(0);
-              }}
-            />
-          </div>
+            <div className="menu-rated-div">
+              <img
+                src={rated}
+                alt="rated-menu"
+                onClick={() => {
+                  setStatus(3);
+                }}
+              />
+            </div>
 
-          <div className="menu-list-div">
-            <img
-              src={mlist}
-              alt="liste-menu"
-              onClick={() => {
-                setIsMenu(false);
-                setStatus(1);
-              }}
-            />
+            <div className="menu-catalog-div">
+              <img
+                src={catalog}
+                alt="galeri-menu"
+                onClick={() => {
+                  setIsMenu(true);
+                  setStatus(0);
+                }}
+              />
+            </div>
+
+            <div className="menu-list-div">
+              <img
+                src={mlist}
+                alt="liste-menu"
+                onClick={() => {
+                  setIsMenu(false);
+                  setStatus(1);
+                }}
+              />
+            </div>
           </div>
         </div>
         {isMenu && status === 0 ? (
           <div className="galery-menu">
-            {productList &&
+            {(searchMenu &&
+              searchedList?.map((product) => (
+                <GaleryMenuCard product={product} key={product.id} />
+              ))) ||
               productList.map((product) => (
                 <GaleryMenuCard product={product} key={product.id} />
               ))}
           </div>
         ) : isMenu && status === 2 ? (
           <div className="galery-menu">
-            {productList &&
+            {(searchMenu &&
+              searchedList
+                ?.filter((p) => p.fav === true)
+                .map((product) => (
+                  <GaleryMenuCard product={product} key={product.id} />
+                ))) ||
               productList
                 .filter((p) => p.fav === true)
                 .map((product) => (
@@ -121,7 +239,12 @@ const MenuPage = () => {
           </div>
         ) : isMenu && status === 3 ? (
           <div className="galery-menu">
-            {productList &&
+            {(searchMenu &&
+              searchedList
+                ?.filter((p) => p.rated === true)
+                .map((product) => (
+                  <GaleryMenuCard product={product} key={product.id} />
+                ))) ||
               productList
                 .filter((p) => p.rated === true)
                 .map((product) => (
@@ -131,15 +254,24 @@ const MenuPage = () => {
         ) : !isMenu && status === 1 ? (
           <div className="list-menu">
             <ul className="lm-container">
-              {productList.map((product) => (
-                <ListMenuCard product={product} key={product.id} />
-              ))}
+              {(searchMenu &&
+                searchedList?.map((product) => (
+                  <ListMenuCard product={product} key={product.id} />
+                ))) ||
+                productList.map((product) => (
+                  <ListMenuCard product={product} key={product.id} />
+                ))}
             </ul>
           </div>
         ) : !isMenu && status === 2 ? (
           <div className="list-menu">
             <ul className="lm-container">
-              {productList &&
+              {(searchMenu &&
+                searchedList
+                  ?.filter((p) => p.fav === true)
+                  .map((product) => (
+                    <ListMenuCard product={product} key={product.id} />
+                  ))) ||
                 productList
                   .filter((p) => p.fav === true)
                   .map((product) => (
@@ -150,7 +282,12 @@ const MenuPage = () => {
         ) : !isMenu && status === 3 ? (
           <div className="list-menu">
             <ul className="lm-container">
-              {productList &&
+              {(searchMenu &&
+                searchedList
+                  ?.filter((p) => p.rated === true)
+                  .map((product) => (
+                    <ListMenuCard product={product} key={product.id} />
+                  ))) ||
                 productList
                   .filter((p) => p.rated === true)
                   .map((product) => (
