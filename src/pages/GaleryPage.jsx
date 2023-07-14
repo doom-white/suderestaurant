@@ -2,6 +2,21 @@ import GaleryModal from "../components/GaleryModal";
 import { useModal } from "../context/ModalContext";
 import sude_images from "../assets/restaurant_images/sude-images";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+
+const galeryPageVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.7,
+      delay: 0.3,
+      linear: "linear",
+    },
+  },
+};
 
 const GaleryPage = () => {
   const { showModal } = useModal();
@@ -18,7 +33,12 @@ const GaleryPage = () => {
 
   return (
     <section className="gp-main-container">
-      <div className="gp-img-container">
+      <motion.div
+        className="gp-img-container"
+        variants={galeryPageVariants}
+        initial="hidden"
+        animate="visible"
+      >
         {sude_images &&
           sude_images.map((sude) => (
             <>
@@ -34,7 +54,7 @@ const GaleryPage = () => {
               </div>
             </>
           ))}
-      </div>
+      </motion.div>
       <GaleryModal sude={allImages} />
     </section>
   );

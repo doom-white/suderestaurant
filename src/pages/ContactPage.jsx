@@ -1,6 +1,38 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
+import { motion } from "framer-motion";
+
+const contactPageVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.7,
+      delay: 0.3,
+      linear: "linear",
+    },
+  },
+};
+
+const contactFormVariants = {
+  hidden: {
+    y: -220,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+
+    transition: {
+      duration: 0.7,
+      delay: 0.3,
+      linear: "linear",
+    },
+  },
+};
 
 const ContactPage = () => {
   const formRef = useRef(null);
@@ -37,8 +69,13 @@ const ContactPage = () => {
   };
 
   return (
-    <section className="con-main-container">
-      <div className="con-form-container">
+    <motion.section
+      className="con-main-container"
+      variants={contactPageVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <motion.div className="con-form-container" variants={contactFormVariants}>
         <p className="con-form-title">Bizimle iletişime geçin</p>
         <form ref={formRef} className="con-form" onSubmit={handleSubmit}>
           <div className="con-form-item">
@@ -122,7 +159,7 @@ const ContactPage = () => {
             </button>
           </div>
         </form>
-      </div>
+      </motion.div>
       <div className="con-map-container">
         <iframe
           title="sude_restaurant_&_cafe"
@@ -131,7 +168,7 @@ const ContactPage = () => {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

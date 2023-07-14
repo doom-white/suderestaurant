@@ -374,7 +374,7 @@
   }
 
   .light-nav a:nth-child(5):is(.active) ~ .indicator {
-    transform: translate(0.12rem, 15.9rem);
+    transform: translate(0.12rem, 15.6rem);
   }
 }
 

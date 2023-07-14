@@ -9,6 +9,34 @@ import rated from "../assets/icons/ico_general/rated.png";
 import menu_search_close from "../assets/icons/ico_general/close.png";
 import menu_search_magnifying from "../assets/icons/ico_general/magnifying.png";
 import ListMenuCard from "../components/ListMenuCard";
+import { motion } from "framer-motion";
+
+const menuPageVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.7,
+      delay: 0.3,
+      linear: "linear",
+    },
+  },
+};
+
+const searchVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.7,
+      ease: "easeInOut",
+    },
+  },
+};
 
 const MenuPage = () => {
   const searchRef = useRef(null);
@@ -120,7 +148,12 @@ const MenuPage = () => {
           </div>
 
           {searchMenu && (
-            <div className="menu-search-container">
+            <motion.div
+              className="menu-search-container"
+              variants={searchVariants}
+              initial="hidden"
+              animate="visible"
+            >
               <input
                 ref={searchRef}
                 className="menu-search"
@@ -149,7 +182,7 @@ const MenuPage = () => {
                 src={menu_search_magnifying}
                 alt="menu_search_magnifying"
               />
-            </div>
+            </motion.div>
           )}
 
           <div className="menu-type-img">
@@ -213,89 +246,95 @@ const MenuPage = () => {
             </div>
           </div>
         </div>
-        {isMenu && status === 0 ? (
-          <div className="galery-menu">
-            {(searchMenu &&
-              searchedList?.map((product) => (
-                <GaleryMenuCard product={product} key={product.id} />
-              ))) ||
-              productList.map((product) => (
-                <GaleryMenuCard product={product} key={product.id} />
-              ))}
-          </div>
-        ) : isMenu && status === 2 ? (
-          <div className="galery-menu">
-            {(searchMenu &&
-              searchedList
-                ?.filter((p) => p.fav === true)
-                .map((product) => (
-                  <GaleryMenuCard product={product} key={product.id} />
-                ))) ||
-              productList
-                .filter((p) => p.fav === true)
-                .map((product) => (
-                  <GaleryMenuCard product={product} key={product.id} />
-                ))}
-          </div>
-        ) : isMenu && status === 3 ? (
-          <div className="galery-menu">
-            {(searchMenu &&
-              searchedList
-                ?.filter((p) => p.rated === true)
-                .map((product) => (
-                  <GaleryMenuCard product={product} key={product.id} />
-                ))) ||
-              productList
-                .filter((p) => p.rated === true)
-                .map((product) => (
-                  <GaleryMenuCard product={product} key={product.id} />
-                ))}
-          </div>
-        ) : !isMenu && status === 1 ? (
-          <div className="list-menu">
-            <ul className="lm-container">
+        <motion.div
+          variants={menuPageVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {isMenu && status === 0 ? (
+            <div className="galery-menu">
               {(searchMenu &&
                 searchedList?.map((product) => (
-                  <ListMenuCard product={product} key={product.id} />
+                  <GaleryMenuCard product={product} key={product.id} />
                 ))) ||
                 productList.map((product) => (
-                  <ListMenuCard product={product} key={product.id} />
+                  <GaleryMenuCard product={product} key={product.id} />
                 ))}
-            </ul>
-          </div>
-        ) : !isMenu && status === 2 ? (
-          <div className="list-menu">
-            <ul className="lm-container">
+            </div>
+          ) : isMenu && status === 2 ? (
+            <div className="galery-menu">
               {(searchMenu &&
                 searchedList
                   ?.filter((p) => p.fav === true)
                   .map((product) => (
-                    <ListMenuCard product={product} key={product.id} />
+                    <GaleryMenuCard product={product} key={product.id} />
                   ))) ||
                 productList
                   .filter((p) => p.fav === true)
                   .map((product) => (
-                    <ListMenuCard product={product} key={product.id} />
+                    <GaleryMenuCard product={product} key={product.id} />
                   ))}
-            </ul>
-          </div>
-        ) : !isMenu && status === 3 ? (
-          <div className="list-menu">
-            <ul className="lm-container">
+            </div>
+          ) : isMenu && status === 3 ? (
+            <div className="galery-menu">
               {(searchMenu &&
                 searchedList
                   ?.filter((p) => p.rated === true)
                   .map((product) => (
-                    <ListMenuCard product={product} key={product.id} />
+                    <GaleryMenuCard product={product} key={product.id} />
                   ))) ||
                 productList
                   .filter((p) => p.rated === true)
                   .map((product) => (
+                    <GaleryMenuCard product={product} key={product.id} />
+                  ))}
+            </div>
+          ) : !isMenu && status === 1 ? (
+            <div className="list-menu">
+              <ul className="lm-container">
+                {(searchMenu &&
+                  searchedList?.map((product) => (
+                    <ListMenuCard product={product} key={product.id} />
+                  ))) ||
+                  productList.map((product) => (
                     <ListMenuCard product={product} key={product.id} />
                   ))}
-            </ul>
-          </div>
-        ) : null}
+              </ul>
+            </div>
+          ) : !isMenu && status === 2 ? (
+            <div className="list-menu">
+              <ul className="lm-container">
+                {(searchMenu &&
+                  searchedList
+                    ?.filter((p) => p.fav === true)
+                    .map((product) => (
+                      <ListMenuCard product={product} key={product.id} />
+                    ))) ||
+                  productList
+                    .filter((p) => p.fav === true)
+                    .map((product) => (
+                      <ListMenuCard product={product} key={product.id} />
+                    ))}
+              </ul>
+            </div>
+          ) : !isMenu && status === 3 ? (
+            <div className="list-menu">
+              <ul className="lm-container">
+                {(searchMenu &&
+                  searchedList
+                    ?.filter((p) => p.rated === true)
+                    .map((product) => (
+                      <ListMenuCard product={product} key={product.id} />
+                    ))) ||
+                  productList
+                    .filter((p) => p.rated === true)
+                    .map((product) => (
+                      <ListMenuCard product={product} key={product.id} />
+                    ))}
+              </ul>
+            </div>
+          ) : null}
+        </motion.div>
       </section>
     </>
   );

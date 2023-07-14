@@ -1,10 +1,68 @@
 import apBottomImg from "../assets/restaurant_images/ap-bottom-img.png";
 import apTopImg from "../assets/restaurant_images/ap-top-img.png";
+import { motion } from "framer-motion";
+
+const aboutPageVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.7,
+      delay: 0.3,
+      linear: "linear",
+    },
+  },
+};
+
+const topVariants = {
+  hidden: {
+    opacity: 0,
+    x: "100vw",
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      mass: 0.7,
+      damping: 3,
+      duration: 0.7,
+      delay: 0.7,
+      stiffness: 150,
+    },
+  },
+};
+
+const bottomVariants = {
+  hidden: {
+    opacity: 0,
+    x: "-100vw",
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      mass: 0.7,
+      damping: 3,
+      duration: 0.7,
+      delay: 0.7,
+      stiffness: 150,
+    },
+  },
+};
 
 const AboutPage = () => {
   return (
-    <section className="ap-main-container">
-      <div className="ap-top-main-container">
+    <motion.section
+      className="ap-main-container"
+      variants={aboutPageVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <motion.div className="ap-top-main-container" variants={topVariants}>
         <div className="ap-top-info">
           <h1 className="ap-top-title">
             Bilecik'te <br /> Gaziantep Lezzetleri
@@ -20,9 +78,12 @@ const AboutPage = () => {
         <div className="ap-top-img-div">
           <img className="ap-top-img" src={apTopImg} alt="" />
         </div>
-      </div>
+      </motion.div>
       <div className="ap-divider"></div>
-      <div className="ap-bottom-main-container">
+      <motion.div
+        className="ap-bottom-main-container"
+        variants={bottomVariants}
+      >
         <div className="ap-bottom-img-div">
           <img className="ap-bottom-img" src={apBottomImg} alt="" />
         </div>
@@ -38,8 +99,8 @@ const AboutPage = () => {
             sağlamaktır.
           </p>
         </div>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   );
 };
 
