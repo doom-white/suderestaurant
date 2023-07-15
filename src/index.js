@@ -7,6 +7,7 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import SelectedProvider from "./context/SelectedContext";
 import ModalProvider from "./context/ModalContext";
+import ScrollToTop from "./components/ScrollToTop";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,6 +15,7 @@ root.render(
     <SelectedProvider>
       <ModalProvider>
         <BrowserRouter>
+          <ScrollToTop />
           <App />
         </BrowserRouter>
       </ModalProvider>
