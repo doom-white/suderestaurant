@@ -15,6 +15,9 @@
   padding: 1rem;
   position: relative;
 }
+.header-nav:is(.dark) {
+  background: linear-gradient(to top, rgb(56, 56, 56), #202020);
+}
 
 /*? HEADER_LOGO */
 
@@ -31,6 +34,15 @@
   font-family: "Pacifico", cursive;
   font-size: 2rem;
   background: -webkit-linear-gradient(#eee, crimson);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  user-select: none;
+}
+
+.header-logo-text:is(.dark) {
+  font-family: "Pacifico", cursive;
+  font-size: 2rem;
+  background: -webkit-linear-gradient(#eee, #333);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   user-select: none;
@@ -66,8 +78,19 @@
   transition: color 0.3s ease-in-out;
 }
 
+.header-list-div:is(.dark) {
+  background: transparent;
+}
+
 .header-list-div a:hover {
   background: -webkit-linear-gradient(#eee, crimson);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header-list-div:is(.dark) a:hover {
+  background: -webkit-linear-gradient(#eee, #fff);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -103,6 +126,11 @@
   top: 2rem;
   cursor: pointer;
   transition: all 0.3s linear;
+  background: transparent;
+}
+
+.btn-toggle:is(.dark) {
+  background: transparent;
 }
 
 .btn-toggle span {
@@ -116,8 +144,12 @@
   transition: all 0.3s linear;
 }
 
+.btn-toggle:is(.dark) span {
+  background-color: rgba(245, 245, 245, 0.8);
+}
+
 .btn-toggle:hover {
-  background-color: rgba(220, 20, 60, 0.1);
+  background-color: rgba(102, 102, 102, 0.2);
 }
 
 .btn-toggle.active-toggle span:nth-child(1) {
@@ -187,37 +219,45 @@
   border-radius: 50%;
 }
 
-.light-nav .indicator {
+.header-nav .indicator {
   border: 2px solid rgba(196, 77, 107, 0.2);
   box-shadow: rgba(196, 77, 107, 0.24) 0px 3px 8px;
   border-radius: 2rem;
 }
 
+.header-nav:is(.dark) .indicator {
+  border: 2px solid rgba(240, 225, 229, 0.2);
+  box-shadow: rgba(163, 162, 162, 0.24) 0px 3px 8px;
+  border-radius: 2rem;
+}
+
 /*? INDICATOR STEPS */
 
-.light-nav a:nth-child(1):is(.active) ~ .indicator {
+.header-nav a:nth-child(1):is(.active) ~ .indicator {
   transform: translateX(7.9rem);
 }
 
-.light-nav a:nth-child(2):is(.active) ~ .indicator {
+.header-nav a:nth-child(2):is(.active) ~ .indicator {
   transform: translateX(15.6rem);
 }
 
-.light-nav a:nth-child(3):is(.active) ~ .indicator {
+.header-nav a:nth-child(3):is(.active) ~ .indicator {
   transform: translateX(20.8rem);
 }
 
-.light-nav a:nth-child(4):is(.active) ~ .indicator {
+.header-nav a:nth-child(4):is(.active) ~ .indicator {
   transform: translateX(26.4rem);
 }
 
-.light-nav a:nth-child(5):is(.active) ~ .indicator {
+.header-nav a:nth-child(5):is(.active) ~ .indicator {
   transform: translateX(32.8rem);
 }
 
 /*! CEILING LAMP */
 
 .ceiling-lamp-container {
+  width: 4.5rem;
+  height: 4.5rem;
   position: absolute;
   top: 0;
   left: 50%;
@@ -226,11 +266,58 @@
   cursor: pointer;
 }
 
+.ceiling-lamp {
+  width: 100%;
+  height: 100%;
+}
+
 /*! MEDIA SCREEN */
 
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 1501px) and (max-width: 1800px) {
   .header-list-div {
     top: 0 !important;
+  }
+
+  .ceiling-lamp-container {
+    width: 4.5rem;
+    height: 4.5rem;
+    left: 47%;
+  }
+}
+
+@media only screen and (min-width: 1281px) and (max-width: 1500px) {
+  .header-list-div {
+    top: 0 !important;
+  }
+
+  .ceiling-lamp-container {
+    width: 4.5rem;
+    height: 4.5rem;
+    left: 45%;
+  }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+  .header-list-div {
+    top: 0 !important;
+  }
+
+  .ceiling-lamp-container {
+    width: 4.5rem;
+    height: 4.5rem;
+    left: 43.5%;
+  }
+}
+
+@media only screen and (min-width: 993px) and (max-width: 1024px) {
+  .header-list-div {
+    top: 0 !important;
+  }
+
+  .ceiling-lamp-container {
+    width: 4.5rem;
+    height: 4.5rem;
+    left: 41.7%;
   }
 }
 
@@ -259,6 +346,20 @@
     z-index: -1;
   }
 
+  .header-list-div:is(.dark) {
+    background: linear-gradient(to bottom, rgb(56, 56, 56), #202020);
+  }
+
+  .header-nav:is(.dark) {
+    border-bottom: 1px solid rgba(51, 51, 51, 0.7);
+  }
+
+  .ceiling-lamp-container {
+    width: 4.5rem;
+    height: 4.5rem;
+    left: 65%;
+  }
+
   /****************** INDICATOR *************************/
 
   .indicator {
@@ -268,47 +369,83 @@
 
   /****************** INDICATOR STEPS ************************/
 
-  .light-nav a:nth-child(1):is(.active) ~ .indicator {
+  .header-nav a:nth-child(1):is(.active) ~ .indicator {
     transform: translate(0.1rem);
   }
 
-  .light-nav a:nth-child(2):is(.active) ~ .indicator {
+  .header-nav a:nth-child(2):is(.active) ~ .indicator {
     transform: translate(0, 3.7rem);
   }
 
-  .light-nav a:nth-child(3):is(.active) ~ .indicator {
+  .header-nav a:nth-child(3):is(.active) ~ .indicator {
     transform: translate(0.1rem, 7.9rem);
   }
 
-  .light-nav a:nth-child(4):is(.active) ~ .indicator {
+  .header-nav a:nth-child(4):is(.active) ~ .indicator {
     transform: translate(0.2rem, 11.53rem);
   }
 
-  .light-nav a:nth-child(5):is(.active) ~ .indicator {
+  .header-nav a:nth-child(5):is(.active) ~ .indicator {
     transform: translate(0.14rem, 15.58rem);
   }
 }
 
 @media only screen and (max-width: 820px) {
+  .ceiling-lamp-container {
+    width: 4.5rem;
+    height: 4.5rem;
+    left: 65%;
+  }
+
   /****************** INDICATOR STEPS ************************/
 
-  .light-nav a:nth-child(1):is(.active) ~ .indicator {
+  .header-nav a:nth-child(1):is(.active) ~ .indicator {
     transform: translate(0.1rem);
   }
 
-  .light-nav a:nth-child(2):is(.active) ~ .indicator {
+  .header-nav a:nth-child(2):is(.active) ~ .indicator {
     transform: translate(0, 3.9rem);
   }
 
-  .light-nav a:nth-child(3):is(.active) ~ .indicator {
+  .header-nav a:nth-child(3):is(.active) ~ .indicator {
     transform: translate(0.1rem, 7.7rem);
   }
 
-  .light-nav a:nth-child(4):is(.active) ~ .indicator {
+  .header-nav a:nth-child(4):is(.active) ~ .indicator {
     transform: translate(0.2rem, 11.5rem);
   }
 
-  .light-nav a:nth-child(5):is(.active) ~ .indicator {
+  .header-nav a:nth-child(5):is(.active) ~ .indicator {
+    transform: translate(0.135rem, 15.49rem);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ceiling-lamp-container {
+    width: 4.5rem;
+    height: 4.5rem;
+    left: 67%;
+  }
+
+  /****************** INDICATOR STEPS ************************/
+
+  .header-nav a:nth-child(1):is(.active) ~ .indicator {
+    transform: translate(0.1rem);
+  }
+
+  .header-nav a:nth-child(2):is(.active) ~ .indicator {
+    transform: translate(0, 3.9rem);
+  }
+
+  .header-nav a:nth-child(3):is(.active) ~ .indicator {
+    transform: translate(0.1rem, 7.7rem);
+  }
+
+  .header-nav a:nth-child(4):is(.active) ~ .indicator {
+    transform: translate(0.2rem, 11.5rem);
+  }
+
+  .header-nav a:nth-child(5):is(.active) ~ .indicator {
     transform: translate(0.135rem, 15.49rem);
   }
 }
@@ -318,97 +455,185 @@
     top: -0.5rem;
   }
 
+  .ceiling-lamp-container {
+    width: 4.5rem;
+    height: 4.5rem;
+    left: 70%;
+  }
+
   /****************** INDICATOR STEPS ************************/
 
-  .light-nav a:nth-child(1):is(.active) ~ .indicator {
+  .header-nav a:nth-child(1):is(.active) ~ .indicator {
     transform: translate(0.1rem);
   }
 
-  .light-nav a:nth-child(2):is(.active) ~ .indicator {
+  .header-nav a:nth-child(2):is(.active) ~ .indicator {
     transform: translate(0, 3.9rem);
   }
 
-  .light-nav a:nth-child(3):is(.active) ~ .indicator {
+  .header-nav a:nth-child(3):is(.active) ~ .indicator {
     transform: translate(0.1rem, 7.9rem);
   }
 
-  .light-nav a:nth-child(4):is(.active) ~ .indicator {
+  .header-nav a:nth-child(4):is(.active) ~ .indicator {
     transform: translate(0.2rem, 11.7rem);
   }
 
-  .light-nav a:nth-child(5):is(.active) ~ .indicator {
+  .header-nav a:nth-child(5):is(.active) ~ .indicator {
+    transform: translate(0.135rem, 15.7rem);
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .header-container {
+    top: -0.5rem;
+  }
+
+  .ceiling-lamp-container {
+    width: 4.5rem;
+    height: 4.5rem;
+    left: 73%;
+  }
+
+  /****************** INDICATOR STEPS ************************/
+
+  .header-nav a:nth-child(1):is(.active) ~ .indicator {
+    transform: translate(0.1rem);
+  }
+
+  .header-nav a:nth-child(2):is(.active) ~ .indicator {
+    transform: translate(0, 3.9rem);
+  }
+
+  .header-nav a:nth-child(3):is(.active) ~ .indicator {
+    transform: translate(0.1rem, 7.9rem);
+  }
+
+  .header-nav a:nth-child(4):is(.active) ~ .indicator {
+    transform: translate(0.2rem, 11.7rem);
+  }
+
+  .header-nav a:nth-child(5):is(.active) ~ .indicator {
     transform: translate(0.135rem, 15.7rem);
   }
 }
 
 @media only screen and (max-width: 480px) {
+  .ceiling-lamp-container {
+    width: 4.5rem;
+    height: 4.5rem;
+    left: 73%;
+  }
+
   /****************** INDICATOR STEPS ************************/
 
-  .light-nav a:nth-child(1):is(.active) ~ .indicator {
+  .header-nav a:nth-child(1):is(.active) ~ .indicator {
     transform: translate(0.1rem);
   }
 
-  .light-nav a:nth-child(2):is(.active) ~ .indicator {
+  .header-nav a:nth-child(2):is(.active) ~ .indicator {
     transform: translate(0, 3.9rem);
   }
 
-  .light-nav a:nth-child(3):is(.active) ~ .indicator {
+  .header-nav a:nth-child(3):is(.active) ~ .indicator {
     transform: translate(0.1rem, 7.8rem);
   }
 
-  .light-nav a:nth-child(4):is(.active) ~ .indicator {
+  .header-nav a:nth-child(4):is(.active) ~ .indicator {
     transform: translate(0.2rem, 11.5rem);
   }
 
-  .light-nav a:nth-child(5):is(.active) ~ .indicator {
+  .header-nav a:nth-child(5):is(.active) ~ .indicator {
     transform: translate(0.135rem, 15.6rem);
   }
 }
 
 @media only screen and (max-width: 414px) {
+  .ceiling-lamp-container {
+    width: 4.5rem;
+    height: 4.5rem;
+    left: 73%;
+  }
+
   /****************** INDICATOR STEPS ************************/
 
-  .light-nav a:nth-child(1):is(.active) ~ .indicator {
+  .header-nav a:nth-child(1):is(.active) ~ .indicator {
     transform: translate(0.1rem);
   }
 
-  .light-nav a:nth-child(2):is(.active) ~ .indicator {
+  .header-nav a:nth-child(2):is(.active) ~ .indicator {
     transform: translate(0, 3.9rem);
   }
 
-  .light-nav a:nth-child(3):is(.active) ~ .indicator {
+  .header-nav a:nth-child(3):is(.active) ~ .indicator {
     transform: translate(0.1rem, 8rem);
   }
 
-  .light-nav a:nth-child(4):is(.active) ~ .indicator {
+  .header-nav a:nth-child(4):is(.active) ~ .indicator {
     transform: translate(0.2rem, 11.8rem);
   }
 
-  .light-nav a:nth-child(5):is(.active) ~ .indicator {
+  .header-nav a:nth-child(5):is(.active) ~ .indicator {
+    transform: translate(0.12rem, 15.6rem);
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .ceiling-lamp-container {
+    width: 4.5rem;
+    height: 4.5rem;
+    left: 75%;
+  }
+
+  /****************** INDICATOR STEPS ************************/
+
+  .header-nav a:nth-child(1):is(.active) ~ .indicator {
+    transform: translate(0.1rem);
+  }
+
+  .header-nav a:nth-child(2):is(.active) ~ .indicator {
+    transform: translate(0, 3.9rem);
+  }
+
+  .header-nav a:nth-child(3):is(.active) ~ .indicator {
+    transform: translate(0.1rem, 8rem);
+  }
+
+  .header-nav a:nth-child(4):is(.active) ~ .indicator {
+    transform: translate(0.2rem, 11.8rem);
+  }
+
+  .header-nav a:nth-child(5):is(.active) ~ .indicator {
     transform: translate(0.12rem, 15.6rem);
   }
 }
 
 @media only screen and (max-width: 320px) {
+  .ceiling-lamp-container {
+    width: 4.5rem;
+    height: 4.5rem;
+    left: 75%;
+  }
+
   /****************** INDICATOR STEPS ************************/
 
-  .light-nav a:nth-child(1):is(.active) ~ .indicator {
+  .header-nav a:nth-child(1):is(.active) ~ .indicator {
     transform: translate(0.1rem);
   }
 
-  .light-nav a:nth-child(2):is(.active) ~ .indicator {
+  .header-nav a:nth-child(2):is(.active) ~ .indicator {
     transform: translate(0, 3.9rem);
   }
 
-  .light-nav a:nth-child(3):is(.active) ~ .indicator {
+  .header-nav a:nth-child(3):is(.active) ~ .indicator {
     transform: translate(0.1rem, 7.9rem);
   }
 
-  .light-nav a:nth-child(4):is(.active) ~ .indicator {
+  .header-nav a:nth-child(4):is(.active) ~ .indicator {
     transform: translate(0.2rem, 11.7rem);
   }
 
-  .light-nav a:nth-child(5):is(.active) ~ .indicator {
+  .header-nav a:nth-child(5):is(.active) ~ .indicator {
     transform: translate(0.12rem, 15.8rem);
   }
 }
@@ -422,25 +647,31 @@
     transform: translate(-0.1rem, -0.4rem) rotate(45deg); /* sola yatık ok */
   }
 
+  .ceiling-lamp-container {
+    width: 4rem;
+    height: 4rem;
+    left: 75%;
+  }
+
   /****************** INDICATOR STEPS ************************/
 
-  .light-nav a:nth-child(1):is(.active) ~ .indicator {
+  .header-nav a:nth-child(1):is(.active) ~ .indicator {
     transform: translate(0.1rem);
   }
 
-  .light-nav a:nth-child(2):is(.active) ~ .indicator {
+  .header-nav a:nth-child(2):is(.active) ~ .indicator {
     transform: translate(0, 3.9rem);
   }
 
-  .light-nav a:nth-child(3):is(.active) ~ .indicator {
+  .header-nav a:nth-child(3):is(.active) ~ .indicator {
     transform: translate(0.1rem, 7.9rem);
   }
 
-  .light-nav a:nth-child(4):is(.active) ~ .indicator {
+  .header-nav a:nth-child(4):is(.active) ~ .indicator {
     transform: translate(0.2rem, 11.7rem);
   }
 
-  .light-nav a:nth-child(5):is(.active) ~ .indicator {
+  .header-nav a:nth-child(5):is(.active) ~ .indicator {
     transform: translate(0.12rem, 15.8rem);
   }
 }

@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import homex32 from "../assets/icons/ico_general/homex32.png";
+import homex32d from "../assets/icons/ico_general/homex32d.png";
 import menux32 from "../assets/icons/ico_general/menux32.png";
+import menux32d from "../assets/icons/ico_general/menux32d.png";
 import galeryx32 from "../assets/icons/ico_general/galeryx32.png";
+import galeryx32d from "../assets/icons/ico_general/galeryx32d.png";
 import contactx32 from "../assets/icons/ico_general/contactx32.png";
+import contactx32d from "../assets/icons/ico_general/contactx32d.png";
 import aboutx32 from "../assets/icons/ico_general/aboutx32.png";
-import lamp from "../assets/icons/ico_general/ceiling-lamp.png";
-import lampOff from "../assets/icons/ico_general/ceiling-lamp-off.png";
+import aboutx32d from "../assets/icons/ico_general/aboutx32d.png";
+import lamp from "../assets/icons/ico_general/lamp64x64.png";
+import lampOff from "../assets/icons/ico_general/lamp64x64d.png";
 import { useTheme } from "../context/ThemeContext";
 
 const HeaderNav = () => {
@@ -23,40 +28,52 @@ const HeaderNav = () => {
           onClick={() => setSwitchOnOff(!switchOnOff)}
         />
       </div>
-      <nav className="header-nav light-nav">
+      <nav className={`header-nav ${switchOnOff ? "" : "dark"}`.trimEnd()}>
         <div className="header-logo-div">
           <Link to="/">
-            <h1 className="header-logo-text">Sude Restoran & Kafe</h1>
+            <h1
+              className={`header-logo-text ${
+                switchOnOff ? "" : "dark"
+              }`.trimEnd()}
+            >
+              Sude Restoran & Kafe
+            </h1>
           </Link>
         </div>
         <button
           type="button"
-          className={`btn-toggle ${hideLinks ? "active-toggle" : ""}`.trim()}
+          className={`btn-toggle ${
+            switchOnOff
+              ? `${hideLinks ? "active-toggle" : ""}`
+              : `dark ${hideLinks ? "active-toggle" : ""}`
+          }`.trim()}
           onClick={() => setHideLinks(!hideLinks)}
         >
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <div className="header-list-div">
+        <div
+          className={`header-list-div ${switchOnOff ? "" : "dark"}`.trimEnd()}
+        >
           <NavLink to="/">
-            <img src={homex32} alt="home" />
+            <img src={switchOnOff ? homex32 : homex32d} alt="home" />
             <p>ana sayfa</p>
           </NavLink>
           <NavLink to="/menu">
-            <img src={menux32} alt="menu" />
+            <img src={switchOnOff ? menux32 : menux32d} alt="menu" />
             <p>menü</p>
           </NavLink>
           <NavLink to="/galeri">
-            <img src={galeryx32} alt="galery" />
+            <img src={switchOnOff ? galeryx32 : galeryx32d} alt="galery" />
             <p>galeri</p>
           </NavLink>
           <NavLink to="/iletisim">
-            <img src={contactx32} alt="contact" />
+            <img src={switchOnOff ? contactx32 : contactx32d} alt="contact" />
             <p>iletişim</p>
           </NavLink>
           <NavLink to="/hakkimizda">
-            <img src={aboutx32} alt="about" />
+            <img src={switchOnOff ? aboutx32 : aboutx32d} alt="about" />
             <p>hakkımızda</p>
           </NavLink>
           <div className="indicator"></div>
