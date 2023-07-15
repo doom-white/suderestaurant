@@ -2,9 +2,11 @@ import React, { useEffect } from "react";
 import heart from "../assets/icons/ico_general/heart.png";
 import toprated from "../assets/icons/ico_general/top-rated.png";
 import { useSelected } from "../context/SelectedContext";
+import { useTheme } from "../context/ThemeContext";
 
 const GaleryMenuCard = ({ product }) => {
   const { selectedElement, setSelectedElement } = useSelected();
+  const { switchOnOff } = useTheme();
 
   useEffect(() => {
     if (selectedElement >= 0) {
@@ -19,8 +21,10 @@ const GaleryMenuCard = ({ product }) => {
 
   return (
     <div className="gm-container">
-      <div className="gm-content">
-        <div className="gm-dantel">{product.desc}</div>
+      <div className={`gm-content ${switchOnOff ? "" : "dark"}`.trimEnd()}>
+        <div className={`gm-dantel ${switchOnOff ? "" : "dark"}`.trimEnd()}>
+          {product.desc}
+        </div>
         <div className="gm-con-img-div">
           <img className="gm-con-img" src={product.imgURL} alt="resim" />
         </div>
@@ -32,7 +36,7 @@ const GaleryMenuCard = ({ product }) => {
             </small>
           )}
 
-          <h3 className="gm-con-price">
+          <h3 className={`gm-con-price ${switchOnOff ? "" : "dark"}`.trimEnd()}>
             {product.price} {product.price && "₺"}
           </h3>
         </div>

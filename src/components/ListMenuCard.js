@@ -2,9 +2,11 @@ import React, { useEffect } from "react";
 import heart from "../assets/icons/ico_general/heart.png";
 import toprated from "../assets/icons/ico_general/top-rated.png";
 import { useSelected } from "../context/SelectedContext";
+import { useTheme } from "../context/ThemeContext";
 
 const ListMenuCard = ({ product }) => {
   const { selectedElement, setSelectedElement } = useSelected();
+  const { switchOnOff } = useTheme();
 
   useEffect(() => {
     if (selectedElement >= 0) {
@@ -19,7 +21,7 @@ const ListMenuCard = ({ product }) => {
 
   return (
     <>
-      <li className="lm-item">
+      <li className={`lm-item ${switchOnOff ? "" : "dark"}`.trimEnd()}>
         <img className="lm-img" src={product.imgURL} alt={product.title} />
         <ul className="inner-lm-container">
           <li id="inner-lm-title" className="inner-lm-item">
@@ -45,7 +47,9 @@ const ListMenuCard = ({ product }) => {
             {product.desc}
           </li>
         </ul>
-        <span className="inner-lm-price">
+        <span
+          className={`inner-lm-price ${switchOnOff ? "" : "dark"}`.trimEnd()}
+        >
           {" "}
           {product.price} {product.price && "₺"}
         </span>

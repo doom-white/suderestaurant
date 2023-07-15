@@ -5,17 +5,23 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import { useSelected } from "../context/SelectedContext";
 import { useNavigate } from "react-router-dom";
+import { useTheme } from "../context/ThemeContext";
 
 const MenuCard = ({ screenSize }) => {
   const { setSelectedElement } = useSelected();
   const navigation = useNavigate();
+  const { switchOnOff } = useTheme();
 
   return (
     <>
       <div className="menu-card-container">
         <div className="menu-card-title">
-          <h1 className="menu-title">Öne çıkan yemek menülerimiz</h1>
-          <pre className="menu-desc">Her zaman taze ve çıtır lezzetler...</pre>
+          <h1 className={`menu-title ${switchOnOff ? "" : "dark"}`.trimEnd()}>
+            Öne çıkan yemek menülerimiz
+          </h1>
+          <pre className={`menu-desc ${switchOnOff ? "" : "dark"}`.trimEnd()}>
+            Her zaman taze ve çıtır lezzetler...
+          </pre>
         </div>
 
         <div className="menu-card-content-container">

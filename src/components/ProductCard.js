@@ -5,17 +5,23 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import { useSelected } from "../context/SelectedContext";
 import { useNavigate } from "react-router-dom";
+import { useTheme } from "../context/ThemeContext";
 
 const ProductCard = ({ screenSize }) => {
   const { setSelectedElement } = useSelected();
   const navigation = useNavigate();
+  const { switchOnOff } = useTheme();
 
   return (
     <>
       <div className="pro-card-container">
         <div className="pro-card-title">
-          <h1 className="pro-title">En çok beğenilen yemeklerimiz</h1>
-          <pre className="pro-desc">Gaziantep lezzetleri ile tanış...</pre>
+          <h1 className={`pro-title ${switchOnOff ? "" : "dark"}`.trimEnd()}>
+            En çok beğenilen yemeklerimiz
+          </h1>
+          <pre className={`pro-desc ${switchOnOff ? "" : "dark"}`.trimEnd()}>
+            Gaziantep lezzetleri ile tanış...
+          </pre>
         </div>
 
         <div className="pro-card-content-container">

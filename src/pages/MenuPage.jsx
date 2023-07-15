@@ -1,15 +1,21 @@
 import { useEffect, useRef, useState } from "react";
 import catalog from "../assets/icons/ico_general/menu.png";
+import catalogdark from "../assets/icons/ico_general/menud.png";
 import mlist from "../assets/icons/ico_general/mlist.png";
+import mlistdark from "../assets/icons/ico_general/mlistd.png";
 import productList from "../assets/data/products.json";
 import GaleryMenuCard from "../components/GaleryMenuCard";
 import love from "../assets/icons/ico_general/love.png";
+import lovedark from "../assets/icons/ico_general/loved.png";
 import search from "../assets/icons/ico_general/search.png";
+import searchdark from "../assets/icons/ico_general/searchd.png";
 import rated from "../assets/icons/ico_general/rated.png";
+import rateddark from "../assets/icons/ico_general/ratedd.png";
 import menu_search_close from "../assets/icons/ico_general/close.png";
 import menu_search_magnifying from "../assets/icons/ico_general/magnifying.png";
 import ListMenuCard from "../components/ListMenuCard";
 import { motion } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
 
 const menuPageVariants = {
   hidden: {
@@ -39,6 +45,7 @@ const searchVariants = {
 };
 
 const MenuPage = () => {
+  const { switchOnOff } = useTheme();
   const searchRef = useRef(null);
   const [isMenu, setIsMenu] = useState(true);
   const [searchMenu, setSearchMenu] = useState(false);
@@ -74,7 +81,7 @@ const MenuPage = () => {
   return (
     <>
       <section className="menu-container">
-        <div className="menu-type">
+        <div className={`menu-type ${switchOnOff ? "" : "dark"}`.trimEnd()}>
           <div className="menu-type-title">
             {
               /* Katalog Menu */
@@ -156,7 +163,7 @@ const MenuPage = () => {
             >
               <input
                 ref={searchRef}
-                className="menu-search"
+                className={`menu-search ${switchOnOff ? "" : "dark"}`.trimEnd()}
                 type="text"
                 placeholder="Menüde Ara..."
                 onChange={(e) => handleSearch(e)}
@@ -188,7 +195,7 @@ const MenuPage = () => {
           <div className="menu-type-img">
             <div className="menu-search-div">
               <img
-                src={search}
+                src={switchOnOff ? search : searchdark}
                 alt="search-bar"
                 onClick={() => {
                   setSearchMenu(true);
@@ -205,7 +212,7 @@ const MenuPage = () => {
             </div>
             <div className="menu-love-div">
               <img
-                src={love}
+                src={switchOnOff ? love : lovedark}
                 alt="love-menu"
                 onClick={() => {
                   setStatus(2);
@@ -215,7 +222,7 @@ const MenuPage = () => {
 
             <div className="menu-rated-div">
               <img
-                src={rated}
+                src={switchOnOff ? rated : rateddark}
                 alt="rated-menu"
                 onClick={() => {
                   setStatus(3);
@@ -225,7 +232,7 @@ const MenuPage = () => {
 
             <div className="menu-catalog-div">
               <img
-                src={catalog}
+                src={switchOnOff ? catalog : catalogdark}
                 alt="galeri-menu"
                 onClick={() => {
                   setIsMenu(true);
@@ -236,7 +243,7 @@ const MenuPage = () => {
 
             <div className="menu-list-div">
               <img
-                src={mlist}
+                src={switchOnOff ? mlist : mlistdark}
                 alt="liste-menu"
                 onClick={() => {
                   setIsMenu(false);

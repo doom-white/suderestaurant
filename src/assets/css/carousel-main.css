@@ -31,6 +31,11 @@
   transition: all 0.5s linear;
 }
 
+.crsl-images-title:is(.dark) {
+  background: #999999c5;
+  color: black;
+}
+
 .crsl-ribbon-top {
   position: absolute;
   top: 0.54rem;

@@ -12,6 +12,10 @@
   overflow: hidden;
 }
 
+.gm-content:is(.dark) {
+  background: #fefefe0c;
+}
+
 .gm-content:hover {
   box-shadow: rgba(4, 206, 48, 0.8) 0 0 0.5rem 0.5rem;
 }
@@ -42,6 +46,10 @@
   clip-path: circle(4.4rem at 100% 100%);
   transition-delay: 0.3s;
   transition: 0.5s ease-in-out;
+}
+
+.gm-content:is(.dark)::before {
+  background: #99999986;
 }
 
 .gm-content:hover:before {
@@ -115,6 +123,11 @@
   user-select: none;
 }
 
+.gm-con-price:is(.dark) {
+  color: black;
+  background: transparent;
+}
+
 /*? GM_DANTEL (gm-content'in üst tarafı) */
 
 .gm-dantel {
@@ -136,6 +149,11 @@
   font-size: 1.2rem;
   text-align: center;
   user-select: none;
+}
+
+.gm-dantel:is(.dark) {
+  background: #9999995b;
+  color: black;
 }
 
 .gm-content:hover .gm-dantel {

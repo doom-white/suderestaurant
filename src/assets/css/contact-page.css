@@ -27,6 +27,10 @@
   color: rgba(199, 61, 88, 0.918);
 }
 
+.con-form-title:is(.dark) {
+  color: rgba(245, 245, 245, 0.575);
+}
+
 .con-form {
   /* background-color: aqua; */
   background-color: white;
@@ -35,6 +39,11 @@
   width: 100%;
   padding: 2rem;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.con-form:is(.dark) {
+  background-color: #dddddd0c;
+  border: 2px solid #20202080;
 }
 
 .con-form-item {
@@ -56,6 +65,11 @@
   transition: all 0.2s linear;
 }
 
+.con-form-label:is(.dark) {
+  background: linear-gradient(to bottom, #2b2b2b 50%, #212221 50%);
+  color: #7c7c7c;
+}
+
 .con-form-input {
   width: 100%;
   height: 3rem;
@@ -63,8 +77,16 @@
   padding: 1rem;
   margin-top: 1rem;
   border: 2px solid #ddd;
+  background-color: transparent;
   border-radius: 0.45rem;
   color: rgb(168, 66, 87);
+}
+
+.con-form-input:is(.dark),
+.con-form-area:is(.dark) {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  box-shadow: inset black 0 0 7px;
+  color: gainsboro;
 }
 
 .con-form-input:focus,
@@ -73,10 +95,21 @@
   border-color: rgb(168, 66, 87) !important;
 }
 
+.con-form-input:is(.dark):focus,
+.con-form-area:is(.dark):focus {
+  outline: none;
+  border-color: #000 !important;
+  box-shadow: unset rgb(63, 63, 63) 0 0 7px;
+}
+
 .con-form-input:focus ~ .con-form-label {
   font-size: 1rem;
   top: 0.6rem;
   color: rgb(168, 66, 87);
+}
+
+.con-form-input:is(.dark):focus ~ .con-form-label {
+  color: gainsboro;
 }
 
 .con-form-area {
@@ -97,9 +130,18 @@
   border-color: rgb(168, 66, 87);
 }
 
+.con-form-area:is(.dark):focus ~ .con-form-label {
+  color: gainsboro;
+}
+
 .con-form-input::placeholder,
 .con-form-area::placeholder {
   color: #dedede;
+}
+
+.con-form-input:is(.dark)::placeholder,
+.con-form-area:is(.dark)::placeholder {
+  color: rgba(220, 220, 220, 0.2);
 }
 
 .con-button-container {
@@ -125,16 +167,34 @@
   background-color: rgb(66, 148, 168);
 }
 
+.btn-send:is(.dark) {
+  background-color: #7c7c7c;
+  color: black;
+}
+
 .btn-send:hover {
   background-color: rgb(57, 124, 141);
+}
+
+.btn-send:is(.dark):hover {
+  background-color: #aaaaaa;
+  color: black;
 }
 
 .btn-cancel {
   background-color: rgba(199, 61, 88, 0.918);
 }
 
+.btn-cancel:is(.dark) {
+  background-color: #121212b4;
+}
+
 .btn-cancel:hover {
   background-color: rgb(168, 66, 87);
+}
+
+.btn-cancel:is(.dark):hover {
+  background-color: #000;
 }
 
 /*! ******* {GOOGLE MAP} *******/

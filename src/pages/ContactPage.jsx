@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import { motion } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
 
 const contactPageVariants = {
   hidden: {
@@ -40,6 +41,7 @@ const ContactPage = () => {
   const [surname, setSurname] = useState("");
   const [mail, setMail] = useState("");
   const [content, setContent] = useState("");
+  const { switchOnOff } = useTheme();
 
   const handleCleanInputs = () => {
     setName("");
@@ -76,13 +78,21 @@ const ContactPage = () => {
       animate="visible"
     >
       <motion.div className="con-form-container" variants={contactFormVariants}>
-        <p className="con-form-title">Bizimle iletişime geçin</p>
-        <form ref={formRef} className="con-form" onSubmit={handleSubmit}>
+        <p className={`con-form-title ${switchOnOff ? "" : "dark"}`.trimEnd()}>
+          Bizimle iletişime geçin
+        </p>
+        <form
+          ref={formRef}
+          className={`con-form ${switchOnOff ? "" : "dark"}`.trimEnd()}
+          onSubmit={handleSubmit}
+        >
           <div className="con-form-item">
             <input
               id="name"
               name="user_name"
-              className="con-form-input"
+              className={`con-form-input ${
+                switchOnOff ? "" : "dark"
+              }`.trimEnd()}
               type="text"
               value={
                 name.substring(0, 1).toLocaleUpperCase("tr") + name.substring(1)
@@ -91,7 +101,12 @@ const ContactPage = () => {
               onChange={(e) => setName(e.target.value)}
               required
             />
-            <label className="con-form-label" htmlFor="name">
+            <label
+              className={`con-form-label ${
+                switchOnOff ? "" : "dark"
+              }`.trimEnd()}
+              htmlFor="name"
+            >
               isim
             </label>
           </div>
@@ -99,7 +114,9 @@ const ContactPage = () => {
             <input
               id="surname"
               name="surname"
-              className="con-form-input"
+              className={`con-form-input ${
+                switchOnOff ? "" : "dark"
+              }`.trimEnd()}
               type="text"
               value={
                 surname.substring(0, 1).toLocaleUpperCase("tr") +
@@ -109,7 +126,12 @@ const ContactPage = () => {
               onChange={(e) => setSurname(e.target.value)}
               required
             />
-            <label className="con-form-label" htmlFor="surname">
+            <label
+              className={`con-form-label ${
+                switchOnOff ? "" : "dark"
+              }`.trimEnd()}
+              htmlFor="surname"
+            >
               soyisim
             </label>
           </div>
@@ -117,7 +139,9 @@ const ContactPage = () => {
             <input
               id="mail"
               name="user_email"
-              className="con-form-input"
+              className={`con-form-input ${
+                switchOnOff ? "" : "dark"
+              }`.trimEnd()}
               type="email"
               pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}"
               value={mail}
@@ -125,7 +149,12 @@ const ContactPage = () => {
               onChange={(e) => setMail(e.target.value)}
               required
             />
-            <label className="con-form-label" htmlFor="user_email">
+            <label
+              className={`con-form-label ${
+                switchOnOff ? "" : "dark"
+              }`.trimEnd()}
+              htmlFor="user_email"
+            >
               e-mail
             </label>
           </div>
@@ -133,7 +162,7 @@ const ContactPage = () => {
             <textarea
               name="message"
               id="mail-text"
-              className="con-form-area"
+              className={`con-form-area ${switchOnOff ? "" : "dark"}`.trimEnd()}
               cols="30"
               rows="5"
               placeholder="Bir şeyler yaz..."
@@ -141,17 +170,29 @@ const ContactPage = () => {
               onChange={(e) => setContent(e.target.value)}
               required
             ></textarea>
-            <label className="con-form-label" htmlFor="message">
+            <label
+              className={`con-form-label ${
+                switchOnOff ? "" : "dark"
+              }`.trimEnd()}
+              htmlFor="message"
+            >
               içerik
             </label>
           </div>
           <div className="con-button-container">
-            <button className="con-button btn-send" type="submit">
+            <button
+              className={`con-button btn-send ${
+                switchOnOff ? "" : "dark"
+              }`.trimEnd()}
+              type="submit"
+            >
               Gönder
             </button>
             <ToastContainer />
             <button
-              className="con-button btn-cancel"
+              className={`con-button btn-cancel ${
+                switchOnOff ? "" : "dark"
+              }`.trimEnd()}
               type="button"
               onClick={handleCleanInputs}
             >

@@ -41,18 +41,16 @@ const GaleryPage = () => {
       >
         {sude_images &&
           sude_images.map((sude) => (
-            <>
-              <div
-                className="gp-img-item"
-                onClick={() => {
-                  setSelectedImg(sude);
+            <div
+              className="gp-img-item"
+              onClick={() => {
+                setSelectedImg(sude);
 
-                  showModal();
-                }}
-              >
-                <img className="gp-img" src={sude.res} alt="sude-resimler" />
-              </div>
-            </>
+                showModal();
+              }}
+            >
+              <img className="gp-img" src={sude.res} alt="sude-resimler" />
+            </div>
           ))}
       </motion.div>
       <GaleryModal sude={allImages} />

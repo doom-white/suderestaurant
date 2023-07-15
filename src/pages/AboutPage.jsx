@@ -20,7 +20,7 @@ const aboutPageVariants = {
 const topVariants = {
   hidden: {
     opacity: 0,
-    x: "100vw",
+    x: "200",
   },
   visible: {
     opacity: 1,
@@ -39,7 +39,7 @@ const topVariants = {
 const bottomVariants = {
   hidden: {
     opacity: 0,
-    x: "-100vw",
+    x: "-200",
   },
   visible: {
     opacity: 1,

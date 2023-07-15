@@ -29,7 +29,7 @@ const GaleryModal = ({ sude }) => {
         }}
       >
         {sude.map((s) => (
-          <SplideSlide>
+          <SplideSlide key={s.id}>
             <img src={s.res} alt="sude-resimler" className="gp-modal-img" />
             <p className="modal-title">{s.desc}</p>
           </SplideSlide>

@@ -1,7 +1,10 @@
 import React from "react";
 import rated from "../assets/icons/ico_general/top-rated.png";
+import { useTheme } from "../context/ThemeContext";
 
 const MenuCardInfo = ({ product }) => {
+  const { switchOnOff } = useTheme();
+
   return (
     <>
       <div className="menu-card-img-container">
@@ -11,11 +14,17 @@ const MenuCardInfo = ({ product }) => {
           alt={product.title}
           title="Menüye Git..."
         />
-        <div className="menu-card-footer-dantel">
+        <div
+          className={`menu-card-footer-dantel ${
+            switchOnOff ? "" : "dark"
+          }`.trimEnd()}
+        >
           <span>{product.desc && product.desc}</span>
         </div>
       </div>
-      <div className="menu-card-dantel">
+      <div
+        className={`menu-card-dantel ${switchOnOff ? "" : "dark"}`.trimEnd()}
+      >
         <span>
           {product.title} {product.type && "-"}{" "}
           {product.type ? product.type : ""}

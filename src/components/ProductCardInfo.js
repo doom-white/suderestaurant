@@ -1,7 +1,10 @@
 import React from "react";
 import heart from "../assets/icons/ico_general/heart.png";
+import { useTheme } from "../context/ThemeContext";
 
 const ProductCardInfo = ({ product }) => {
+  const { switchOnOff } = useTheme();
+
   return (
     <>
       <div className="pro-card-img-container">
@@ -11,11 +14,15 @@ const ProductCardInfo = ({ product }) => {
           alt={product.title}
           title="Menüye Git..."
         />
-        <div className="pro-card-footer-dantel">
+        <div
+          className={`pro-card-footer-dantel ${
+            switchOnOff ? "" : "dark"
+          }`.trimEnd()}
+        >
           <span>{product.desc && product.desc}</span>
         </div>
       </div>
-      <div className="pro-card-dantel">
+      <div className={`pro-card-dantel ${switchOnOff ? "" : "dark"}`.trimEnd()}>
         <span>
           {product.title} {product.type && "-"}{" "}
           {product.type ? product.type : ""}
