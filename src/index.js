@@ -7,18 +7,21 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import SelectedProvider from "./context/SelectedContext";
 import ModalProvider from "./context/ModalContext";
+import ThemeProvider from "./context/ThemeContext";
 import ScrollToTop from "./components/ScrollToTop";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <SelectedProvider>
-      <ModalProvider>
-        <BrowserRouter>
-          <ScrollToTop />
-          <App />
-        </BrowserRouter>
-      </ModalProvider>
-    </SelectedProvider>
+    <ThemeProvider>
+      <SelectedProvider>
+        <ModalProvider>
+          <BrowserRouter>
+            <ScrollToTop />
+            <App />
+          </BrowserRouter>
+        </ModalProvider>
+      </SelectedProvider>
+    </ThemeProvider>
   </React.StrictMode>
 );

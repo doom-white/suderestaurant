@@ -9,10 +9,12 @@ import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
 import MasterChef from "./components/MasterChef";
 import { handleScroll } from "./helpers/CatchBottomPosition";
+import { useTheme } from "./context/ThemeContext";
 
 const App = () => {
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
   const [isBottom, setIsBottom] = useState(false);
+  const { switchOnOff } = useTheme();
 
   handleScroll(setIsBottom);
 
@@ -36,7 +38,9 @@ const App = () => {
 
   return (
     <>
-      <div className="app-main-container">
+      <div
+        className={`app-main-container ${switchOnOff ? "".trimEnd() : "dark"}`}
+      >
         <HeaderNav />
         <Routes>
           <Route path="/" element={<HomePage screenSize={screenSize} />} />

@@ -23,11 +23,16 @@
   transform: rotateY(180deg);
 }
 
-.tooltip-container p {
+.ttp-text {
   position: absolute;
   top: 1rem;
   font-weight: bold;
   font-size: 1rem;
   color: crimson;
   z-index: 1;
+}
+
+.ttp-text:is(.dark) {
+  color: whitesmoke;
+  background: transparent;
 }

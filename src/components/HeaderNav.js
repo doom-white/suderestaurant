@@ -5,12 +5,24 @@ import menux32 from "../assets/icons/ico_general/menux32.png";
 import galeryx32 from "../assets/icons/ico_general/galeryx32.png";
 import contactx32 from "../assets/icons/ico_general/contactx32.png";
 import aboutx32 from "../assets/icons/ico_general/aboutx32.png";
+import lamp from "../assets/icons/ico_general/ceiling-lamp.png";
+import lampOff from "../assets/icons/ico_general/ceiling-lamp-off.png";
+import { useTheme } from "../context/ThemeContext";
 
 const HeaderNav = () => {
   const [hideLinks, setHideLinks] = useState(false);
+  const { switchOnOff, setSwitchOnOff } = useTheme();
 
   return (
     <header className="header-container">
+      <div className="ceiling-lamp-container">
+        <img
+          className="ceiling-lamp"
+          src={switchOnOff ? lamp : lampOff}
+          alt="lamba"
+          onClick={() => setSwitchOnOff(!switchOnOff)}
+        />
+      </div>
       <nav className="header-nav light-nav">
         <div className="header-logo-div">
           <Link to="/">

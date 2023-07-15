@@ -10,6 +10,10 @@
   background-repeat: no-repeat;
 }
 
+.footer-container:is(.dark) {
+  background: linear-gradient(to bottom, rgb(44, 44, 44), #161616);
+}
+
 .footer-content-container {
   /* background-color: aqua; */
   width: 100%;
@@ -42,6 +46,11 @@
 
 .fcl-store-date {
   color: rgb(254 205 211);
+}
+
+.fcl-store-name:is(.dark),
+.fcl-store-date:is(.dark) {
+  color: rgb(209 213 219);
 }
 
 .fcl-city {
@@ -79,6 +88,7 @@
   /* background-color: yellow; */
   position: relative !important;
   margin-left: 1rem;
+  border-radius: 50%;
 }
 
 .styles-module_whatsappButton__tVits {
@@ -92,6 +102,10 @@
   position: relative !important;
   top: 0;
   left: 0;
+}
+
+.div-whatsapp:is(.dark) .styles-module_whatsappButton__tVits {
+  background: linear-gradient(to bottom, rgb(65, 65, 65), #2e2e2e) !important;
 }
 
 .styles-module_whatsappButton__tVits:after {
@@ -117,17 +131,48 @@
   ) !important;
 }
 
+.div-whatsapp:is(.dark) .styles-module_chatHeader__gaeOA {
+  background: linear-gradient(to bottom, rgb(56, 56, 56), #202020) !important;
+}
+
 .styles-module_chatHeader__gaeOA .styles-module_statusTitle__NgfPQ {
   color: #881337 !important;
+}
+
+.div-whatsapp:is(.dark)
+  .styles-module_chatHeader__gaeOA
+  .styles-module_statusTitle__NgfPQ {
+  color: whitesmoke !important;
 }
 
 .styles-module_chatHeader__gaeOA .styles-module_statusSubtitle__esavW {
   color: #b41f4c !important;
 }
 
+.div-whatsapp:is(.dark)
+  .styles-module_chatHeader__gaeOA
+  .styles-module_statusSubtitle__esavW {
+  color: lightgray !important;
+}
+
 .styles-module_chatHeader__gaeOA .styles-module_close__RLouK svg {
   fill: #d84470 !important;
   transition: all 0.5s linear !important;
+}
+
+.div-whatsapp:is(.dark)
+  .styles-module_chatHeader__gaeOA
+  .styles-module_close__RLouK
+  svg {
+  fill: gray !important;
+  transition: all 0.5s linear !important;
+}
+
+.div-whatsapp:is(.dark)
+  .styles-module_chatHeader__gaeOA
+  .styles-module_close__RLouK
+  svg:hover {
+  fill: gainsboro !important;
 }
 
 .styles-module_chatHeader__gaeOA .styles-module_close__RLouK svg:hover {
@@ -138,8 +183,20 @@
   background: #881337 !important;
 }
 
+.div-whatsapp:is(.dark)
+  .styles-module_chatHeader__gaeOA
+  .styles-module_avatar__afcc4:after {
+  background: #000 !important;
+}
+
 .styles-module_chatBody__VBxQH .styles-module_message__Z9MOV {
   background-color: #fcdae4 !important;
+}
+
+.div-whatsapp:is(.dark)
+  .styles-module_chatBody__VBxQH
+  .styles-module_message__Z9MOV {
+  background-color: #111 !important;
 }
 
 .styles-module_chatBubble__F6k84 {
@@ -150,8 +207,16 @@
   ) !important;
 }
 
+.div-whatsapp:is(.dark) .styles-module_chatBubble__F6k84 {
+  background: linear-gradient(to bottom, rgb(56, 56, 56), #202020) !important;
+}
+
 .styles-module_typing__Ru9xZ .styles-module_dot__RoVT7 {
   background-color: rgba(180, 31, 76, 0.7) !important;
+}
+
+.div-whatsapp:is(.dark) .styles-module_typing__Ru9xZ .styles-module_dot__RoVT7 {
+  background-color: whitesmoke !important;
 }
 
 .styles-module_chatBody__VBxQH
@@ -160,24 +225,57 @@
   border-color: transparent #fcdae4 transparent transparent !important;
 }
 
+.div-whatsapp:is(.dark)
+  .styles-module_chatBody__VBxQH
+  .styles-module_message__Z9MOV
+  .styles-module_triangle__K9ViC {
+  border-color: transparent #111 transparent transparent !important;
+}
+
 .styles-module_chatBody__VBxQH .styles-module_accountName__20AXD {
   color: #881337 !important;
+}
+
+.div-whatsapp:is(.dark)
+  .styles-module_chatBody__VBxQH
+  .styles-module_accountName__20AXD {
+  color: whitesmoke !important;
 }
 
 .styles-module_chatBody__VBxQH .styles-module_messageBody__9-hwo {
   color: #b41f4c !important;
 }
 
+.div-whatsapp:is(.dark)
+  .styles-module_chatBody__VBxQH
+  .styles-module_messageBody__9-hwo {
+  color: lightgray !important;
+}
+
 .styles-module_chatBody__VBxQH .styles-module_messageTime__MIwoR {
   color: #88133679 !important;
+}
+
+.div-whatsapp:is(.dark)
+  .styles-module_chatBody__VBxQH
+  .styles-module_messageTime__MIwoR {
+  color: gray !important;
 }
 
 .styles-module_chatBody__VBxQH {
   background-color: #ff99b7c0 !important;
 }
 
+.div-whatsapp:is(.dark) .styles-module_chatBody__VBxQH {
+  background-color: #555 !important;
+}
+
 .styles-module_chatFooter__TGv0P {
   background: linear-gradient(to top, rgb(248, 250, 252), #f86692) !important;
+}
+
+.div-whatsapp:is(.dark) .styles-module_chatFooter__TGv0P {
+  background: linear-gradient(to top, rgb(56, 56, 56), #202020) !important;
 }
 
 .styles-module_chatFooter__TGv0P form .styles-module_input__WFb9L {
@@ -185,17 +283,48 @@
   color: #881337 !important;
 }
 
+.div-whatsapp:is(.dark)
+  .styles-module_chatFooter__TGv0P
+  form
+  .styles-module_input__WFb9L {
+  background-color: #555 !important;
+  color: whitesmoke !important;
+}
+
 .styles-module_chatFooter__TGv0P form .styles-module_input__WFb9L:focus {
   border-color: rgb(136, 19, 55) !important;
   box-shadow: 0 0 0 1px rgba(136, 19, 55, 0.5) !important;
+}
+
+.div-whatsapp:is(.dark)
+  .styles-module_chatFooter__TGv0P
+  form
+  .styles-module_input__WFb9L:focus {
+  border-color: rgb(0, 0, 0) !important;
+  box-shadow: 0 0 0 1px rgba(7, 7, 7, 0.5) !important;
 }
 
 .styles-module_chatFooter__TGv0P form .styles-module_input__WFb9L::placeholder {
   color: #88133679 !important;
 }
 
+.div-whatsapp:is(.dark)
+  .styles-module_chatFooter__TGv0P
+  form
+  .styles-module_input__WFb9L::placeholder {
+  color: #000000a2 !important;
+}
+
 .styles-module_chatFooter__TGv0P form .styles-module_buttonSend__kXjja svg {
   fill: #881337 !important;
+}
+
+.div-whatsapp:is(.dark)
+  .styles-module_chatFooter__TGv0P
+  form
+  .styles-module_buttonSend__kXjja
+  svg {
+  fill: #555 !important;
 }
 
 .styles-module_notificationIndicator__gVmjV {
@@ -238,6 +367,10 @@
   font-weight: bold;
 }
 
+.fcr-mail-text:is(.dark) {
+  color: rgb(209 213 219);
+}
+
 .fcr-tel {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -256,10 +389,14 @@
 
   /* font-size: 0.875rem 14px */
   /*line-height: 1.25rem  20px; */
-  color: rgb(255 228 230);
+  color: rgba(220, 220, 220, 0.3);
   font-size: 0.75rem /* 12px */;
   line-height: 1rem /* 16px */;
-  opacity: 0.5;
+  transition: all 0.5s ease-in-out;
+}
+
+.footer-bottom:hover {
+  color: rgba(220, 220, 220, 0.7);
 }
 
 /*! MEDIA SCREEN */

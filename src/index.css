@@ -66,6 +66,10 @@ body::-webkit-scrollbar-thumb {
   position: relative;
 }
 
+.dark {
+  background-color: #222;
+}
+
 /* SPLIDE-JS SETTINGS*/
 
 .splide__arrow svg {
