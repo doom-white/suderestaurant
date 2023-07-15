@@ -28,7 +28,6 @@
 /*? CONTENT - LEFT */
 
 .footer-content-left {
-  /* background-color: blue; */
   flex: 1;
   height: 100%;
   display: flex;
@@ -51,6 +50,7 @@
 .fcl-store-name:is(.dark),
 .fcl-store-date:is(.dark) {
   color: rgb(209 213 219);
+  background: transparent;
 }
 
 .fcl-city {
@@ -369,6 +369,7 @@
 
 .fcr-mail-text:is(.dark) {
   color: rgb(209 213 219);
+  background: transparent;
 }
 
 .fcr-tel {
