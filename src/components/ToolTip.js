@@ -2,10 +2,11 @@ import React from "react";
 import speech from "../assets/icons/ico_general/speech-bubble.png";
 import speechDark from "../assets/icons/ico_general/speech-bubble-dark.png";
 import { useTheme } from "../context/ThemeContext";
-const ToolTip = ({ isBottom }) => {
+
+const ToolTip = () => {
   const { switchOnOff } = useTheme();
   return (
-    <div className={`tooltip-container ${isBottom ? "atBottom" : ""}`.trim()}>
+    <div className="tooltip-container">
       <p className={`ttp-text ${switchOnOff ? "" : "dark"}`.trimEnd()}>
         Başa dön...
       </p>

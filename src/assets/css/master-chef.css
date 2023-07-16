@@ -1,11 +1,10 @@
 .hp-chef-div {
-  width: 5rem;
-  height: 5rem;
+  width: 3.5rem;
+  height: 3.5rem;
   position: absolute;
   bottom: 1rem;
   right: 1rem !important;
   cursor: pointer;
-  /* background-color: yellow; */
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -14,8 +13,8 @@
 }
 
 .hp-chef {
-  width: 5rem !important;
-  height: 5rem !important;
+  width: 3.5rem !important;
+  height: 3.5rem !important;
   opacity: 0.7;
   transition: 0.5s ease-in-out;
 }
@@ -24,6 +23,6 @@
   opacity: 1;
 }
 
-.hp-chef:hover + .tooltip-container:is(.atBottom) {
-  opacity: 1 !important;
+.hp-chef:hover + .tooltip-container {
+  opacity: 1;
 }
