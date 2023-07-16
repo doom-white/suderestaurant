@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import HeaderNav from "./components/HeaderNav";
 import FooterNav from "./components/FooterNav";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import MenuPage from "./pages/MenuPage";
 import GaleryPage from "./pages/GaleryPage";
@@ -15,6 +15,7 @@ import {
 import { useTheme } from "./context/ThemeContext";
 
 const App = () => {
+  const { pathname } = useLocation();
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
   const [isBottom, setIsBottom] = useState(false);
   const { switchOnOff } = useTheme();
@@ -22,7 +23,7 @@ const App = () => {
   useEffect(() => {
     handleScroll(setIsBottom);
     return () => handleScrollRemove();
-  }, [isBottom, setIsBottom]);
+  }, [pathname]);
 
   function getCurrentDimension() {
     return {
