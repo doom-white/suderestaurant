@@ -31,3 +31,11 @@
   color: whitesmoke;
   background: transparent;
 }
+
+/*!  MEDIA SCREEN */
+
+@media only screen and (max-width: 540px) {
+  .tooltip-container {
+    opacity: 1;
+  }
+}
