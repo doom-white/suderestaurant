@@ -7,3 +7,7 @@ export const handleScroll = (cb) => {
     }
   });
 };
+
+export const handleScrollRemove = () => {
+  window.removeEventListener("scroll", handleScroll);
+};

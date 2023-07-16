@@ -8,7 +8,10 @@ import GaleryPage from "./pages/GaleryPage";
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
 import MasterChef from "./components/MasterChef";
-import { handleScroll } from "./helpers/CatchBottomPosition";
+import {
+  handleScroll,
+  handleScrollRemove,
+} from "./helpers/CatchBottomPosition";
 import { useTheme } from "./context/ThemeContext";
 
 const App = () => {
@@ -16,7 +19,10 @@ const App = () => {
   const [isBottom, setIsBottom] = useState(false);
   const { switchOnOff } = useTheme();
 
-  handleScroll(setIsBottom);
+  useEffect(() => {
+    handleScroll(setIsBottom);
+    return () => handleScrollRemove();
+  }, [isBottom, setIsBottom]);
 
   function getCurrentDimension() {
     return {

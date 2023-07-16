@@ -5,9 +5,7 @@ import { useTheme } from "../context/ThemeContext";
 const ToolTip = ({ isBottom }) => {
   const { switchOnOff } = useTheme();
   return (
-    <div
-      className={`tooltip-container ${(isBottom && "atBottom") || ""}`.trim()}
-    >
+    <div className={`tooltip-container ${isBottom ? "atBottom" : ""}`.trim()}>
       <p className={`ttp-text ${switchOnOff ? "" : "dark"}`.trimEnd()}>
         Başa dön...
       </p>
