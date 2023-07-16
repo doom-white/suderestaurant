@@ -66,7 +66,12 @@
 }
 
 .con-form-label:is(.dark) {
-  background: linear-gradient(to bottom, #2b2b2b 50%, #212221 50%);
+  background: linear-gradient(
+    to bottom,
+    #2b2b2b 42%,
+    #121212 65%,
+    #212121b9 70%
+  );
   color: #7c7c7c;
 }
 
@@ -110,6 +115,7 @@
 
 .con-form-input:is(.dark):focus ~ .con-form-label {
   color: gainsboro;
+  background: linear-gradient(to bottom, #2b2b2be7 80%, #151515f5);
 }
 
 .con-form-area {
@@ -132,6 +138,7 @@
 
 .con-form-area:is(.dark):focus ~ .con-form-label {
   color: gainsboro;
+  background: linear-gradient(to bottom, #2b2b2be7 80%, #151515f5);
 }
 
 .con-form-input::placeholder,

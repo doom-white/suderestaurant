@@ -3,6 +3,7 @@ import { useModal } from "../context/ModalContext";
 import sude_images from "../assets/restaurant_images/sude-images";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
 
 const galeryPageVariants = {
   hidden: {
@@ -19,6 +20,7 @@ const galeryPageVariants = {
 };
 
 const GaleryPage = () => {
+  const { switchOnOff } = useTheme();
   const { showModal } = useModal();
   const [selectedImg, setSelectedImg] = useState(sude_images[0]);
   const [allImages, setAllImages] = useState([]);
@@ -42,10 +44,9 @@ const GaleryPage = () => {
         {sude_images &&
           sude_images.map((sude) => (
             <div
-              className="gp-img-item"
+              className={`gp-img-item ${switchOnOff ? "" : "dark"}`.trimEnd()}
               onClick={() => {
                 setSelectedImg(sude);
-
                 showModal();
               }}
             >

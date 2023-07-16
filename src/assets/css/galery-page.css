@@ -24,7 +24,7 @@
   height: 15rem;
   overflow: hidden;
   transition: 0.7s ease-in-out;
-  border: 7px solid whitesmoke;
+  border: 10px solid whitesmoke;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,23 +32,33 @@
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
-.gp-img-item:hover {
-  transform: scale(1.05);
-  /* box-shadow: rgba(4, 206, 48, 0.8) 0 0 0.5rem 0.5rem; */
-  z-index: 1;
-  animation: random 2s linear infinite;
-  border: none;
+.gp-img-item:is(.dark) {
+  border-color: #000000d8;
+  box-shadow: rgba(64, 64, 65, 0.3) 0px 1px 2px 0px,
+    rgba(183, 187, 190, 0.15) 0px 2px 6px 2px;
+  filter: brightness(35%) grayscale(50%);
 }
 
-@keyframes random {
+.gp-img-item:hover {
+  filter: brightness(1) grayscale(0);
+  animation: shakeImg 0.3s ease-in-out 0s 1;
+}
+
+@keyframes shakeImg {
   0% {
-    box-shadow: rgba(4, 176, 206, 0.432) 0 0 0.3rem 0.5rem;
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
   }
   50% {
-    box-shadow: rgba(4, 206, 48, 0.8) 0 0 0.3rem 0.5rem;
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
   }
   100% {
-    box-shadow: rgba(206, 4, 71, 0.377) 0 0 0.3rem 0.5rem;
+    transform: translateX(0);
   }
 }
 
@@ -57,6 +67,11 @@
   height: 100%;
   background-size: cover;
   cursor: pointer;
+}
+
+.gp-modal:is(.dark) {
+  padding-bottom: 0 !important;
+  border-radius: 8px !important;
 }
 
 .gp-modal-img {
@@ -68,6 +83,10 @@
   font-size: 1rem;
   padding: 0.5rem 0 0 0;
   text-align: center;
+}
+
+.gp-modal:is(.dark) .modal-title {
+  color: whitesmoke;
 }
 
 .ant-modal-close {
@@ -84,6 +103,23 @@
 
 .ant-modal-content {
   padding: 15px 17px 7px 17px !important;
+}
+
+.gp-modal:is(.dark) .ant-modal-content {
+  background: #0000003a !important;
+  border: 3px solid black;
+  box-shadow: inset black 0 0 9px;
+}
+
+.gp-modal:is(.dark) .ant-modal-close svg {
+  fill: whitesmoke;
+}
+
+.gp-modal:is(.dark) .ant-modal-title {
+  background-color: #171717fb !important;
+  color: whitesmoke !important;
+  border-top-left-radius: 5.3px !important;
+  border-top-right-radius: 5.3px !important;
 }
 
 /*todo ********************************************************************************/
@@ -217,12 +253,6 @@
     width: 18px !important;
     height: 18px !important;
   }
-
-  .gp-img-item:hover {
-    transform: scale(1);
-    box-shadow: rgba(0, 0, 0, 0) 0 0 0 0;
-    animation: backwards;
-  }
 }
 
 @media only screen and (max-width: 912px) {
@@ -265,12 +295,6 @@
   .ant-modal-close svg {
     width: 18px !important;
     height: 18px !important;
-  }
-
-  .gp-img-item:hover {
-    transform: scale(1);
-    box-shadow: rgba(0, 0, 0, 0) 0 0 0 0;
-    animation: backwards;
   }
 }
 
@@ -315,12 +339,6 @@
     width: 18px !important;
     height: 18px !important;
   }
-
-  .gp-img-item:hover {
-    transform: scale(1);
-    box-shadow: rgba(0, 0, 0, 0) 0 0 0 0;
-    animation: backwards;
-  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -363,12 +381,6 @@
   .ant-modal-close svg {
     width: 18px !important;
     height: 18px !important;
-  }
-
-  .gp-img-item:hover {
-    transform: scale(1);
-    box-shadow: rgba(0, 0, 0, 0) 0 0 0 0;
-    animation: backwards;
   }
 }
 
@@ -413,12 +425,6 @@
     width: 15px !important;
     height: 15px !important;
   }
-
-  .gp-img-item:hover {
-    transform: scale(1);
-    box-shadow: rgba(0, 0, 0, 0) 0 0 0 0;
-    animation: backwards;
-  }
 }
 
 @media only screen and (max-width: 414px) {
@@ -462,12 +468,6 @@
   .ant-modal-close svg {
     width: 12px !important;
     height: 12px !important;
-  }
-
-  .gp-img-item:hover {
-    transform: scale(1);
-    box-shadow: rgba(0, 0, 0, 0) 0 0 0 0;
-    animation: backwards;
   }
 }
 
@@ -517,12 +517,6 @@
     width: 12px !important;
     height: 12px !important;
   }
-
-  .gp-img-item:hover {
-    transform: scale(1);
-    box-shadow: rgba(0, 0, 0, 0) 0 0 0 0;
-    animation: backwards;
-  }
 }
 
 @media only screen and (max-width: 320px) {
@@ -571,12 +565,6 @@
     width: 12px !important;
     height: 12px !important;
   }
-
-  .gp-img-item:hover {
-    transform: scale(1);
-    box-shadow: rgba(0, 0, 0, 0) 0 0 0 0;
-    animation: backwards;
-  }
 }
 
 @media only screen and (max-width: 280px) {
@@ -624,11 +612,5 @@
   .ant-modal-close svg {
     width: 9px !important;
     height: 9px !important;
-  }
-
-  .gp-img-item:hover {
-    transform: scale(1);
-    box-shadow: rgba(0, 0, 0, 0) 0 0 0 0;
-    animation: backwards;
   }
 }

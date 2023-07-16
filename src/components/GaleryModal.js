@@ -2,9 +2,11 @@ import React from "react";
 import { Modal } from "antd";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { useModal } from "../context/ModalContext";
+import { useTheme } from "../context/ThemeContext";
 
 const GaleryModal = ({ sude }) => {
   const { isModalOpen, handleOk, handleCancel } = useModal();
+  const { switchOnOff } = useTheme();
 
   return (
     <Modal
@@ -12,7 +14,7 @@ const GaleryModal = ({ sude }) => {
       onOk={handleOk}
       onCancel={handleCancel}
       width={"60rem"}
-      className="gp-modal"
+      className={`gp-modal ${switchOnOff ? "" : "dark"}`.trimEnd()}
       closable={true}
       footer={null}
       title="Sude Restaurant & Cafe"
