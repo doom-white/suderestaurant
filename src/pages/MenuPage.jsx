@@ -237,6 +237,7 @@ const MenuPage = () => {
                 onClick={() => {
                   setIsMenu(true);
                   setStatus(0);
+                  setSearchMenu(false);
                 }}
               />
             </div>
@@ -248,6 +249,7 @@ const MenuPage = () => {
                 onClick={() => {
                   setIsMenu(false);
                   setStatus(1);
+                  setSearchMenu(false);
                 }}
               />
             </div>

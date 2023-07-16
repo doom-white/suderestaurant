@@ -66,12 +66,7 @@
 }
 
 .con-form-label:is(.dark) {
-  background: linear-gradient(
-    to bottom,
-    #2b2b2b 42%,
-    #121212 65%,
-    #212121b9 70%
-  );
+  background: linear-gradient(to bottom, #2b2b2be7 45%, #20202080 20%);
   color: #7c7c7c;
 }
 
@@ -109,13 +104,13 @@
 
 .con-form-input:focus ~ .con-form-label {
   font-size: 1rem;
-  top: 0.6rem;
+  top: 0;
   color: rgb(168, 66, 87);
 }
 
 .con-form-input:is(.dark):focus ~ .con-form-label {
   color: gainsboro;
-  background: linear-gradient(to bottom, #2b2b2be7 80%, #151515f5);
+  background: linear-gradient(#2b2b2be7, #2b2b2b1c);
 }
 
 .con-form-area {
@@ -131,14 +126,14 @@
 
 .con-form-area:focus ~ .con-form-label {
   font-size: 1rem;
-  top: 0.6rem;
+  top: 0;
   color: rgb(168, 66, 87);
   border-color: rgb(168, 66, 87);
 }
 
 .con-form-area:is(.dark):focus ~ .con-form-label {
   color: gainsboro;
-  background: linear-gradient(to bottom, #2b2b2be7 80%, #151515f5);
+  background: linear-gradient(#2b2b2be7, #2b2b2b1c);
 }
 
 .con-form-input::placeholder,
