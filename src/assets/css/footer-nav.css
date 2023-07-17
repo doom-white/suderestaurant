@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
 }
 
-.footer-container:is(.dark) {
+.footer-container:is(.ftr-dark) {
   background: linear-gradient(to bottom, rgb(44, 44, 44), #161616);
 }
 
@@ -47,8 +47,8 @@
   color: rgb(254 205 211);
 }
 
-.fcl-store-name:is(.dark),
-.fcl-store-date:is(.dark) {
+.fcl-store-name:is(.ftr-dark),
+.fcl-store-date:is(.ftr-dark) {
   color: rgb(209 213 219);
   background: transparent;
 }
@@ -104,7 +104,7 @@
   left: 0;
 }
 
-.div-whatsapp:is(.dark) .styles-module_whatsappButton__tVits {
+.div-whatsapp:is(.ftr-dark) .styles-module_whatsappButton__tVits {
   background: linear-gradient(to bottom, rgb(65, 65, 65), #2e2e2e) !important;
 }
 
@@ -131,7 +131,7 @@
   ) !important;
 }
 
-.div-whatsapp:is(.dark) .styles-module_chatHeader__gaeOA {
+.div-whatsapp:is(.ftr-dark) .styles-module_chatHeader__gaeOA {
   background: linear-gradient(to bottom, rgb(56, 56, 56), #202020) !important;
 }
 
@@ -139,7 +139,7 @@
   color: #881337 !important;
 }
 
-.div-whatsapp:is(.dark)
+.div-whatsapp:is(.ftr-dark)
   .styles-module_chatHeader__gaeOA
   .styles-module_statusTitle__NgfPQ {
   color: whitesmoke !important;
@@ -149,7 +149,7 @@
   color: #b41f4c !important;
 }
 
-.div-whatsapp:is(.dark)
+.div-whatsapp:is(.ftr-dark)
   .styles-module_chatHeader__gaeOA
   .styles-module_statusSubtitle__esavW {
   color: lightgray !important;
@@ -160,7 +160,7 @@
   transition: all 0.5s linear !important;
 }
 
-.div-whatsapp:is(.dark)
+.div-whatsapp:is(.ftr-dark)
   .styles-module_chatHeader__gaeOA
   .styles-module_close__RLouK
   svg {
@@ -168,7 +168,7 @@
   transition: all 0.5s linear !important;
 }
 
-.div-whatsapp:is(.dark)
+.div-whatsapp:is(.ftr-dark)
   .styles-module_chatHeader__gaeOA
   .styles-module_close__RLouK
   svg:hover {
@@ -183,7 +183,7 @@
   background: #881337 !important;
 }
 
-.div-whatsapp:is(.dark)
+.div-whatsapp:is(.ftr-dark)
   .styles-module_chatHeader__gaeOA
   .styles-module_avatar__afcc4:after {
   background: #000 !important;
@@ -193,7 +193,7 @@
   background-color: #fcdae4 !important;
 }
 
-.div-whatsapp:is(.dark)
+.div-whatsapp:is(.ftr-dark)
   .styles-module_chatBody__VBxQH
   .styles-module_message__Z9MOV {
   background-color: #111 !important;
@@ -207,7 +207,7 @@
   ) !important;
 }
 
-.div-whatsapp:is(.dark) .styles-module_chatBubble__F6k84 {
+.div-whatsapp:is(.ftr-dark) .styles-module_chatBubble__F6k84 {
   background: linear-gradient(to bottom, rgb(56, 56, 56), #202020) !important;
 }
 
@@ -215,7 +215,9 @@
   background-color: rgba(180, 31, 76, 0.7) !important;
 }
 
-.div-whatsapp:is(.dark) .styles-module_typing__Ru9xZ .styles-module_dot__RoVT7 {
+.div-whatsapp:is(.ftr-dark)
+  .styles-module_typing__Ru9xZ
+  .styles-module_dot__RoVT7 {
   background-color: whitesmoke !important;
 }
 
@@ -225,7 +227,7 @@
   border-color: transparent #fcdae4 transparent transparent !important;
 }
 
-.div-whatsapp:is(.dark)
+.div-whatsapp:is(.ftr-dark)
   .styles-module_chatBody__VBxQH
   .styles-module_message__Z9MOV
   .styles-module_triangle__K9ViC {
@@ -236,7 +238,7 @@
   color: #881337 !important;
 }
 
-.div-whatsapp:is(.dark)
+.div-whatsapp:is(.ftr-dark)
   .styles-module_chatBody__VBxQH
   .styles-module_accountName__20AXD {
   color: whitesmoke !important;
@@ -246,7 +248,7 @@
   color: #b41f4c !important;
 }
 
-.div-whatsapp:is(.dark)
+.div-whatsapp:is(.ftr-dark)
   .styles-module_chatBody__VBxQH
   .styles-module_messageBody__9-hwo {
   color: lightgray !important;
@@ -256,7 +258,7 @@
   color: #88133679 !important;
 }
 
-.div-whatsapp:is(.dark)
+.div-whatsapp:is(.ftr-dark)
   .styles-module_chatBody__VBxQH
   .styles-module_messageTime__MIwoR {
   color: gray !important;
@@ -266,7 +268,7 @@
   background-color: #ff99b7c0 !important;
 }
 
-.div-whatsapp:is(.dark) .styles-module_chatBody__VBxQH {
+.div-whatsapp:is(.ftr-dark) .styles-module_chatBody__VBxQH {
   background-color: #555 !important;
 }
 
@@ -274,7 +276,7 @@
   background: linear-gradient(to top, rgb(248, 250, 252), #f86692) !important;
 }
 
-.div-whatsapp:is(.dark) .styles-module_chatFooter__TGv0P {
+.div-whatsapp:is(.ftr-dark) .styles-module_chatFooter__TGv0P {
   background: linear-gradient(to top, rgb(56, 56, 56), #202020) !important;
 }
 
@@ -283,7 +285,7 @@
   color: #881337 !important;
 }
 
-.div-whatsapp:is(.dark)
+.div-whatsapp:is(.ftr-dark)
   .styles-module_chatFooter__TGv0P
   form
   .styles-module_input__WFb9L {
@@ -296,7 +298,7 @@
   box-shadow: 0 0 0 1px rgba(136, 19, 55, 0.5) !important;
 }
 
-.div-whatsapp:is(.dark)
+.div-whatsapp:is(.ftr-dark)
   .styles-module_chatFooter__TGv0P
   form
   .styles-module_input__WFb9L:focus {
@@ -308,7 +310,7 @@
   color: #88133679 !important;
 }
 
-.div-whatsapp:is(.dark)
+.div-whatsapp:is(.ftr-dark)
   .styles-module_chatFooter__TGv0P
   form
   .styles-module_input__WFb9L::placeholder {
@@ -319,7 +321,7 @@
   fill: #881337 !important;
 }
 
-.div-whatsapp:is(.dark)
+.div-whatsapp:is(.ftr-dark)
   .styles-module_chatFooter__TGv0P
   form
   .styles-module_buttonSend__kXjja
@@ -367,7 +369,7 @@
   font-weight: bold;
 }
 
-.fcr-mail-text:is(.dark) {
+.fcr-mail-text:is(.ftr-dark) {
   color: rgb(209 213 219);
   background: transparent;
 }

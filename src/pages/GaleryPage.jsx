@@ -44,7 +44,9 @@ const GaleryPage = () => {
         {sude_images &&
           sude_images.map((sude) => (
             <div
-              className={`gp-img-item ${switchOnOff ? "" : "dark"}`.trimEnd()}
+              className={`gp-img-item ${
+                switchOnOff ? "" : "gp-dark"
+              }`.trimEnd()}
               onClick={() => {
                 setSelectedImg(sude);
                 showModal();

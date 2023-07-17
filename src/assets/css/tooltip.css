@@ -27,7 +27,7 @@
   z-index: 1;
 }
 
-.ttp-text:is(.dark) {
+.ttp-text:is(.ttp-dark) {
   color: whitesmoke;
   background: transparent;
 }

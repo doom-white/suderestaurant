@@ -7,7 +7,7 @@ const ToolTip = () => {
   const { switchOnOff } = useTheme();
   return (
     <div className="tooltip-container">
-      <p className={`ttp-text ${switchOnOff ? "" : "dark"}`.trimEnd()}>
+      <p className={`ttp-text ${switchOnOff ? "" : "ttp-dark"}`.trimEnd()}>
         Başa dön...
       </p>
       <img src={switchOnOff ? speech : speechDark} alt="speech" />

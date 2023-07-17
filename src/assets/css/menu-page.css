@@ -19,7 +19,7 @@
   z-index: 992;
 }
 
-.menu-type:is(.dark) {
+.menu-type:is(.mp-dark) {
   background: linear-gradient(to bottom, #111, #222, #111);
 }
 
@@ -52,7 +52,7 @@
   text-align: center;
 }
 
-.menu-search:is(.dark) {
+.menu-search:is(.mp-dark) {
   background: linear-gradient(to bottom, #666666, #3a3a3a);
 }
 
@@ -64,7 +64,7 @@
   color: #460c1a83;
 }
 
-.menu-search:is(.dark)::placeholder {
+.menu-search:is(.mp-dark)::placeholder {
   color: rgba(211, 211, 211, 0.308);
 }
 

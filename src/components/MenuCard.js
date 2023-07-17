@@ -16,17 +16,21 @@ const MenuCard = ({ screenSize }) => {
     <>
       <div className="menu-card-container">
         <div className="menu-card-title">
-          <h1 className={`menu-title ${switchOnOff ? "" : "dark"}`.trimEnd()}>
+          <h1
+            className={`menu-title ${switchOnOff ? "" : "menu-dark"}`.trimEnd()}
+          >
             Öne çıkan yemek menülerimiz
           </h1>
-          <pre className={`menu-desc ${switchOnOff ? "" : "dark"}`.trimEnd()}>
+          <pre
+            className={`menu-desc ${switchOnOff ? "" : "menu-dark"}`.trimEnd()}
+          >
             Her zaman taze ve çıtır lezzetler...
           </pre>
         </div>
 
         <div
           className={`menu-card-content-container ${
-            switchOnOff ? "" : "dark"
+            switchOnOff ? "" : "menu-dark"
           }`.trimEnd()}
         >
           <Splide

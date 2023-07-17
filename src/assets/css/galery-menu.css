@@ -12,7 +12,7 @@
   overflow: hidden;
 }
 
-.gm-content:is(.dark) {
+.gm-content:is(.gm-dark) {
   background: #fefefe0c;
 }
 
@@ -48,7 +48,7 @@
   transition: 0.5s ease-in-out;
 }
 
-.gm-content:is(.dark)::before {
+.gm-content:is(.gm-dark)::before {
   background: #99999986;
 }
 
@@ -123,7 +123,7 @@
   user-select: none;
 }
 
-.gm-con-price:is(.dark) {
+.gm-con-price:is(.gm-dark) {
   color: black;
   background: transparent;
 }
@@ -151,7 +151,7 @@
   user-select: none;
 }
 
-.gm-dantel:is(.dark) {
+.gm-dantel:is(.gm-dark) {
   background: #9999995b;
   color: black;
 }

@@ -9,20 +9,22 @@ import { useTheme } from "../context/ThemeContext";
 const FooterNav = () => {
   const { switchOnOff } = useTheme();
   return (
-    <div className={`footer-container ${switchOnOff ? "".trimEnd() : "dark"} `}>
+    <div
+      className={`footer-container ${switchOnOff ? "".trimEnd() : "ftr-dark"} `}
+    >
       <div className="footer-content-container">
         <div className="footer-content-left">
           <div className="fcl-store">
             <span
               className={`fcl-store-name ${
-                switchOnOff ? "".trimEnd() : "dark"
+                switchOnOff ? "".trimEnd() : "ftr-dark"
               }`}
             >
               Sude Restaurant&nbsp;
             </span>
             <span
               className={`fcl-store-date ${
-                switchOnOff ? "".trimEnd() : "dark"
+                switchOnOff ? "".trimEnd() : "ftr-dark"
               }`}
             >
               &copy; 2001
@@ -46,7 +48,9 @@ const FooterNav = () => {
               <img className="fcm-social-img" src={instagram} alt="instagram" />
             </Link>
             <div
-              className={`div-whatsapp ${switchOnOff ? "".trimEnd() : "dark"}`}
+              className={`div-whatsapp ${
+                switchOnOff ? "".trimEnd() : "ftr-dark"
+              }`}
             >
               <FloatingWhatsApp
                 phoneNumber="+90 538 678 76 78"
@@ -67,7 +71,9 @@ const FooterNav = () => {
         <div className="footer-content-right">
           <div className="fcr-mail">
             <span
-              className={`fcr-mail-text ${switchOnOff ? "".trimEnd() : "dark"}`}
+              className={`fcr-mail-text ${
+                switchOnOff ? "".trimEnd() : "ftr-dark"
+              }`}
             >
               suderestaurant27@gmail.com
             </span>

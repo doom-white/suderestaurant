@@ -34,7 +34,7 @@
   transition: all 0.5s linear;
 }
 
-.crsl-images-title:is(.dark) {
+.crsl-images-title:is(.crsl-dark) {
   background: #999999c5;
   color: black;
 }

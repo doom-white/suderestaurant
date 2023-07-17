@@ -32,7 +32,7 @@
     rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
-.gp-img-item:is(.dark) {
+.gp-img-item:is(.gp-dark) {
   border-color: #000000d8;
   box-shadow: rgba(64, 64, 65, 0.3) 0px 1px 2px 0px,
     rgba(183, 187, 190, 0.15) 0px 2px 6px 2px;
@@ -69,7 +69,7 @@
   cursor: pointer;
 }
 
-.gp-modal:is(.dark) {
+.gp-modal:is(.gp-dark) {
   padding-bottom: 0 !important;
   border-radius: 8px !important;
 }
@@ -85,7 +85,7 @@
   text-align: center;
 }
 
-.gp-modal:is(.dark) .modal-title {
+.gp-modal:is(.gp-dark) .modal-title {
   color: whitesmoke;
 }
 
@@ -105,17 +105,17 @@
   padding: 15px 17px 7px 17px !important;
 }
 
-.gp-modal:is(.dark) .ant-modal-content {
+.gp-modal:is(.gp-dark) .ant-modal-content {
   background: #0000003a !important;
   border: 3px solid black;
   box-shadow: inset black 0 0 9px;
 }
 
-.gp-modal:is(.dark) .ant-modal-close svg {
+.gp-modal:is(.gp-dark) .ant-modal-close svg {
   fill: whitesmoke;
 }
 
-.gp-modal:is(.dark) .ant-modal-title {
+.gp-modal:is(.gp-dark) .ant-modal-title {
   background-color: #171717fb !important;
   color: whitesmoke !important;
   border-top-left-radius: 5.3px !important;

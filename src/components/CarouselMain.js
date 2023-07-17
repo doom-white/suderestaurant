@@ -26,7 +26,7 @@ const CarouselMain = () => {
               <div className="crsl-images-container" key={i.id}>
                 <span
                   className={`crsl-images-title ${
-                    switchOnOff ? "" : "dark"
+                    switchOnOff ? "" : "crsl-dark"
                   }`.trimEnd()}
                 >
                   {i.title} {i.desc && "-"} {i.desc}

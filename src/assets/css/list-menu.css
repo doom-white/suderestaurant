@@ -39,7 +39,7 @@
   transition: 0.5s ease-in-out;
 }
 
-.lm-item:nth-of-type(odd):is(.dark) {
+.lm-item:nth-of-type(odd):is(.lm-dark) {
   background: #99999960;
   transition: 0.5s ease-in-out;
 }
@@ -48,7 +48,7 @@
   background: #232323;
 }
 
-.lm-item:nth-of-type(odd):is(.dark):hover {
+.lm-item:nth-of-type(odd):is(.lm-dark):hover {
   background: #99999963;
 }
 
@@ -57,7 +57,7 @@
   transition: 0.5s ease-in-out;
 }
 
-.lm-item:nth-of-type(even):is(.dark) {
+.lm-item:nth-of-type(even):is(.lm-dark) {
   background: #99999925;
   transition: 0.5s ease-in-out;
 }
@@ -66,7 +66,7 @@
   background: #8d1b38;
 }
 
-.lm-item:nth-of-type(even):is(.dark):hover {
+.lm-item:nth-of-type(even):is(.lm-dark):hover {
   background: #99999911;
 }
 
@@ -81,7 +81,7 @@
   margin-right: 1rem;
 }
 
-.lm-item:nth-child(n + 1):hover .inner-lm-price:is(.dark) {
+.lm-item:nth-child(n + 1):hover .inner-lm-price:is(.lm-dark) {
   background: transparent;
   /* background-color: blue; */
   margin-right: 1rem;
@@ -128,7 +128,7 @@
   user-select: none;
 }
 
-.inner-lm-price:is(.dark) {
+.inner-lm-price:is(.lm-dark) {
   background-color: #222;
 }
 

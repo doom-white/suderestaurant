@@ -16,14 +16,16 @@ const MenuCardInfo = ({ product }) => {
         />
         <div
           className={`menu-card-footer-dantel ${
-            switchOnOff ? "" : "dark"
+            switchOnOff ? "" : "menu-dark"
           }`.trimEnd()}
         >
           <span>{product.desc && product.desc}</span>
         </div>
       </div>
       <div
-        className={`menu-card-dantel ${switchOnOff ? "" : "dark"}`.trimEnd()}
+        className={`menu-card-dantel ${
+          switchOnOff ? "" : "menu-dark"
+        }`.trimEnd()}
       >
         <span>
           {product.title} {product.type && "-"}{" "}

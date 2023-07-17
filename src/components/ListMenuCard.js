@@ -21,7 +21,7 @@ const ListMenuCard = ({ product }) => {
 
   return (
     <>
-      <li className={`lm-item ${switchOnOff ? "" : "dark"}`.trimEnd()}>
+      <li className={`lm-item ${switchOnOff ? "" : "lm-dark"}`.trimEnd()}>
         <img className="lm-img" src={product.imgURL} alt={product.title} />
         <ul className="inner-lm-container">
           <li id="inner-lm-title" className="inner-lm-item">
@@ -48,7 +48,7 @@ const ListMenuCard = ({ product }) => {
           </li>
         </ul>
         <span
-          className={`inner-lm-price ${switchOnOff ? "" : "dark"}`.trimEnd()}
+          className={`inner-lm-price ${switchOnOff ? "" : "lm-dark"}`.trimEnd()}
         >
           {" "}
           {product.price} {product.price && "₺"}

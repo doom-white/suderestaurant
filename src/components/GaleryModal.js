@@ -14,7 +14,7 @@ const GaleryModal = ({ sude }) => {
       onOk={handleOk}
       onCancel={handleCancel}
       width={"60rem"}
-      className={`gp-modal ${switchOnOff ? "" : "dark"}`.trimEnd()}
+      className={`gp-modal ${switchOnOff ? "" : "gp-dark"}`.trimEnd()}
       closable={true}
       footer={null}
       title="Sude Restaurant & Cafe"

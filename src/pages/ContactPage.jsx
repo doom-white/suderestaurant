@@ -78,12 +78,16 @@ const ContactPage = () => {
       animate="visible"
     >
       <motion.div className="con-form-container" variants={contactFormVariants}>
-        <p className={`con-form-title ${switchOnOff ? "" : "dark"}`.trimEnd()}>
+        <p
+          className={`con-form-title ${
+            switchOnOff ? "" : "con-dark"
+          }`.trimEnd()}
+        >
           Bizimle iletişime geçin
         </p>
         <form
           ref={formRef}
-          className={`con-form ${switchOnOff ? "" : "dark"}`.trimEnd()}
+          className={`con-form ${switchOnOff ? "" : "con-dark"}`.trimEnd()}
           onSubmit={handleSubmit}
         >
           <div className="con-form-item">
@@ -91,7 +95,7 @@ const ContactPage = () => {
               id="name"
               name="user_name"
               className={`con-form-input ${
-                switchOnOff ? "" : "dark"
+                switchOnOff ? "" : "con-dark"
               }`.trimEnd()}
               type="text"
               value={
@@ -103,7 +107,7 @@ const ContactPage = () => {
             />
             <label
               className={`con-form-label ${
-                switchOnOff ? "" : "dark"
+                switchOnOff ? "" : "con-dark"
               }`.trimEnd()}
               htmlFor="name"
             >
@@ -115,7 +119,7 @@ const ContactPage = () => {
               id="surname"
               name="surname"
               className={`con-form-input ${
-                switchOnOff ? "" : "dark"
+                switchOnOff ? "" : "con-dark"
               }`.trimEnd()}
               type="text"
               value={
@@ -128,7 +132,7 @@ const ContactPage = () => {
             />
             <label
               className={`con-form-label ${
-                switchOnOff ? "" : "dark"
+                switchOnOff ? "" : "con-dark"
               }`.trimEnd()}
               htmlFor="surname"
             >
@@ -140,7 +144,7 @@ const ContactPage = () => {
               id="mail"
               name="user_email"
               className={`con-form-input ${
-                switchOnOff ? "" : "dark"
+                switchOnOff ? "" : "con-dark"
               }`.trimEnd()}
               type="email"
               pattern="[a-z0-9]+@[a-z]+\.[a-z]{2,3}"
@@ -151,7 +155,7 @@ const ContactPage = () => {
             />
             <label
               className={`con-form-label ${
-                switchOnOff ? "" : "dark"
+                switchOnOff ? "" : "con-dark"
               }`.trimEnd()}
               htmlFor="user_email"
             >
@@ -162,7 +166,9 @@ const ContactPage = () => {
             <textarea
               name="message"
               id="mail-text"
-              className={`con-form-area ${switchOnOff ? "" : "dark"}`.trimEnd()}
+              className={`con-form-area ${
+                switchOnOff ? "" : "con-dark"
+              }`.trimEnd()}
               cols="30"
               rows="5"
               placeholder="Bir şeyler yaz..."
@@ -172,7 +178,7 @@ const ContactPage = () => {
             ></textarea>
             <label
               className={`con-form-label ${
-                switchOnOff ? "" : "dark"
+                switchOnOff ? "" : "con-dark"
               }`.trimEnd()}
               htmlFor="message"
             >
@@ -182,7 +188,7 @@ const ContactPage = () => {
           <div className="con-button-container">
             <button
               className={`con-button btn-send ${
-                switchOnOff ? "" : "dark"
+                switchOnOff ? "" : "con-dark"
               }`.trimEnd()}
               type="submit"
             >
@@ -191,7 +197,7 @@ const ContactPage = () => {
             <ToastContainer />
             <button
               className={`con-button btn-cancel ${
-                switchOnOff ? "" : "dark"
+                switchOnOff ? "" : "con-dark"
               }`.trimEnd()}
               type="button"
               onClick={handleCleanInputs}

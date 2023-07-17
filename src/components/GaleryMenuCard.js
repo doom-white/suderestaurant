@@ -21,8 +21,8 @@ const GaleryMenuCard = ({ product }) => {
 
   return (
     <div className="gm-container">
-      <div className={`gm-content ${switchOnOff ? "" : "dark"}`.trimEnd()}>
-        <div className={`gm-dantel ${switchOnOff ? "" : "dark"}`.trimEnd()}>
+      <div className={`gm-content ${switchOnOff ? "" : "gm-dark"}`.trimEnd()}>
+        <div className={`gm-dantel ${switchOnOff ? "" : "gm-dark"}`.trimEnd()}>
           {product.desc}
         </div>
         <div className="gm-con-img-div">
@@ -36,7 +36,9 @@ const GaleryMenuCard = ({ product }) => {
             </small>
           )}
 
-          <h3 className={`gm-con-price ${switchOnOff ? "" : "dark"}`.trimEnd()}>
+          <h3
+            className={`gm-con-price ${switchOnOff ? "" : "gm-dark"}`.trimEnd()}
+          >
             {product.price} {product.price && "₺"}
           </h3>
         </div>

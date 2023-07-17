@@ -76,15 +76,15 @@ body::-webkit-scrollbar-thumb {
   fill: rgb(190 18 60);
 }
 
-.gp-modal:is(.dark) .splide__arrow svg {
+.gp-modal:is(.gp-dark) .splide__arrow svg {
   fill: black;
 }
 
-.pro-card-content-container:is(.dark) .splide__arrow svg {
+.pro-card-content-container:is(.pro-dark) .splide__arrow svg {
   fill: black;
 }
 
-.menu-card-content-container:is(.dark) .splide__arrow svg {
+.menu-card-content-container:is(.menu-dark) .splide__arrow svg {
   fill: black;
 }
 

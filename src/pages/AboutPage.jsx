@@ -73,11 +73,17 @@ const AboutPage = () => {
       >
         <div className="ap-top-info">
           <h1
-            className={`ap-top-title ${switchOnOff ? "" : "dark"} `.trimEnd()}
+            className={`ap-top-title ${
+              switchOnOff ? "" : "abt-dark"
+            } `.trimEnd()}
           >
             Bilecik'te <br /> Gaziantep Lezzetleri
           </h1>
-          <p className={`ap-top-text ${switchOnOff ? "" : "dark"} `.trimEnd()}>
+          <p
+            className={`ap-top-text ${
+              switchOnOff ? "" : "abt-dark"
+            } `.trimEnd()}
+          >
             2000'li yılların başından beri Bilecik ilimizde esnaflık
             yapmaktayız. Siz değerli müşterilerimize varsayılan lezzetler
             haricinde Gaziantep lezzetlerini de Gaziantep'e gitmenize gerek
@@ -95,7 +101,7 @@ const AboutPage = () => {
       </motion.div>
 
       <div
-        className={`ap-divider ${switchOnOff ? "" : "dark"} `.trimEnd()}
+        className={`ap-divider ${switchOnOff ? "" : "abt-dark"} `.trimEnd()}
       ></div>
 
       <motion.div
@@ -116,13 +122,15 @@ const AboutPage = () => {
         <div className="ap-bottom-info">
           <h1
             className={`ap-bottom-title ${
-              switchOnOff ? "" : "dark"
+              switchOnOff ? "" : "abt-dark"
             } `.trimEnd()}
           >
             Ev tadında, güvenelir <br /> ve nezih yemekler
           </h1>
           <p
-            className={`ap-bottom-text ${switchOnOff ? "" : "dark"} `.trimEnd()}
+            className={`ap-bottom-text ${
+              switchOnOff ? "" : "abt-dark"
+            } `.trimEnd()}
           >
             Siz değerli müşterilerimiz için öncelikli hedefimiz, evinizde yemek
             yediğiniz zamanki hijyeni sağlamak , sağlıklı ve lezettli

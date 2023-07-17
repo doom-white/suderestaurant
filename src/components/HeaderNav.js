@@ -28,12 +28,12 @@ const HeaderNav = () => {
           onClick={() => setSwitchOnOff(!switchOnOff)}
         />
       </div>
-      <nav className={`header-nav ${switchOnOff ? "" : "dark"}`.trimEnd()}>
+      <nav className={`header-nav ${switchOnOff ? "" : "hdr-dark"}`.trimEnd()}>
         <div className="header-logo-div">
           <Link to="/">
             <h1
               className={`header-logo-text ${
-                switchOnOff ? "" : "dark"
+                switchOnOff ? "" : "hdr-dark"
               }`.trimEnd()}
             >
               Sude Restoran & Kafe
@@ -45,7 +45,7 @@ const HeaderNav = () => {
           className={`btn-toggle ${
             switchOnOff
               ? `${hideLinks ? "active-toggle" : ""}`
-              : `dark ${hideLinks ? "active-toggle" : ""}`
+              : `hdr-dark ${hideLinks ? "active-toggle" : ""}`
           }`.trim()}
           onClick={() => setHideLinks(!hideLinks)}
         >
@@ -54,7 +54,9 @@ const HeaderNav = () => {
           <span></span>
         </button>
         <div
-          className={`header-list-div ${switchOnOff ? "" : "dark"}`.trimEnd()}
+          className={`header-list-div ${
+            switchOnOff ? "" : "hdr-dark"
+          }`.trimEnd()}
         >
           <NavLink to="/">
             <img src={switchOnOff ? homex32 : homex32d} alt="home" />

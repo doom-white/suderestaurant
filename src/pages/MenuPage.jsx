@@ -81,7 +81,7 @@ const MenuPage = () => {
   return (
     <>
       <section className="menu-container">
-        <div className={`menu-type ${switchOnOff ? "" : "dark"}`.trimEnd()}>
+        <div className={`menu-type ${switchOnOff ? "" : "mp-dark"}`.trimEnd()}>
           <div className="menu-type-title">
             {
               /* Katalog Menu */
@@ -163,7 +163,9 @@ const MenuPage = () => {
             >
               <input
                 ref={searchRef}
-                className={`menu-search ${switchOnOff ? "" : "dark"}`.trimEnd()}
+                className={`menu-search ${
+                  switchOnOff ? "" : "mp-dark"
+                }`.trimEnd()}
                 type="text"
                 placeholder="Menüde Ara..."
                 onChange={(e) => handleSearch(e)}

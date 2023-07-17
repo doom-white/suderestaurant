@@ -16,17 +16,21 @@ const ProductCard = ({ screenSize }) => {
     <>
       <div className="pro-card-container">
         <div className="pro-card-title">
-          <h1 className={`pro-title ${switchOnOff ? "" : "dark"}`.trimEnd()}>
+          <h1
+            className={`pro-title ${switchOnOff ? "" : "pro-dark"}`.trimEnd()}
+          >
             En çok beğenilen yemeklerimiz
           </h1>
-          <pre className={`pro-desc ${switchOnOff ? "" : "dark"}`.trimEnd()}>
+          <pre
+            className={`pro-desc ${switchOnOff ? "" : "pro-dark"}`.trimEnd()}
+          >
             Gaziantep lezzetleri ile tanış...
           </pre>
         </div>
 
         <div
           className={`pro-card-content-container ${
-            switchOnOff ? "" : "dark"
+            switchOnOff ? "" : "pro-dark"
           }`.trimEnd()}
         >
           <Splide
