@@ -24,7 +24,11 @@ const ProductCard = ({ screenSize }) => {
           </pre>
         </div>
 
-        <div className="pro-card-content-container">
+        <div
+          className={`pro-card-content-container ${
+            switchOnOff ? "" : "dark"
+          }`.trimEnd()}
+        >
           <Splide
             options={{
               direction: screenSize.width > 992 ? "ltr" : "ttb",

@@ -8,7 +8,7 @@ const CarouselMain = () => {
   const { switchOnOff } = useTheme();
 
   return (
-    <>
+    <div className="crsl-main-container">
       <img
         className="crsl-ribbon-top"
         src={switchOnOff ? ribbon : ribbondark}
@@ -36,7 +36,7 @@ const CarouselMain = () => {
             );
           })}
       </Carousel>
-    </>
+    </div>
   );
 };
 

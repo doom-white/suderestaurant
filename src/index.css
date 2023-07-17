@@ -80,6 +80,14 @@ body::-webkit-scrollbar-thumb {
   fill: black;
 }
 
+.pro-card-content-container:is(.dark) .splide__arrow svg {
+  fill: black;
+}
+
+.menu-card-content-container:is(.dark) .splide__arrow svg {
+  fill: black;
+}
+
 /*todo ********************************************************************************/
 /*todo ********************************************************************************/
 /*? **********************************************************************************/

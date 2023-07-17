@@ -1,30 +1,13 @@
 .pro-card-container {
   width: 95%;
   height: 100%;
-
-  /* background-color: #be123d15; */
-  /* background-color: #333; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
-}
-
-.pro-card-container::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: url("../../../public/assets/images/yuvalama.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  opacity: 0.3;
-  position: absolute;
-  top: 0;
-  left: 0;
+  margin: 0 auto;
 }
 
 .pro-card-content-container {
@@ -80,11 +63,13 @@
 }
 
 .pro-title:is(.dark) {
-  color: whitesmoke;
+  color: black;
+  background: transparent;
 }
 
 .pro-desc:is(.dark) {
-  color: #999;
+  color: #333;
+  background: transparent;
 }
 
 .pro-card-dantel {
@@ -345,6 +330,10 @@
 }
 
 @media only screen and (max-width: 414px) {
+  .pro-card-container {
+    width: 85%;
+  }
+
   .pro-card-img {
     height: 23rem !important;
   }
@@ -365,6 +354,10 @@
 }
 
 @media only screen and (max-width: 320px) {
+  .pro-card-container {
+    width: 85%;
+  }
+
   .pro-card-img {
     height: 20rem !important;
   }

@@ -24,7 +24,11 @@ const MenuCard = ({ screenSize }) => {
           </pre>
         </div>
 
-        <div className="menu-card-content-container">
+        <div
+          className={`menu-card-content-container ${
+            switchOnOff ? "" : "dark"
+          }`.trimEnd()}
+        >
           <Splide
             options={{
               direction: screenSize.width > 992 ? "ltr" : "ttb",

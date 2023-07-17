@@ -1,3 +1,6 @@
+.crsl-main-container {
+  position: relative;
+}
 .crsl-images-container {
   /* background-color: #333; */
   width: 100%;
@@ -38,8 +41,8 @@
 
 .crsl-ribbon-top {
   position: absolute;
-  top: 0.54rem;
-  right: -0.4rem;
+  top: 0.55rem;
+  right: -0.45rem;
   z-index: 10;
   width: 8rem;
   height: 8rem;
@@ -47,8 +50,8 @@
 
 .crsl-ribbon-bottom {
   position: absolute;
-  bottom: -0.4rem;
-  left: -0.4rem;
+  bottom: -0.45rem;
+  left: -0.45rem;
   z-index: 10;
   width: 8rem;
   height: 8rem;
