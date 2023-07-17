@@ -59,7 +59,7 @@ const App = () => {
           <Route path="/iletisim" element={<ContactPage />} />
           <Route path="/hakkimizda" element={<AboutPage />} />
         </Routes>
-        <MasterChef />
+        <MasterChef screenSize={screenSize} />
         <FooterNav />
       </div>
     </>
