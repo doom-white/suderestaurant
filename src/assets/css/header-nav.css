@@ -120,6 +120,7 @@
   justify-content: space-evenly;
   /* border: 1px solid crimson; */
   border-radius: 3px;
+  outline: none;
   padding: 0.1rem;
   position: absolute;
   right: 1rem;
@@ -146,10 +147,6 @@
 
 .btn-toggle:is(.hdr-dark) span {
   background-color: rgba(245, 245, 245, 0.8);
-}
-
-.btn-toggle:hover {
-  background-color: rgba(102, 102, 102, 0.2);
 }
 
 .btn-toggle.active-toggle span:nth-child(1) {

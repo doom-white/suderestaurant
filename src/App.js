@@ -12,7 +12,7 @@ import { useTheme } from "./context/ThemeContext";
 
 const App = () => {
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
-  const { switchOnOff } = useTheme();
+  const { switchOnOff, setHideLinks } = useTheme();
 
   function getCurrentDimension() {
     return {
@@ -20,6 +20,20 @@ const App = () => {
       height: window.innerHeight,
     };
   }
+
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") {
+        setHideLinks(false);
+      }
+    };
+
+    window.addEventListener("keydown", handleEsc);
+
+    return () => {
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, [setHideLinks]);
 
   useEffect(() => {
     const updateDimension = () => {

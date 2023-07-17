@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import homex32 from "../assets/icons/ico_general/homex32.png";
 import homex32d from "../assets/icons/ico_general/homex32d.png";
@@ -15,8 +15,7 @@ import lampOff from "../assets/icons/ico_general/lamp64x64d.png";
 import { useTheme } from "../context/ThemeContext";
 
 const HeaderNav = () => {
-  const [hideLinks, setHideLinks] = useState(false);
-  const { switchOnOff, setSwitchOnOff } = useTheme();
+  const { switchOnOff, setSwitchOnOff, hideLinks, setHideLinks } = useTheme();
 
   return (
     <header className="header-container">
@@ -47,7 +46,9 @@ const HeaderNav = () => {
               ? `${hideLinks ? "active-toggle" : ""}`
               : `hdr-dark ${hideLinks ? "active-toggle" : ""}`
           }`.trim()}
-          onClick={() => setHideLinks(!hideLinks)}
+          onClick={() => {
+            setHideLinks(!hideLinks);
+          }}
         >
           <span></span>
           <span></span>
