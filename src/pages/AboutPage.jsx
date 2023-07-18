@@ -100,9 +100,9 @@ const AboutPage = () => {
         </div>
       </motion.div>
 
-      <div
+      {/* <div
         className={`ap-divider ${switchOnOff ? "" : "abt-dark"} `.trimEnd()}
-      ></div>
+      ></div> */}
 
       <motion.div
         className={`${
