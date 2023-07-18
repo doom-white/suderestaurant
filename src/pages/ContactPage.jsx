@@ -194,7 +194,7 @@ const ContactPage = () => {
             >
               Gönder
             </button>
-            <ToastContainer />
+            <ToastContainer theme={`${switchOnOff ? "light" : "dark"}`} />
             <button
               className={`con-button btn-cancel ${
                 switchOnOff ? "" : "con-dark"
