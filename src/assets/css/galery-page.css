@@ -106,9 +106,10 @@
 }
 
 .gp-modal:is(.gp-dark) .ant-modal-content {
-  background: #0000003a !important;
-  border: 3px solid black;
-  box-shadow: inset black 0 0 9px;
+  background: #000000 !important;
+  border: 1px solid rgba(187, 187, 187, 0.24);
+  box-shadow: inset rgb(124, 124, 124) 0 0 9px;
+  padding: 15px 17px 13px 17px !important;
 }
 
 .gp-modal:is(.gp-dark) .ant-modal-close svg {
@@ -116,7 +117,7 @@
 }
 
 .gp-modal:is(.gp-dark) .ant-modal-title {
-  background-color: #171717fb !important;
+  background-color: #000000 !important;
   color: whitesmoke !important;
   border-top-left-radius: 5.3px !important;
   border-top-right-radius: 5.3px !important;
