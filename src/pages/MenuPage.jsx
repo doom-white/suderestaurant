@@ -239,7 +239,12 @@ const MenuPage = () => {
                 onClick={() => {
                   setIsMenu(true);
                   setStatus(0);
-                  setSearchMenu(false);
+                  searchMenu &&
+                    setTimeout(() => {
+                      document
+                        .querySelector(".galery-menu")
+                        .classList.add("m-responsive");
+                    }, 5);
                 }}
               />
             </div>
@@ -251,7 +256,12 @@ const MenuPage = () => {
                 onClick={() => {
                   setIsMenu(false);
                   setStatus(1);
-                  setSearchMenu(false);
+                  searchMenu &&
+                    setTimeout(() => {
+                      document
+                        .querySelector(".lm-container")
+                        .classList.add("m-responsive");
+                    }, 5);
                 }}
               />
             </div>
