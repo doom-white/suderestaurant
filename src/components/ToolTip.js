@@ -5,8 +5,16 @@ import { useTheme } from "../context/ThemeContext";
 
 const ToolTip = () => {
   const { switchOnOff } = useTheme();
+
+  const goToTheTopOfPage = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <div className="tooltip-container">
+    <div className="tooltip-container" onClick={goToTheTopOfPage}>
       <p className={`ttp-text ${switchOnOff ? "" : "ttp-dark"}`.trimEnd()}>
         Başa dön...
       </p>

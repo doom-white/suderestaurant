@@ -25,6 +25,7 @@
   font-size: 1rem;
   color: crimson;
   z-index: 1;
+  user-select: none;
 }
 
 .ttp-text:is(.ttp-dark) {
