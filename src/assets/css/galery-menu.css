@@ -236,7 +236,7 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .gm-content {
     width: 19rem;
     height: 28rem;
@@ -251,7 +251,7 @@
 
 @media only screen and (max-width: 540px) {
   .gm-content {
-    width: 18rem;
+    width: 17rem;
     height: 28rem;
   }
 

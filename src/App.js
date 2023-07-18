@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from "react";
-import HeaderNav from "./components/HeaderNav";
-import FooterNav from "./components/FooterNav";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import MenuPage from "./pages/MenuPage";
 import GaleryPage from "./pages/GaleryPage";
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
-import MasterChef from "./components/MasterChef";
 import { useTheme } from "./context/ThemeContext";
+import NotFoundPage from "./pages/NotFoundPage";
+import PageLayout from "./components/PageLayout";
 
 const App = () => {
   const [screenSize, setScreenSize] = useState(getCurrentDimension());
@@ -51,16 +50,16 @@ const App = () => {
       <div
         className={`app-main-container ${switchOnOff ? "".trimEnd() : "dark"}`}
       >
-        <HeaderNav />
         <Routes>
-          <Route path="/" element={<HomePage screenSize={screenSize} />} />
-          <Route path="/menu" element={<MenuPage />} />
-          <Route path="/galeri" element={<GaleryPage />} />
-          <Route path="/iletisim" element={<ContactPage />} />
-          <Route path="/hakkimizda" element={<AboutPage />} />
+          <Route element={<PageLayout screenSize={screenSize} />}>
+            <Route path="/" element={<HomePage screenSize={screenSize} />} />
+            <Route path="/menu" element={<MenuPage />} />
+            <Route path="/galeri" element={<GaleryPage />} />
+            <Route path="/iletisim" element={<ContactPage />} />
+            <Route path="/hakkimizda" element={<AboutPage />} />
+          </Route>
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
-        <MasterChef screenSize={screenSize} />
-        <FooterNav />
       </div>
     </>
   );
