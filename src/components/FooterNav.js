@@ -44,9 +44,13 @@ const FooterNav = () => {
                 alt="facebook"
               />
             </Link>
-            <Link to="#">
+            <Link
+              to={"https://www.instagram.com/sude_restoran__kafe/"}
+              target="_blank"
+            >
               <img className="fcm-social-img" src={instagram} alt="instagram" />
             </Link>
+
             <div
               className={`div-whatsapp ${
                 switchOnOff ? "".trimEnd() : "ftr-dark"
