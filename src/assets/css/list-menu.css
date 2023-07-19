@@ -10,6 +10,34 @@
   transition: 0.5s ease-in-out;
 }
 
+.lm-deprecated {
+  border: none !important;
+  box-shadow: none !important;
+  position: relative;
+  pointer-events: none;
+  user-select: none;
+}
+
+.lm-item:is(.lm-deprecated)::before {
+  content: "Kış aylarında servis edilir.";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0%;
+  background: rgba(118, 138, 158, 0.75);
+  color: white;
+  clip-path: none;
+  font-size: 3rem;
+  z-index: 99998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: line-through;
+  font-size: 2rem;
+}
+
 .lm-item:hover {
   box-shadow: rgba(4, 206, 48, 0.8) 0 0 0.5rem 0.5rem;
 }
@@ -128,8 +156,16 @@
   user-select: none;
 }
 
+.lm-item:is(.lm-deprecated) .inner-lm-price {
+  z-index: 99999;
+}
+
 .inner-lm-price:is(.lm-dark) {
   background-color: #222;
+}
+
+.lm-item:is(.lm-deprecated) .inner-lm-price:is(.lm-dark) {
+  z-index: 99999;
 }
 
 #inner-lm-title {

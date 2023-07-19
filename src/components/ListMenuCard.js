@@ -21,7 +21,17 @@ const ListMenuCard = ({ product }) => {
 
   return (
     <>
-      <li className={`lm-item ${switchOnOff ? "" : "lm-dark"}`.trimEnd()}>
+      <li
+        className={`lm-item  ${
+          product.status
+            ? switchOnOff
+              ? ""
+              : "lm-dark"
+            : switchOnOff
+            ? "lm-deprecated"
+            : "lm-dark lm-deprecated"
+        }`.trimEnd()}
+      >
         <img className="lm-img" src={product.imgURL} alt={product.title} />
         <ul className="inner-lm-container">
           <li id="inner-lm-title" className="inner-lm-item">

@@ -21,7 +21,17 @@ const GaleryMenuCard = ({ product }) => {
 
   return (
     <div className="gm-container">
-      <div className={`gm-content ${switchOnOff ? "" : "gm-dark"}`.trimEnd()}>
+      <div
+        className={`gm-content ${
+          product.status
+            ? switchOnOff
+              ? ""
+              : "gm-dark"
+            : switchOnOff
+            ? "gm-deprecated"
+            : "gm-dark gm-deprecated"
+        }`.trimEnd()}
+      >
         <div className={`gm-dantel ${switchOnOff ? "" : "gm-dark"}`.trimEnd()}>
           {product.desc}
         </div>
