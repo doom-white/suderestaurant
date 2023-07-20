@@ -73,8 +73,8 @@
   background: rgba(118, 138, 158, 0.75);
   color: white;
   clip-path: none;
-  font-size: 3rem;
-  z-index: 99999;
+  font-size: 2.7rem !important;
+  z-index: 11;
   display: flex;
   align-items: center;
   justify-content: center;

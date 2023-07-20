@@ -29,7 +29,7 @@
   color: white;
   clip-path: none;
   font-size: 3rem;
-  z-index: 99998;
+  z-index: 9;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -160,16 +160,8 @@
   user-select: none;
 }
 
-.lm-item:is(.lm-deprecated) .inner-lm-price {
-  z-index: 99999;
-}
-
 .inner-lm-price:is(.lm-dark) {
   background-color: #222;
-}
-
-.lm-item:is(.lm-deprecated) .inner-lm-price:is(.lm-dark) {
-  z-index: 99999;
 }
 
 #inner-lm-title {

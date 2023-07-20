@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CarouselMain from "../components/CarouselMain";
 import ProductCard from "../components/ProductCard";
 import MenuCard from "../components/MenuCard";
 import { motion } from "framer-motion";
+import { useModal } from "../context/ModalContext";
+import OrderModal from "../components/OrderModal";
+import { useState } from "react";
 
 const homePageVariants = {
   hidden: {
@@ -19,6 +22,18 @@ const homePageVariants = {
 };
 
 const HomePage = ({ screenSize }) => {
+  const [orderModalStatus] = useState(
+    JSON.parse(localStorage.getItem("order") || true)
+  );
+  const { showModal } = useModal();
+
+  useEffect(() => {
+    if (orderModalStatus) {
+      showModal();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <>
       <motion.div
@@ -37,6 +52,7 @@ const HomePage = ({ screenSize }) => {
           <MenuCard screenSize={screenSize} />
         </div>
       </motion.div>
+      <OrderModal />
     </>
   );
 };

@@ -1,0 +1,178 @@
+.order-container {
+  background-color: #fee0e3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-container:is(.order-dark) {
+  background: lightgrey;
+  /* filter: brightness(35%); */
+  transition: all 0.5s ease-in-out;
+}
+
+.order-container:is(.order-dark):hover {
+  filter: brightness(100%);
+}
+
+.kurye-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 1rem;
+}
+
+.kurye {
+  width: 17rem;
+  height: 15rem;
+}
+
+.kurye-text-container {
+  width: 30rem;
+  height: 17rem;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.kurye-text {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+  color: #333;
+  text-shadow: 1px 2px 3px rgba(233, 21, 102, 0.7);
+  user-select: none;
+}
+
+.kurye-text:is(.order-dark) {
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.7);
+}
+
+.dugun-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 1rem;
+}
+
+.dugun {
+  width: 13rem;
+  height: 13rem;
+}
+
+.dugun-text-container {
+  width: 30rem;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem 0 0;
+}
+
+.dugun-text {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+  color: #333;
+  text-shadow: 1px 2px 3px rgba(223, 182, 0, 0.7);
+  user-select: none;
+}
+
+.dugun-text:is(.order-dark) {
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.7);
+}
+
+.order-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.34rem 0 1rem 0;
+}
+
+.order-footer-whatsapp-text {
+  color: rgb(4, 82, 4) !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  font-size: 0.8rem;
+  font-weight: 700;
+  user-select: none;
+}
+
+.order-footer-whatsapp-text:is(.order-dark) {
+  color: #333 !important;
+}
+
+.order-footer-siparis-text {
+  color: rgb(177, 3, 76) !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  font-size: 0.8rem;
+  font-weight: 700;
+  user-select: none;
+}
+
+.order-footer-siparis-text:is(.order-dark) {
+  color: #333 !important;
+}
+
+.order-status-container {
+  width: 100%;
+  padding: 0.3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.order-status-container input {
+  appearance: none;
+  width: 1.2rem;
+  height: 1.2rem;
+  cursor: pointer;
+  background-color: whitesmoke;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  transition: all 0.2s ease-in;
+  position: relative;
+}
+
+.order-status-container input:hover {
+  border-color: rgba(220, 20, 60, 0.39);
+}
+
+.order-status-container input::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background: url("../icons/ico_general/verify.png") no-repeat center;
+  transition: all 0.2s ease-in;
+}
+
+.order-status-container input:checked::before {
+  opacity: 1;
+}
+
+.order-status-container label {
+  color: #333;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/*! Order Status Container is DarkMode */
+
+.order-status-container:is(.order-dark) input {
+  background-color: rgb(156, 156, 156);
+}
+
+.order-status-container:is(.order-dark) input:hover {
+  border-color: rgba(0, 0, 0, 0.39);
+}
+
+.order-status-container:is(.order-dark) input::before {
+  background: url("../icons/ico_general/verifyd.png") no-repeat center;
+}
