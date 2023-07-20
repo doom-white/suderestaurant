@@ -6,10 +6,13 @@ import kurye from "../assets/order-modal/kurye.png";
 import kuryed from "../assets/order-modal/kuryed.png";
 import dugun from "../assets/order-modal/dugun.png";
 import dugund from "../assets/order-modal/dugund.png";
+import { useEffect } from "react";
+import { useRef } from "react";
 
 const OrderModal = () => {
   const { isModalOpen, handleOk, handleCancel } = useModal();
   const { switchOnOff } = useTheme();
+  const cboxRef = useRef(null);
 
   const handleModalStatus = (e) => {
     if (e.target.checked) {
@@ -18,6 +21,14 @@ const OrderModal = () => {
       localStorage.setItem("order", true);
     }
   };
+
+  useEffect(() => {
+    if (isModalOpen && !JSON.parse(localStorage.getItem("order"))) {
+      setTimeout(() => {
+        cboxRef.current.checked = true;
+      }, 100);
+    }
+  }, [isModalOpen]);
 
   return (
     <Modal
@@ -96,6 +107,7 @@ const OrderModal = () => {
           }`.trimEnd()}
         >
           <input
+            ref={cboxRef}
             type="checkbox"
             name="orderStatus"
             id="order-status"
