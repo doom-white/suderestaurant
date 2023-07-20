@@ -8,7 +8,7 @@
 
 .order-container:is(.order-dark) {
   background: lightgrey;
-  /* filter: brightness(35%); */
+  filter: brightness(35%);
   transition: all 0.5s ease-in-out;
 }
 
@@ -30,8 +30,8 @@
 }
 
 .kurye-text-container {
-  width: 30rem;
-  height: 17rem;
+  width: 25rem;
+  height: 15rem;
   display: flex;
   align-items: center;
   padding: 0 2rem;
@@ -59,16 +59,16 @@
 }
 
 .dugun {
-  width: 13rem;
-  height: 13rem;
+  width: 15rem;
+  height: 15rem;
 }
 
 .dugun-text-container {
-  width: 30rem;
+  width: 25rem;
   height: 15rem;
   display: flex;
   align-items: center;
-  padding: 0 2rem 0 0;
+  padding: 0 2rem;
 }
 
 .dugun-text {
@@ -85,11 +85,16 @@
 }
 
 .order-footer {
+  background-color: rgba(243, 156, 165, 0.25);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 0.34rem 0 1rem 0;
+  padding: 0.7rem 0;
+}
+
+.order-footer:is(.order-dark) {
+  background-color: rgb(134, 134, 134, 0.2);
 }
 
 .order-footer-whatsapp-text {
@@ -97,6 +102,7 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
   font-size: 0.8rem;
   font-weight: 700;
+  text-align: center;
   user-select: none;
 }
 
@@ -109,6 +115,7 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
   font-size: 0.8rem;
   font-weight: 700;
+  text-align: center;
   user-select: none;
 }
 
@@ -117,12 +124,17 @@
 }
 
 .order-status-container {
+  background-color: rgba(243, 156, 164, 0.5);
   width: 100%;
-  padding: 0.3rem 0;
+  padding: 0.5rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+}
+
+.order-status-container:is(.order-dark) {
+  background-color: rgb(128, 128, 128, 0.4);
 }
 
 .order-status-container input {
@@ -158,9 +170,15 @@
 }
 
 .order-status-container label {
+  display: inline-block;
+  height: 1.1rem;
+  text-align: center;
+  line-height: 1.1rem;
   color: #333;
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: 0.9rem;
+  font-weight: 600;
+  user-select: none;
+  cursor: pointer;
 }
 
 /*! Order Status Container is DarkMode */
@@ -175,4 +193,129 @@
 
 .order-status-container:is(.order-dark) input::before {
   background: url("../icons/ico_general/verifyd.png") no-repeat center;
+}
+
+/*todo ********************************************************************************/
+/*todo ********************************************************************************/
+/*? **********************************************************************************/
+/*? **********************************************************************************/
+/*! **********************************************************************************/
+/*! **********************************************************************************/
+
+/*! MEDIA SCREEN */
+
+@media only screen and (max-width: 1024px) {
+  .order-status-container input::before {
+    background-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .order-status-container input::before {
+    background-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .kurye-container {
+    height: 11rem;
+    padding: 1rem 0 1rem 0;
+  }
+  .kurye {
+    width: 13rem;
+    height: 11rem;
+  }
+
+  .kurye-text-container {
+    width: 15rem;
+    height: 11rem;
+    padding: 0 0.5rem;
+  }
+
+  .kurye-text {
+    font-size: 1rem;
+    font-weight: 800;
+  }
+
+  .dugun-container {
+    height: 11rem;
+    padding: 1rem 0 1rem 0;
+  }
+
+  .dugun {
+    width: 11rem;
+    height: 11rem;
+  }
+
+  .dugun-text-container {
+    width: 15rem;
+    height: 11rem;
+    padding: 0 1rem;
+  }
+
+  .dugun-text {
+    font-size: 1rem;
+    font-weight: 800;
+  }
+
+  .order-footer {
+    padding-top: 0.7rem;
+  }
+
+  .order-footer-whatsapp-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .order-footer-siparis-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .order-status-container {
+    padding: 0.5rem 0;
+    gap: 1rem;
+  }
+
+  .order-status-container input {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 2px;
+  }
+
+  .order-status-container label {
+    height: 1.1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .order-status-container input::before {
+    background-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .order-status-container input::before {
+    background-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .order-status-container input::before {
+    background-size: 8px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .order-status-container input::before {
+    background-size: 7px;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .order-status-container input::before {
+    background-size: 5.5px;
+  }
 }

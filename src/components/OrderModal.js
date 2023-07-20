@@ -69,20 +69,25 @@ const OrderModal = () => {
             alt="dugun"
           />
         </div>
-        <div className="order-footer">
+        <div
+          className={`order-footer ${
+            switchOnOff ? "" : "order-dark"
+          }`.trimEnd()}
+        >
           <p
             className={`order-footer-whatsapp-text ${
               switchOnOff ? "" : "order-dark"
             }`.trimEnd()}
           >
-            Whatsapp Hattı: +90 538 678 7678
+            Whatsapp Hattı: <br />
+            +90 538 678 7678
           </p>
           <p
             className={`order-footer-siparis-text ${
               switchOnOff ? "" : "order-dark"
             }`.trimEnd()}
           >
-            Sipariş Hattı: +90 228 212 2424
+            Sipariş Hattı: <br /> +90 228 212 2424
           </p>
         </div>
         <div
@@ -96,7 +101,7 @@ const OrderModal = () => {
             id="order-status"
             onChange={handleModalStatus}
           />
-          <label htmlFor="order-status">Her zaman gösterme.</label>
+          <label htmlFor="order-status">Başlangıçta her zaman gösterme.</label>
         </div>
       </div>
     </Modal>

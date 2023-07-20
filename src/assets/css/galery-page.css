@@ -70,6 +70,7 @@
 }
 
 .gp-modal:is(.gp-dark) {
+  background: black !important;
   padding-bottom: 0 !important;
   border-radius: 8px !important;
 }
@@ -108,7 +109,7 @@
 }
 
 .gp-modal:is(.gp-dark) .ant-modal-content {
-  background: #000000 !important;
+  background: #000 !important;
   border: 1px solid rgba(187, 187, 187, 0.24) !important;
   box-shadow: inset rgb(124, 124, 124) 0 0 9px !important;
   padding: 15px 17px 13px 17px !important;
@@ -119,7 +120,7 @@
 }
 
 .gp-modal:is(.gp-dark) .ant-modal-title {
-  background-color: #000000 !important;
+  background-color: #000 !important;
   color: whitesmoke !important;
   border-top-left-radius: 5.3px !important;
   border-top-right-radius: 5.3px !important;
@@ -155,7 +156,7 @@
   }
 
   .ant-modal-content {
-    padding: 15px 17px 7px 17px !important;
+    padding: 15px 17px 17px 17px !important;
   }
 
   .ant-modal-title {
@@ -195,7 +196,7 @@
   }
 
   .ant-modal-content {
-    padding: 15px 17px 7px 17px !important;
+    padding: 15px 17px 17px 17px !important;
   }
 
   .ant-modal-title {
@@ -238,7 +239,7 @@
   }
 
   .ant-modal-content {
-    padding: 15px 17px 8px 17px !important;
+    padding: 15px 17px 17px 17px !important;
   }
 
   .ant-modal-title {
@@ -281,7 +282,7 @@
   }
 
   .ant-modal-content {
-    padding: 15px 17px 7px 17px !important;
+    padding: 15px 17px 17px 17px !important;
   }
 
   .ant-modal-title {
@@ -324,7 +325,7 @@
   }
 
   .ant-modal-content {
-    padding: 15px 13px 7px 13px !important;
+    padding: 15px 13px 13px 13px !important;
   }
 
   .ant-modal-title {
@@ -367,7 +368,7 @@
   }
 
   .ant-modal-content {
-    padding: 15px 13px 7px 13px !important;
+    padding: 15px 13px 13px 13px !important;
   }
 
   .ant-modal-title {
@@ -410,7 +411,7 @@
   }
 
   .ant-modal-content {
-    padding: 15px 13px 7px 13px !important;
+    padding: 15px 13px 13px 13px !important;
   }
 
   .ant-modal-title {
@@ -453,24 +454,27 @@
   }
 
   .ant-modal-content {
-    padding: 15px 13px 7px 13px !important;
+    padding: 15px 13px 13px 13px !important;
   }
 
   .ant-modal-title {
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
   }
 
   .ant-modal-close {
-    /* background: red !important; */
-    width: 16px !important;
-    height: 16px !important;
-    top: 18px !important;
+    width: 12px !important;
+    height: 12px !important;
+    top: 18.5px !important;
     right: 1.5rem !important;
   }
 
   .ant-modal-close svg {
-    width: 12px !important;
-    height: 12px !important;
+    width: 10px !important;
+    height: 10px !important;
+  }
+
+  .modal-title {
+    padding: 1rem 0 0 0;
   }
 }
 
@@ -491,15 +495,16 @@
   }
 
   .ant-modal-content {
-    padding: 15px 13px 7px 13px !important;
+    padding: 15px 13px 13px 13px !important;
   }
 
   .ant-modal-title {
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
   }
 
   .modal-title {
     font-size: 1.2rem;
+    padding: 1rem 0 0 0;
   }
 
   .ant-modal {
@@ -509,16 +514,15 @@
   }
 
   .ant-modal-close {
-    /* background: red !important; */
-    width: 16px !important;
-    height: 16px !important;
-    top: 18px !important;
+    width: 12px !important;
+    height: 12px !important;
+    top: 18.5px !important;
     right: 1.5rem !important;
   }
 
   .ant-modal-close svg {
-    width: 12px !important;
-    height: 12px !important;
+    width: 10px !important;
+    height: 10px !important;
   }
 }
 
@@ -545,11 +549,11 @@
   }
 
   .ant-modal-content {
-    padding: 15px 13px 7px 13px !important;
+    padding: 13px 13px 11px 13px !important;
   }
 
   .ant-modal-title {
-    font-size: 1.5rem !important;
+    font-size: 1.2rem !important;
   }
 
   .modal-title {
@@ -557,16 +561,15 @@
   }
 
   .ant-modal-close {
-    /* background: red !important; */
-    width: 16px !important;
-    height: 16px !important;
-    top: 18px !important;
-    right: 1.3rem !important;
+    width: 12px !important;
+    height: 12px !important;
+    top: 14.5px !important;
+    right: 1.5rem !important;
   }
 
   .ant-modal-close svg {
-    width: 12px !important;
-    height: 12px !important;
+    width: 10px !important;
+    height: 10px !important;
   }
 }
 
@@ -593,27 +596,27 @@
   }
 
   .ant-modal-content {
-    padding: 9px 9px 0 9px !important;
+    padding: 9px 9px 11px 9px !important;
   }
 
   .ant-modal-title {
-    font-size: 1.3rem !important;
+    font-size: 1.1rem !important;
   }
 
   .modal-title {
     font-size: 1.1rem;
-    padding: 0.5rem 0;
+    padding: 1rem 0 0 0;
   }
 
   .ant-modal-close {
-    width: 14px !important;
-    height: 14px !important;
-    top: 9px !important;
+    width: 12px !important;
+    height: 12px !important;
+    top: 8.8px !important;
     right: 1.5rem !important;
   }
 
   .ant-modal-close svg {
-    width: 9px !important;
-    height: 9px !important;
+    width: 7px !important;
+    height: 7px !important;
   }
 }
