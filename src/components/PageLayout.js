@@ -3,7 +3,6 @@ import { Outlet } from "react-router-dom";
 import HeaderNav from "./HeaderNav";
 import FooterNav from "./FooterNav";
 import MasterChef from "./MasterChef";
-import OrderModalButton from "./OrderModalButton";
 
 const PageLayout = ({ screenSize }) => {
   return (
@@ -12,7 +11,6 @@ const PageLayout = ({ screenSize }) => {
       <Outlet />
       <FooterNav />
       <MasterChef screenSize={screenSize} />
-      <OrderModalButton />
     </>
   );
 };

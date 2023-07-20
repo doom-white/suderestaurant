@@ -191,6 +191,10 @@
   border-color: rgba(0, 0, 0, 0.39);
 }
 
+.order-status-container:is(.order-dark) input:checked::before {
+  opacity: 1;
+}
+
 .order-status-container:is(.order-dark) input::before {
   background: url("../icons/ico_general/verifyd.png") no-repeat center;
 }
@@ -208,10 +212,18 @@
   .order-status-container input::before {
     background-size: 15px;
   }
+
+  .order-status-container:is(.order-dark) input::before {
+    background-size: 15px;
+  }
 }
 
 @media only screen and (max-width: 820px) {
   .order-status-container input::before {
+    background-size: 14px;
+  }
+
+  .order-status-container:is(.order-dark) input::before {
     background-size: 14px;
   }
 }
@@ -294,10 +306,18 @@
   .order-status-container input::before {
     background-size: 13px;
   }
+
+  .order-status-container:is(.order-dark) input::before {
+    background-size: 13px;
+  }
 }
 
 @media only screen and (max-width: 540px) {
   .order-status-container input::before {
+    background-size: 11px;
+  }
+
+  .order-status-container:is(.order-dark) input::before {
     background-size: 11px;
   }
 }
@@ -306,16 +326,28 @@
   .order-status-container input::before {
     background-size: 8px;
   }
+
+  .order-status-container:is(.order-dark) input::before {
+    background-size: 8px;
+  }
 }
 
 @media only screen and (max-width: 320px) {
   .order-status-container input::before {
     background-size: 7px;
   }
+
+  .order-status-container:is(.order-dark) input::before {
+    background-size: 7px;
+  }
 }
 
 @media only screen and (max-width: 280px) {
   .order-status-container input::before {
-    background-size: 5.5px;
+    background-size: 6.4px;
+  }
+
+  .order-status-container:is(.order-dark) input::before {
+    background-size: 6.4px;
   }
 }

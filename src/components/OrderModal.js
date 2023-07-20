@@ -23,11 +23,12 @@ const OrderModal = () => {
   };
 
   useEffect(() => {
-    if (isModalOpen && !JSON.parse(localStorage.getItem("order"))) {
+    if (isModalOpen && JSON.parse(localStorage.getItem("order")) === false) {
       setTimeout(() => {
         cboxRef.current.checked = true;
       }, 100);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isModalOpen]);
 
   return (

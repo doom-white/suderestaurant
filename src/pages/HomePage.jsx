@@ -5,6 +5,7 @@ import MenuCard from "../components/MenuCard";
 import { motion } from "framer-motion";
 import { useModal } from "../context/ModalContext";
 import OrderModal from "../components/OrderModal";
+import OrderModalButton from "../components/OrderModalButton";
 import { useState } from "react";
 
 const homePageVariants = {
@@ -53,6 +54,7 @@ const HomePage = ({ screenSize }) => {
         </div>
       </motion.div>
       <OrderModal />
+      <OrderModalButton />
     </>
   );
 };
